@@ -28,35 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Check = new System.Windows.Forms.Button();
+            this.Success = new System.Windows.Forms.Label();
+            this.Error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // Check
             // 
-            this.button1.Location = new System.Drawing.Point(418, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Check.Location = new System.Drawing.Point(312, 198);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(75, 23);
+            this.Check.TabIndex = 0;
+            this.Check.Text = "Check";
+            this.Check.UseVisualStyleBackColor = true;
+            this.Check.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Success
+            // 
+            this.Success.AutoSize = true;
+            this.Success.Location = new System.Drawing.Point(226, 259);
+            this.Success.Name = "Success";
+            this.Success.Size = new System.Drawing.Size(59, 16);
+            this.Success.TabIndex = 1;
+            this.Success.Text = "Success";
+            this.Success.Visible = false;
+            this.Success.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.Error.Location = new System.Drawing.Point(431, 259);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(36, 16);
+            this.Error.TabIndex = 2;
+            this.Error.Text = "Error";
+            this.Error.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Error);
+            this.Controls.Add(this.Success);
+            this.Controls.Add(this.Check);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Check;
+        private System.Windows.Forms.Label Success;
+        private System.Windows.Forms.Label Error;
     }
 }
 

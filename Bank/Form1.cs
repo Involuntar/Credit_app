@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace Bank
 {
 
-    public partial class Form1 : Form
+    public partial class Check_conn : Form
     {
         Data.Connection con = new Data.Connection();
-        public Form1()
+        public Check_conn()
         {
             InitializeComponent();
         }

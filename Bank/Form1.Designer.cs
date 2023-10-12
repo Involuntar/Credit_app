@@ -1,6 +1,6 @@
 ﻿namespace Bank
 {
-    partial class Form1
+    partial class Check_conn
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -64,7 +64,7 @@
             this.Error.Text = "Error";
             this.Error.Visible = false;
             // 
-            // Form1
+            // Check_conn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,8 +72,8 @@
             this.Controls.Add(this.Error);
             this.Controls.Add(this.Success);
             this.Controls.Add(this.Check);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Check_conn";
+            this.Text = "Проверка соединения";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

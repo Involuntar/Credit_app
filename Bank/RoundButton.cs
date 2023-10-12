@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing.Drawing2D;
 using System.Drawing;
 using System.Linq;
@@ -11,54 +9,133 @@ using System.Windows.Forms;
 
 namespace Bank
 {
-    public partial class RoundButton : Component
+    public class RoundButton : Control
     {
+        public Color BackColor2 { get; set; }
+        public Color ButtonBorderColor { get; set; }
+        public int ButtonRoundRadius { get; set; }
+
+        public Color ButtonHighlightColor { get; set; }
+        public Color ButtonHighlightColor2 { get; set; }
+        public Color ButtonHighlightForeColor { get; set; }
+
+        public Color ButtonPressedColor { get; set; }
+        public Color ButtonPressedColor2 { get; set; }
+        public Color ButtonPressedForeColor { get; set; }
+
+        private bool IsHighlighted;
+        private bool IsPressed;
+
         public RoundButton()
         {
-            InitializeComponent();
+            Size = new Size(100, 40);
+            ButtonRoundRadius = 30;
+            BackColor = Color.Gainsboro;
+            BackColor2 = Color.Silver;
+            ButtonBorderColor = Color.Black;
+            ButtonHighlightColor = Color.Orange;
+            ButtonHighlightColor2 = Color.OrangeRed;
+            ButtonHighlightForeColor = Color.Black;
+
+            ButtonPressedColor = Color.Red;
+            ButtonPressedColor2 = Color.Maroon;
+            ButtonPressedForeColor = Color.White;
         }
 
-        public RoundButton(IContainer container)
+        protected override CreateParams CreateParams
         {
-            container.Add(this);
-
-            InitializeComponent();
+            get
+            {
+                CreateParams createParams = base.CreateParams;
+                createParams.ExStyle |= 0x00000020; // WS_EX_TRANSPARENT
+                return createParams;
+            }
         }
-        public class RoundedButton : Button
+
+        protected override void OnPaint(PaintEventArgs e)
         {
-            [Category("Appearance"), Description("Цвет границы")]
-            public Color BorderColor { get; set; }
-            [Category("Appearance"), Description("Ширина границы")]
-            public float BorderWidth { get; set; }
+            e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
 
-            public RoundedButton()
-            {
-                BorderColor = DefaultBackColor;
-                BorderWidth = 6f;
-            }
-            #region Overrides of Control
+            var foreColor = IsPressed ? ButtonPressedForeColor : IsHighlighted ? ButtonHighlightForeColor : ForeColor;
+            var backColor = IsPressed ? ButtonPressedColor : IsHighlighted ? ButtonHighlightColor : BackColor;
+            var backColor2 = IsPressed ? ButtonPressedColor2 : IsHighlighted ? ButtonHighlightColor2 : BackColor2;
 
-            protected override void OnPaint(PaintEventArgs pevent)
+
+            using (var pen = new Pen(ButtonBorderColor, 1))
+                e.Graphics.DrawPath(pen, Path);
+
+            using (var brush = new LinearGradientBrush(ClientRectangle, backColor, backColor2, LinearGradientMode.Vertical))
+                e.Graphics.FillPath(brush, Path);
+
+            using (var brush = new SolidBrush(foreColor))
             {
-                using (var gp = new GraphicsPath())
-                {
-                    RectangleF rf = new RectangleF(new PointF(0, 0), new SizeF(Height, Height));
-                    gp.AddArc(rf, 90, 180);
-                    gp.AddLine(new PointF(Height / 2f, 0), new PointF(Width - Height / 2f, 0));
-                    rf.Offset(Width - Height, 0);
-                    gp.AddArc(rf, -90, 180);
-                    gp.CloseAllFigures();
-                    Region = new Region(gp);
-                    base.OnPaint(pevent);
-                    using (var pen = new Pen(BorderColor, BorderWidth))
-                    {
-                        pevent.Graphics.DrawPath(pen, gp);
-                    }
-                }
+                var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+                var rect = ClientRectangle;
+                rect.Inflate(-4, -4);
+                e.Graphics.DrawString(Text, Font, brush, rect, sf);
             }
 
+            base.OnPaint(e);
+        }
 
-            #endregion
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+        }
+
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            base.OnMouseEnter(e);
+            IsHighlighted = true;
+            Parent.Invalidate(Bounds, false);
+            Invalidate();
+        }
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+            base.OnMouseLeave(e);
+            IsHighlighted = false;
+            IsPressed = false;
+            Parent.Invalidate(Bounds, false);
+            Invalidate();
+        }
+
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            Parent.Invalidate(Bounds, false);
+            Invalidate();
+            IsPressed = true;
+        }
+
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            base.OnMouseUp(e);
+            Parent.Invalidate(Bounds, false);
+            Invalidate();
+            IsPressed = false;
+        }
+
+        protected GraphicsPath Path
+        {
+            get
+            {
+                var rect = ClientRectangle;
+                rect.Inflate(-1, -1);
+                return GetRoundedRectangle(rect, ButtonRoundRadius);
+            }
+        }
+
+        public static GraphicsPath GetRoundedRectangle(Rectangle rect, int d)
+        {
+            var gp = new GraphicsPath();
+
+            gp.AddArc(rect.X, rect.Y, d, d, 180, 90);
+            gp.AddArc(rect.X + rect.Width - d, rect.Y, d, d, 270, 90);
+            gp.AddArc(rect.X + rect.Width - d, rect.Y + rect.Height - d, d, d, 0, 90);
+            gp.AddArc(rect.X, rect.Y + rect.Height - d, d, d, 90, 90);
+            gp.CloseFigure();
+
+            return gp;
         }
     }
 }

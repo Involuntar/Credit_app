@@ -99,11 +99,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Connection.cs" />
-    <Compile Include="Check.cs">
+    <Compile Include="Check_con.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Check.Designer.cs">
-      <DependentUpon>Check.cs</DependentUpon>
+    <Compile Include="Check_con.Designer.cs">
+      <DependentUpon>Check_con.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_form.cs">
       <SubType>Form</SubType>
@@ -116,8 +116,8 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Check.resx">
-      <DependentUpon>Check.cs</DependentUpon>
+    <EmbeddedResource Include="Check_con.resx">
+      <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>

@@ -34,10 +34,11 @@
             this.Password_txt = new System.Windows.Forms.Label();
             this.User = new System.Windows.Forms.RadioButton();
             this.Admin = new System.Windows.Forms.RadioButton();
-            this.Reg = new Bank.RoundButton();
-            this.Log_in = new Bank.RoundButton();
             this.Exit = new System.Windows.Forms.Button();
             this.Log_in_txt = new System.Windows.Forms.Label();
+            this.Check_c = new System.Windows.Forms.Button();
+            this.Reg = new Bank.RoundButton();
+            this.Log_in = new Bank.RoundButton();
             this.SuspendLayout();
             // 
             // Password
@@ -102,6 +103,51 @@
             this.Admin.Text = "Администратор";
             this.Admin.UseVisualStyleBackColor = true;
             // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Exit.FlatAppearance.BorderSize = 3;
+            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(424, 8);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(95, 35);
+            this.Exit.TabIndex = 12;
+            this.Exit.Text = "Выход";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Log_in_txt
+            // 
+            this.Log_in_txt.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Log_in_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.Log_in_txt.Location = new System.Drawing.Point(85, 72);
+            this.Log_in_txt.Name = "Log_in_txt";
+            this.Log_in_txt.Size = new System.Drawing.Size(467, 53);
+            this.Log_in_txt.TabIndex = 13;
+            this.Log_in_txt.Text = "Вход в личный кабинет";
+            // 
+            // Check_c
+            // 
+            this.Check_c.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Check_c.FlatAppearance.BorderSize = 0;
+            this.Check_c.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.Check_c.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.Check_c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Check_c.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Check_c.Location = new System.Drawing.Point(9, 8);
+            this.Check_c.Name = "Check_c";
+            this.Check_c.Size = new System.Drawing.Size(132, 45);
+            this.Check_c.TabIndex = 14;
+            this.Check_c.Text = " ";
+            this.Check_c.UseVisualStyleBackColor = false;
+            this.Check_c.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Reg
             // 
             this.Reg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -143,35 +189,7 @@
             this.Log_in.Size = new System.Drawing.Size(132, 47);
             this.Log_in.TabIndex = 9;
             this.Log_in.Text = "Войти";
-            // 
-            // Exit
-            // 
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Exit.FlatAppearance.BorderSize = 3;
-            this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(424, 8);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(95, 35);
-            this.Exit.TabIndex = 12;
-            this.Exit.Text = "Выход";
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Log_in_txt
-            // 
-            this.Log_in_txt.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Log_in_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Log_in_txt.Location = new System.Drawing.Point(85, 72);
-            this.Log_in_txt.Name = "Log_in_txt";
-            this.Log_in_txt.Size = new System.Drawing.Size(467, 53);
-            this.Log_in_txt.TabIndex = 13;
-            this.Log_in_txt.Text = "Вход в личный кабинет";
+            this.Log_in.Click += new System.EventHandler(this.Log_in_Click);
             // 
             // Login_form
             // 
@@ -179,6 +197,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(527, 407);
             this.ControlBox = false;
+            this.Controls.Add(this.Check_c);
             this.Controls.Add(this.Log_in_txt);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Reg);
@@ -213,5 +232,6 @@
         private RoundButton Reg;
         private System.Windows.Forms.Label Log_in_txt;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button Check_c;
     }
 }

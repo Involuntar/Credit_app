@@ -48,6 +48,9 @@ namespace Bank
                     if (pass_check != null)
                     {
                         MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        product_choice pr_ch = new product_choice();
+                        pr_ch.Show();
                     }
                     else
                     {

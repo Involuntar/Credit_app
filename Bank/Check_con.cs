@@ -24,7 +24,7 @@ namespace Bank
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace Bank
             {
                 con.connClose();
             }
-        }
+        }*/
 
         private void label1_Click(object sender, EventArgs e)
         {

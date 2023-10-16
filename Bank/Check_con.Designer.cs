@@ -41,7 +41,6 @@
             this.Check.TabIndex = 0;
             this.Check.Text = "Check";
             this.Check.UseVisualStyleBackColor = true;
-            this.Check.Click += new System.EventHandler(this.button1_Click);
             // 
             // Success
             // 

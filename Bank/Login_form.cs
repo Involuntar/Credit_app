@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bank.Data;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,6 @@ namespace Bank
 {
     public partial class Login_form : Form
     {
-        Data.Connection con = new Data.Connection();
         public Login_form()
         {
             InitializeComponent();
@@ -30,13 +31,25 @@ namespace Bank
 
         private void Log_in_Click(object sender, EventArgs e)
         {
-            try
-            {
                 string login_check = Login.Text;
                 string password_check = Password.Text;
-                Data.Connection.dataSource();
-                con.connOpen();
+                MySqlConnection con = Connection.GetConnection();
+                string sql = "SELECT login, password FROM users WHERE login LIKE @login AND password LIKE @password";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login_check;
+                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password_check;
 
+            try
+            {   
+                int pass_check = cmd.ExecuteNonQuery();
+                if (pass_check == 1)
+                {
+                    MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch
             {

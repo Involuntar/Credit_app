@@ -16,7 +16,7 @@ namespace Bank
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test_table());
+            Application.Run(new Login_form());
         }
     }
 }

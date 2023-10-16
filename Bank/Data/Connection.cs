@@ -3,36 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Bank.Data
 {
     internal class Connection
     {
-        public static MySqlConnection connMaster = new MySqlConnection();
-        static string server = "127.0.0.1;";
-        static string database = "bank;";
-        static string Uid = "root;";
-        static string password = "Nyp1809!pyN51";
-
-        public static MySqlConnection dataSource()
+        public static MySqlConnection GetConnection()
         {
-            connMaster = new MySqlConnection($"server = {server} database = {database} Uid = {Uid} password = {password}");
-            return connMaster;
+            string sql = "datasource=localhost;port=3306;username=root;password=Nyp1809!pyN51;database=bank";
+            MySqlConnection con = new MySqlConnection(sql);
+            try
+            {
+                con.Open();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return con;
         }
-
-
-        public void connOpen()
-        {
-            dataSource();
-            connMaster.Open();
-        }
-
-        public void connClose()
-        {
-            dataSource();
-            connMaster.Close();
-        }
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Bank
 {
-    partial class product_choice
+    partial class Product_choice
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@
             this.credit.Size = new System.Drawing.Size(154, 62);
             this.credit.TabIndex = 1;
             this.credit.Text = "Кредит";
+            this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
             // mortgages
             // 
@@ -81,8 +82,9 @@
             this.mortgages.Size = new System.Drawing.Size(154, 62);
             this.mortgages.TabIndex = 2;
             this.mortgages.Text = "Ипотека";
+            this.mortgages.Click += new System.EventHandler(this.mortgages_Click);
             // 
-            // product_choice
+            // Product_choice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +94,7 @@
             this.Controls.Add(this.credit);
             this.Controls.Add(this.Product_head);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Name = "product_choice";
+            this.Name = "Product_choice";
             this.Text = "Продукты";
             this.ResumeLayout(false);
             this.PerformLayout();

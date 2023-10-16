@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credit.Designer.cs">
+      <DependentUpon>Credit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Connection.cs" />
     <Compile Include="Check_con.cs">
       <SubType>Form</SubType>
@@ -111,11 +117,17 @@
     <Compile Include="Login_form.Designer.cs">
       <DependentUpon>Login_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="product_choice.cs">
+    <Compile Include="Mortgage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="product_choice.Designer.cs">
-      <DependentUpon>product_choice.cs</DependentUpon>
+    <Compile Include="Mortgage.Designer.cs">
+      <DependentUpon>Mortgage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_choice.Designer.cs">
+      <DependentUpon>Product_choice.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,8 +146,8 @@
     <EmbeddedResource Include="Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="product_choice.resx">
-      <DependentUpon>product_choice.cs</DependentUpon>
+    <EmbeddedResource Include="Product_choice.resx">
+      <DependentUpon>Product_choice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

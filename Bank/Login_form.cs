@@ -49,7 +49,7 @@ namespace Bank
                     {
                         MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        product_choice pr_ch = new product_choice();
+                        Product_choice pr_ch = new Product_choice();
                         pr_ch.Show();
                     }
                     else

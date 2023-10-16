@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace Bank
 {
 
-    public partial class Form1 : Form
+    public partial class Check_conn : Form
     {
         Data.Connection con = new Data.Connection();
-        public Form1()
+        public Check_conn()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Bank
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace Bank
             {
                 con.connClose();
             }
-        }
+        }*/
 
         private void label1_Click(object sender, EventArgs e)
         {

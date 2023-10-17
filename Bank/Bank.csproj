@@ -143,6 +143,9 @@
     <EmbeddedResource Include="Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Credit.resx">
+      <DependentUpon>Credit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>

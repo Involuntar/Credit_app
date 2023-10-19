@@ -149,6 +149,9 @@
     <EmbeddedResource Include="Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mortgage.resx">
+      <DependentUpon>Mortgage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product_choice.resx">
       <DependentUpon>Product_choice.cs</DependentUpon>
     </EmbeddedResource>

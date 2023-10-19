@@ -140,12 +140,6 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Test_table.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test_table.Designer.cs">
-      <DependentUpon>Test_table.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,9 +167,6 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test_table.resx">
-      <DependentUpon>Test_table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Bank.Data.Connection.datasource" />

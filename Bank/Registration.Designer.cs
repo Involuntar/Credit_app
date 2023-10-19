@@ -45,7 +45,8 @@
             this.Product_head.AutoSize = true;
             this.Product_head.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.Product_head.Location = new System.Drawing.Point(255, 9);
+            this.Product_head.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Product_head.Location = new System.Drawing.Point(260, 9);
             this.Product_head.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Product_head.Name = "Product_head";
             this.Product_head.Size = new System.Drawing.Size(213, 31);

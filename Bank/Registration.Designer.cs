@@ -56,11 +56,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(201, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 24);
+            this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Почта";
             // 
@@ -75,11 +76,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(201, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 24);
+            this.label2.Size = new System.Drawing.Size(74, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Логин";
             // 
@@ -94,11 +96,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(201, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 24);
+            this.label3.Size = new System.Drawing.Size(87, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "Пароль";
             // 
@@ -112,11 +115,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(201, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 24);
+            this.label4.Size = new System.Drawing.Size(214, 23);
             this.label4.TabIndex = 12;
             this.label4.Text = "Повторите пароль";
             // 
@@ -129,7 +133,7 @@
             // 
             // credit
             // 
-            this.credit.BackColor = System.Drawing.Color.Gray;
+            this.credit.BackColor = System.Drawing.Color.DarkGray;
             this.credit.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.credit.ButtonBorderColor = System.Drawing.Color.Black;
             this.credit.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
@@ -147,6 +151,7 @@
             this.credit.Size = new System.Drawing.Size(264, 62);
             this.credit.TabIndex = 14;
             this.credit.Text = "Зарегистрироваться";
+            this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
             // Registration
             // 
@@ -166,6 +171,7 @@
             this.Controls.Add(this.Product_head);
             this.Name = "Registration";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

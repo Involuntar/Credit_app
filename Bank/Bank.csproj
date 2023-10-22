@@ -98,61 +98,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Credit.cs">
+    <Compile Include="Forms\Credit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credit.Designer.cs">
+    <Compile Include="Forms\Credit.Designer.cs">
       <DependentUpon>Credit.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Connection.cs" />
-    <Compile Include="Check_con.cs">
+    <Compile Include="Forms\Check_con.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Check_con.Designer.cs">
+    <Compile Include="Forms\Check_con.Designer.cs">
       <DependentUpon>Check_con.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_form.cs">
+    <Compile Include="Forms\Login_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_form.Designer.cs">
+    <Compile Include="Forms\Login_form.Designer.cs">
       <DependentUpon>Login_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mortgage.cs">
+    <Compile Include="Forms\Mortgage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mortgage.Designer.cs">
+    <Compile Include="Forms\Mortgage.Designer.cs">
       <DependentUpon>Mortgage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product_choice.cs">
+    <Compile Include="Forms\Product_choice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product_choice.Designer.cs">
+    <Compile Include="Forms\Product_choice.Designer.cs">
       <DependentUpon>Product_choice.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.cs">
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
+    <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Check_con.resx">
+    <Compile Include="Forms\Test_table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test_table.Designer.cs">
+      <DependentUpon>Test_table.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Credit.resx">
-      <DependentUpon>Credit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login_form.resx">
+    <EmbeddedResource Include="Forms\Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mortgage.resx">
-      <DependentUpon>Mortgage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Product_choice.resx">
+    <EmbeddedResource Include="Forms\Product_choice.resx">
       <DependentUpon>Product_choice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -165,8 +165,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registration.resx">
+    <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test_table.resx">
+      <DependentUpon>Test_table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Bank.Data.Connection.datasource" />

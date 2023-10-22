@@ -26,5 +26,15 @@ namespace Bank
         {
 
         }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void credit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

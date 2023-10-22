@@ -47,14 +47,14 @@ namespace Bank
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         Product_choice pr_ch = new Product_choice();
                         pr_ch.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Во входе отказано", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
@@ -78,11 +78,11 @@ namespace Bank
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Во входе отказано", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
@@ -92,7 +92,7 @@ namespace Bank
             }
             else
             {
-                MessageBox.Show("Chose your role", "Recomendation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Выберите свою роль!", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -100,6 +100,13 @@ namespace Bank
         {
             Check_conn check = new Check_conn();
             check.Show();
+        }
+
+        private void Reg_Click(object sender, EventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.Show();
+            this.Hide();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Bank
 {
-    public partial class Registration : Form
+    public partial class Test_table : Form
     {
-        public Registration()
+        public Test_table()
         {
             InitializeComponent();
         }

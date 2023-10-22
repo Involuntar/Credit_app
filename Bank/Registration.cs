@@ -16,5 +16,25 @@ namespace Bank
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void credit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Bank
 {
     public partial class Credit : Form
     {
+        // перенесись позязя
         public Credit()
         {
             InitializeComponent();
@@ -48,6 +49,11 @@ namespace Bank
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Credit_Load(object sender, EventArgs e)
         {
 
         }

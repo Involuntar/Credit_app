@@ -12,12 +12,18 @@ namespace Bank
 {
     public partial class Mortgage : Form
     {
+        //и ты засинхронься пжпж
         public Mortgage()
         {
             InitializeComponent();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mortgage_Load(object sender, EventArgs e)
         {
 
         }

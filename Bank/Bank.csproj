@@ -176,6 +176,9 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Admin%27s forms\credit_types_watch.resx">
+      <DependentUpon>credit_types_watch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>

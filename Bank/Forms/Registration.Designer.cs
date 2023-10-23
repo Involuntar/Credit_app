@@ -30,13 +30,13 @@
         {
             this.Product_head = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.new_login = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.new_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.confirm_password = new System.Windows.Forms.TextBox();
             this.credit = new Bank.RoundButton();
             this.SuspendLayout();
             // 
@@ -46,10 +46,9 @@
             this.Product_head.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
             this.Product_head.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Product_head.Location = new System.Drawing.Point(260, 9);
-            this.Product_head.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Product_head.Location = new System.Drawing.Point(347, 11);
             this.Product_head.Name = "Product_head";
-            this.Product_head.Size = new System.Drawing.Size(213, 31);
+            this.Product_head.Size = new System.Drawing.Size(260, 38);
             this.Product_head.TabIndex = 5;
             this.Product_head.Text = "Регистрация";
             // 
@@ -59,19 +58,21 @@
             this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(201, 58);
+            this.label1.Location = new System.Drawing.Point(268, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 23);
+            this.label1.Size = new System.Drawing.Size(106, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Почта";
             // 
-            // textBox1
+            // email
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.email.Location = new System.Drawing.Point(273, 111);
+            this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(405, 22);
+            this.email.TabIndex = 7;
+            this.email.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -79,19 +80,21 @@
             this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(201, 113);
+            this.label2.Location = new System.Drawing.Point(268, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.Size = new System.Drawing.Size(94, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Логин";
             // 
-            // textBox2
+            // new_login
             // 
-            this.textBox2.Location = new System.Drawing.Point(205, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 20);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.new_login.Location = new System.Drawing.Point(273, 183);
+            this.new_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_login.Name = "new_login";
+            this.new_login.Size = new System.Drawing.Size(405, 22);
+            this.new_login.TabIndex = 9;
+            this.new_login.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -99,18 +102,20 @@
             this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(201, 172);
+            this.label3.Location = new System.Drawing.Point(268, 212);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 23);
+            this.label3.Size = new System.Drawing.Size(113, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Пароль";
             // 
-            // textBox3
+            // new_password
             // 
-            this.textBox3.Location = new System.Drawing.Point(205, 201);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(305, 20);
-            this.textBox3.TabIndex = 11;
+            this.new_password.Location = new System.Drawing.Point(273, 247);
+            this.new_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_password.Name = "new_password";
+            this.new_password.Size = new System.Drawing.Size(405, 22);
+            this.new_password.TabIndex = 11;
             // 
             // label4
             // 
@@ -118,18 +123,20 @@
             this.label4.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(201, 235);
+            this.label4.Location = new System.Drawing.Point(268, 289);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 23);
+            this.label4.Size = new System.Drawing.Size(273, 29);
             this.label4.TabIndex = 12;
             this.label4.Text = "Повторите пароль";
             // 
-            // textBox4
+            // confirm_password
             // 
-            this.textBox4.Location = new System.Drawing.Point(205, 271);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(305, 20);
-            this.textBox4.TabIndex = 13;
+            this.confirm_password.Location = new System.Drawing.Point(273, 334);
+            this.confirm_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirm_password.Name = "confirm_password";
+            this.confirm_password.Size = new System.Drawing.Size(405, 22);
+            this.confirm_password.TabIndex = 13;
             // 
             // credit
             // 
@@ -145,30 +152,31 @@
             this.credit.ButtonRoundRadius = 30;
             this.credit.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.credit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.credit.Location = new System.Drawing.Point(223, 306);
-            this.credit.Margin = new System.Windows.Forms.Padding(2);
+            this.credit.Location = new System.Drawing.Point(297, 377);
+            this.credit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.credit.Name = "credit";
-            this.credit.Size = new System.Drawing.Size(264, 62);
+            this.credit.Size = new System.Drawing.Size(352, 76);
             this.credit.TabIndex = 14;
             this.credit.Text = "Зарегистрироваться";
             this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.credit);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.confirm_password);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.new_password);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.new_login);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Product_head);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
@@ -181,13 +189,13 @@
 
         private System.Windows.Forms.Label Product_head;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox new_login;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox new_password;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox confirm_password;
         private RoundButton credit;
     }
 }

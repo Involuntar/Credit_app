@@ -12,7 +12,7 @@ namespace Bank.Data
     {
         public static MySqlConnection GetConnection()
         {
-            string sql = "datasource=localhost;port=3306;username=root;password=Nyp1809!pyN51;database=bank";
+            string sql = "datasource=26.212.113.38;port=3306;username=root;password=Nyp1809!pyN51;database=bank";
             MySqlConnection con = new MySqlConnection(sql);
             try
             {

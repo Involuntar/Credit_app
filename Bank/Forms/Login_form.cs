@@ -1,5 +1,6 @@
 ﻿using Bank.Data;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Tls.Crypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +101,13 @@ namespace Bank
         {
             Check_conn check = new Check_conn();
             check.Show();
+        }
+
+        private void Reg_Click(object sender, EventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.Show();
+            this.Hide();
         }
     }
 }

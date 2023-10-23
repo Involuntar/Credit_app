@@ -168,6 +168,7 @@
             this.Reg.Size = new System.Drawing.Size(172, 47);
             this.Reg.TabIndex = 10;
             this.Reg.Text = "Регистрация";
+            this.Reg.Click += new System.EventHandler(this.Reg_Click);
             // 
             // Log_in
             // 

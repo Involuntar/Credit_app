@@ -38,6 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.confirm_password = new System.Windows.Forms.TextBox();
             this.credit = new Bank.RoundButton();
+            this.name = new System.Windows.Forms.TextBox();
+            this.middlename = new System.Windows.Forms.TextBox();
+            this.lastname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Product_head
@@ -68,7 +71,7 @@
             // email
             // 
             this.email.Location = new System.Drawing.Point(273, 111);
-            this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(405, 22);
             this.email.TabIndex = 7;
@@ -90,7 +93,7 @@
             // new_login
             // 
             this.new_login.Location = new System.Drawing.Point(273, 183);
-            this.new_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_login.Margin = new System.Windows.Forms.Padding(4);
             this.new_login.Name = "new_login";
             this.new_login.Size = new System.Drawing.Size(405, 22);
             this.new_login.TabIndex = 9;
@@ -112,7 +115,7 @@
             // new_password
             // 
             this.new_password.Location = new System.Drawing.Point(273, 247);
-            this.new_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_password.Margin = new System.Windows.Forms.Padding(4);
             this.new_password.Name = "new_password";
             this.new_password.Size = new System.Drawing.Size(405, 22);
             this.new_password.TabIndex = 11;
@@ -133,7 +136,7 @@
             // confirm_password
             // 
             this.confirm_password.Location = new System.Drawing.Point(273, 334);
-            this.confirm_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirm_password.Margin = new System.Windows.Forms.Padding(4);
             this.confirm_password.Name = "confirm_password";
             this.confirm_password.Size = new System.Drawing.Size(405, 22);
             this.confirm_password.TabIndex = 13;
@@ -160,12 +163,36 @@
             this.credit.Text = "Зарегистрироваться";
             this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(806, 201);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(100, 22);
+            this.name.TabIndex = 15;
+            // 
+            // middlename
+            // 
+            this.middlename.Location = new System.Drawing.Point(806, 246);
+            this.middlename.Name = "middlename";
+            this.middlename.Size = new System.Drawing.Size(100, 22);
+            this.middlename.TabIndex = 16;
+            // 
+            // lastname
+            // 
+            this.lastname.Location = new System.Drawing.Point(806, 289);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(100, 22);
+            this.lastname.TabIndex = 17;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lastname);
+            this.Controls.Add(this.middlename);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.credit);
             this.Controls.Add(this.confirm_password);
             this.Controls.Add(this.label4);
@@ -176,7 +203,7 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Product_head);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
@@ -197,5 +224,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox confirm_password;
         private RoundButton credit;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox middlename;
+        private System.Windows.Forms.TextBox lastname;
     }
 }

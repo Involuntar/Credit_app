@@ -98,6 +98,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Admin%27s forms\credits_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\credits_watch.Designer.cs">
+      <DependentUpon>credits_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\credit_types_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\credit_types_watch.Designer.cs">
+      <DependentUpon>credit_types_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\mortgages_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\mortgages_watch.Designer.cs">
+      <DependentUpon>mortgages_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\terms_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\terms_watch.Designer.cs">
+      <DependentUpon>terms_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\users_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\users_watch.Designer.cs">
+      <DependentUpon>users_watch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Credit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +140,12 @@
     </Compile>
     <Compile Include="Forms\Check_con.Designer.cs">
       <DependentUpon>Check_con.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_for_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_for_admin.Designer.cs">
+      <DependentUpon>Form_for_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login_form.cs">
       <SubType>Form</SubType>
@@ -140,11 +176,17 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Admin%27s forms\credit_types_watch.resx">
+      <DependentUpon>credit_types_watch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credit.resx">
       <DependentUpon>Credit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_for_admin.resx">
+      <DependentUpon>Form_for_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>

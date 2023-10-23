@@ -1,4 +1,5 @@
 ﻿using Bank.Data;
+using Bank.Forms;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Tls.Crypto;
 using System;
@@ -27,7 +28,7 @@ namespace Bank
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Log_in_Click(object sender, EventArgs e)
@@ -48,14 +49,14 @@ namespace Bank
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         Product_choice pr_ch = new Product_choice();
                         pr_ch.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
@@ -79,11 +80,14 @@ namespace Bank
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Form_for_admin admin = new Form_for_admin();
+                        admin.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch

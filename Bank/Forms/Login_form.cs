@@ -27,7 +27,7 @@ namespace Bank
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Log_in_Click(object sender, EventArgs e)

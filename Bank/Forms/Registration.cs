@@ -68,5 +68,12 @@ namespace Bank
             }
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_form login = new Login_form();
+            login.Show();
+        }
     }
 }

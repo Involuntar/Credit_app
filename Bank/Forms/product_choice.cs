@@ -30,5 +30,10 @@ namespace Bank
             this.Hide();
             mrtg.Show();
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

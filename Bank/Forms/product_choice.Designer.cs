@@ -31,6 +31,7 @@
             this.Product_head = new System.Windows.Forms.Label();
             this.credit = new Bank.RoundButton();
             this.mortgages = new Bank.RoundButton();
+            this.Exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Product_head
@@ -84,12 +85,23 @@
             this.mortgages.Text = "Ипотека";
             this.mortgages.Click += new System.EventHandler(this.mortgages_Click);
             // 
+            // Exit
+            // 
+            this.Exit.Location = new System.Drawing.Point(695, 13);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.TabIndex = 3;
+            this.Exit.Text = "Выход";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // Product_choice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.mortgages);
             this.Controls.Add(this.credit);
             this.Controls.Add(this.Product_head);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Label Product_head;
         private RoundButton credit;
         private RoundButton mortgages;
+        private System.Windows.Forms.Button Exit;
     }
 }

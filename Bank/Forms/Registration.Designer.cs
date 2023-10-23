@@ -37,10 +37,11 @@
             this.new_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.confirm_password = new System.Windows.Forms.TextBox();
-            this.credit = new Bank.RoundButton();
             this.name = new System.Windows.Forms.TextBox();
             this.middlename = new System.Windows.Forms.TextBox();
             this.lastname = new System.Windows.Forms.TextBox();
+            this.credit = new Bank.RoundButton();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Product_head
@@ -141,6 +142,27 @@
             this.confirm_password.Size = new System.Drawing.Size(405, 22);
             this.confirm_password.TabIndex = 13;
             // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(806, 201);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(100, 22);
+            this.name.TabIndex = 15;
+            // 
+            // middlename
+            // 
+            this.middlename.Location = new System.Drawing.Point(806, 246);
+            this.middlename.Name = "middlename";
+            this.middlename.Size = new System.Drawing.Size(100, 22);
+            this.middlename.TabIndex = 16;
+            // 
+            // lastname
+            // 
+            this.lastname.Location = new System.Drawing.Point(806, 289);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(100, 22);
+            this.lastname.TabIndex = 17;
+            // 
             // credit
             // 
             this.credit.BackColor = System.Drawing.Color.DarkGray;
@@ -163,26 +185,15 @@
             this.credit.Text = "Зарегистрироваться";
             this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
-            // name
+            // Back
             // 
-            this.name.Location = new System.Drawing.Point(806, 201);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(100, 22);
-            this.name.TabIndex = 15;
-            // 
-            // middlename
-            // 
-            this.middlename.Location = new System.Drawing.Point(806, 246);
-            this.middlename.Name = "middlename";
-            this.middlename.Size = new System.Drawing.Size(100, 22);
-            this.middlename.TabIndex = 16;
-            // 
-            // lastname
-            // 
-            this.lastname.Location = new System.Drawing.Point(806, 289);
-            this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(100, 22);
-            this.lastname.TabIndex = 17;
+            this.Back.Location = new System.Drawing.Point(980, 11);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 18;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Registration
             // 
@@ -190,6 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.lastname);
             this.Controls.Add(this.middlename);
             this.Controls.Add(this.name);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox middlename;
         private System.Windows.Forms.TextBox lastname;
+        private System.Windows.Forms.Button Back;
     }
 }

@@ -59,7 +59,7 @@
             // Rate
             // 
             this.Rate.AutoSize = true;
-            this.Rate.Location = new System.Drawing.Point(98, 158);
+            this.Rate.Location = new System.Drawing.Point(98, 207);
             this.Rate.Name = "Rate";
             this.Rate.Size = new System.Drawing.Size(54, 16);
             this.Rate.TabIndex = 2;
@@ -86,11 +86,11 @@
             // Rate_show
             // 
             this.Rate_show.AutoSize = true;
-            this.Rate_show.Location = new System.Drawing.Point(224, 157);
+            this.Rate_show.Location = new System.Drawing.Point(204, 207);
             this.Rate_show.Name = "Rate_show";
-            this.Rate_show.Size = new System.Drawing.Size(44, 16);
+            this.Rate_show.Size = new System.Drawing.Size(30, 16);
             this.Rate_show.TabIndex = 5;
-            this.Rate_show.Text = "label5";
+            this.Rate_show.Text = "rate";
             // 
             // Term_show
             // 

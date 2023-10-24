@@ -22,7 +22,7 @@ namespace Bank.Forms
         {
             Summ_show.Text = public_class.End_Summ;
             Rate_show.Text = public_class.Rate + '%';
-            Term_show.Text = public_class.Term;
+            Term_show.Text = public_class.Term + " лет";
         }
     }
 }

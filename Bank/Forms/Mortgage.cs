@@ -48,6 +48,8 @@ namespace Bank
         {
             //public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
             public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
+            public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
+
             this.Hide();
             mortgage_counted counted = new mortgage_counted();
             counted.Show();
@@ -81,6 +83,36 @@ namespace Bank
         {
             rate.Text = "15.5%";
             rate.Visible = true;
+        }
+
+        private void years5_Click(object sender, EventArgs e)
+        {
+            term.Text = "5 лет";
+            term.Visible = true;
+        }
+
+        private void years10_Click(object sender, EventArgs e)
+        {
+            term.Text = "10 лет";
+            term.Visible = true;
+        }
+
+        private void years15_Click(object sender, EventArgs e)
+        {
+            term.Text = "15 лет";
+            term.Visible = true;
+        }
+
+        private void years20_Click(object sender, EventArgs e)
+        {
+            term.Text = "20 лет";
+            term.Visible = true;
+        }
+
+        private void years30_Click(object sender, EventArgs e)
+        {
+            term.Text = "30 лет";
+            term.Visible = true;
         }
     }
 }

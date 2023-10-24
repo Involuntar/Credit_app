@@ -52,11 +52,11 @@
             this.rate136 = new Bank.RoundButton();
             this.rate8 = new Bank.RoundButton();
             this.rate5 = new Bank.RoundButton();
-            this.roundButton5 = new Bank.RoundButton();
-            this.roundButton4 = new Bank.RoundButton();
-            this.roundButton3 = new Bank.RoundButton();
-            this.roundButton2 = new Bank.RoundButton();
-            this.roundButton1 = new Bank.RoundButton();
+            this.years30 = new Bank.RoundButton();
+            this.years20 = new Bank.RoundButton();
+            this.years15 = new Bank.RoundButton();
+            this.years10 = new Bank.RoundButton();
+            this.years5 = new Bank.RoundButton();
             this.SuspendLayout();
             // 
             // label1
@@ -188,6 +188,7 @@
             this.term.Size = new System.Drawing.Size(33, 16);
             this.term.TabIndex = 37;
             this.term.Text = "term";
+            this.term.Visible = false;
             // 
             // rate
             // 
@@ -424,104 +425,109 @@
             this.rate5.Text = "5 %";
             this.rate5.Click += new System.EventHandler(this.rate5_Click);
             // 
-            // roundButton5
+            // years30
             // 
-            this.roundButton5.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton5.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton5.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton5.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton5.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton5.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton5.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton5.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton5.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton5.ButtonRoundRadius = 30;
-            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton5.Location = new System.Drawing.Point(327, 291);
-            this.roundButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Size = new System.Drawing.Size(75, 33);
-            this.roundButton5.TabIndex = 19;
-            this.roundButton5.Text = "30 лет";
+            this.years30.BackColor = System.Drawing.Color.Gainsboro;
+            this.years30.BackColor2 = System.Drawing.Color.Silver;
+            this.years30.ButtonBorderColor = System.Drawing.Color.Black;
+            this.years30.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.years30.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.years30.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.years30.ButtonPressedColor = System.Drawing.Color.Red;
+            this.years30.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.years30.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.years30.ButtonRoundRadius = 30;
+            this.years30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.years30.Location = new System.Drawing.Point(327, 291);
+            this.years30.Margin = new System.Windows.Forms.Padding(4);
+            this.years30.Name = "years30";
+            this.years30.Size = new System.Drawing.Size(75, 33);
+            this.years30.TabIndex = 19;
+            this.years30.Text = "30 лет";
+            this.years30.Click += new System.EventHandler(this.years30_Click);
             // 
-            // roundButton4
+            // years20
             // 
-            this.roundButton4.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton4.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton4.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton4.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton4.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton4.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton4.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton4.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton4.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton4.ButtonRoundRadius = 30;
-            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton4.Location = new System.Drawing.Point(244, 291);
-            this.roundButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Size = new System.Drawing.Size(75, 33);
-            this.roundButton4.TabIndex = 18;
-            this.roundButton4.Text = "20 лет";
+            this.years20.BackColor = System.Drawing.Color.Gainsboro;
+            this.years20.BackColor2 = System.Drawing.Color.Silver;
+            this.years20.ButtonBorderColor = System.Drawing.Color.Black;
+            this.years20.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.years20.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.years20.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.years20.ButtonPressedColor = System.Drawing.Color.Red;
+            this.years20.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.years20.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.years20.ButtonRoundRadius = 30;
+            this.years20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.years20.Location = new System.Drawing.Point(244, 291);
+            this.years20.Margin = new System.Windows.Forms.Padding(4);
+            this.years20.Name = "years20";
+            this.years20.Size = new System.Drawing.Size(75, 33);
+            this.years20.TabIndex = 18;
+            this.years20.Text = "20 лет";
+            this.years20.Click += new System.EventHandler(this.years20_Click);
             // 
-            // roundButton3
+            // years15
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton3.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton3.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton3.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton3.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton3.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton3.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton3.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton3.ButtonRoundRadius = 30;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton3.Location = new System.Drawing.Point(161, 291);
-            this.roundButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(75, 33);
-            this.roundButton3.TabIndex = 17;
-            this.roundButton3.Text = "15 лет";
+            this.years15.BackColor = System.Drawing.Color.Gainsboro;
+            this.years15.BackColor2 = System.Drawing.Color.Silver;
+            this.years15.ButtonBorderColor = System.Drawing.Color.Black;
+            this.years15.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.years15.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.years15.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.years15.ButtonPressedColor = System.Drawing.Color.Red;
+            this.years15.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.years15.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.years15.ButtonRoundRadius = 30;
+            this.years15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.years15.Location = new System.Drawing.Point(161, 291);
+            this.years15.Margin = new System.Windows.Forms.Padding(4);
+            this.years15.Name = "years15";
+            this.years15.Size = new System.Drawing.Size(75, 33);
+            this.years15.TabIndex = 17;
+            this.years15.Text = "15 лет";
+            this.years15.Click += new System.EventHandler(this.years15_Click);
             // 
-            // roundButton2
+            // years10
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton2.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton2.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton2.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton2.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton2.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton2.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton2.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton2.ButtonRoundRadius = 30;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton2.Location = new System.Drawing.Point(79, 291);
-            this.roundButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(75, 33);
-            this.roundButton2.TabIndex = 16;
-            this.roundButton2.Text = "10 лет";
+            this.years10.BackColor = System.Drawing.Color.Gainsboro;
+            this.years10.BackColor2 = System.Drawing.Color.Silver;
+            this.years10.ButtonBorderColor = System.Drawing.Color.Black;
+            this.years10.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.years10.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.years10.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.years10.ButtonPressedColor = System.Drawing.Color.Red;
+            this.years10.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.years10.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.years10.ButtonRoundRadius = 30;
+            this.years10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.years10.Location = new System.Drawing.Point(79, 291);
+            this.years10.Margin = new System.Windows.Forms.Padding(4);
+            this.years10.Name = "years10";
+            this.years10.Size = new System.Drawing.Size(75, 33);
+            this.years10.TabIndex = 16;
+            this.years10.Text = "10 лет";
+            this.years10.Click += new System.EventHandler(this.years10_Click);
             // 
-            // roundButton1
+            // years5
             // 
-            this.roundButton1.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton1.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton1.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton1.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton1.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton1.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton1.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton1.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton1.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton1.ButtonRoundRadius = 30;
-            this.roundButton1.Location = new System.Drawing.Point(19, 291);
-            this.roundButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(52, 33);
-            this.roundButton1.TabIndex = 15;
-            this.roundButton1.Text = "5 лет";
+            this.years5.BackColor = System.Drawing.Color.Gainsboro;
+            this.years5.BackColor2 = System.Drawing.Color.Silver;
+            this.years5.ButtonBorderColor = System.Drawing.Color.Black;
+            this.years5.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.years5.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.years5.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.years5.ButtonPressedColor = System.Drawing.Color.Red;
+            this.years5.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.years5.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.years5.ButtonRoundRadius = 30;
+            this.years5.Location = new System.Drawing.Point(19, 291);
+            this.years5.Margin = new System.Windows.Forms.Padding(4);
+            this.years5.Name = "years5";
+            this.years5.Size = new System.Drawing.Size(52, 33);
+            this.years5.TabIndex = 15;
+            this.years5.Text = "5 лет";
+            this.years5.Click += new System.EventHandler(this.years5_Click);
             // 
             // Mortgage
             // 
@@ -547,11 +553,11 @@
             this.Controls.Add(this.rate136);
             this.Controls.Add(this.rate8);
             this.Controls.Add(this.rate5);
-            this.Controls.Add(this.roundButton5);
-            this.Controls.Add(this.roundButton4);
-            this.Controls.Add(this.roundButton3);
-            this.Controls.Add(this.roundButton2);
-            this.Controls.Add(this.roundButton1);
+            this.Controls.Add(this.years30);
+            this.Controls.Add(this.years20);
+            this.Controls.Add(this.years15);
+            this.Controls.Add(this.years10);
+            this.Controls.Add(this.years5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
@@ -575,11 +581,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private RoundButton roundButton1;
-        private RoundButton roundButton2;
-        private RoundButton roundButton3;
-        private RoundButton roundButton4;
-        private RoundButton roundButton5;
+        private RoundButton years5;
+        private RoundButton years10;
+        private RoundButton years15;
+        private RoundButton years20;
+        private RoundButton years30;
         private RoundButton rate5;
         private RoundButton rate8;
         private RoundButton rate136;

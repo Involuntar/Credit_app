@@ -46,13 +46,20 @@ namespace Bank
 
         private void Mortgage_count_Click(object sender, EventArgs e)
         {
-            //public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
-            public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
-            public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
+            try
+            {
+                public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
+                public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
+                public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
 
-            this.Hide();
-            mortgage_counted counted = new mortgage_counted();
-            counted.Show();
+                this.Hide();
+                mortgage_counted counted = new mortgage_counted();
+                counted.Show();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Введите целое число", "Неверная сумма", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void rate8_Click(object sender, EventArgs e)

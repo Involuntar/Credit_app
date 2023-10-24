@@ -40,7 +40,7 @@
             this.name = new System.Windows.Forms.TextBox();
             this.middlename = new System.Windows.Forms.TextBox();
             this.lastname = new System.Windows.Forms.TextBox();
-            this.credit = new Bank.RoundButton();
+            this.reg = new Bank.RoundButton();
             this.Back = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -166,27 +166,27 @@
             this.lastname.Size = new System.Drawing.Size(200, 22);
             this.lastname.TabIndex = 17;
             // 
-            // credit
+            // reg
             // 
-            this.credit.BackColor = System.Drawing.Color.DarkGray;
-            this.credit.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.credit.ButtonBorderColor = System.Drawing.Color.Black;
-            this.credit.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
-            this.credit.ButtonHighlightColor2 = System.Drawing.Color.SaddleBrown;
-            this.credit.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.credit.ButtonPressedColor = System.Drawing.Color.Chocolate;
-            this.credit.ButtonPressedColor2 = System.Drawing.Color.Chocolate;
-            this.credit.ButtonPressedForeColor = System.Drawing.Color.Black;
-            this.credit.ButtonRoundRadius = 30;
-            this.credit.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.credit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.credit.Location = new System.Drawing.Point(297, 377);
-            this.credit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.credit.Name = "credit";
-            this.credit.Size = new System.Drawing.Size(352, 76);
-            this.credit.TabIndex = 14;
-            this.credit.Text = "Зарегистрироваться";
-            this.credit.Click += new System.EventHandler(this.credit_Click);
+            this.reg.BackColor = System.Drawing.Color.DarkGray;
+            this.reg.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.reg.ButtonBorderColor = System.Drawing.Color.Black;
+            this.reg.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
+            this.reg.ButtonHighlightColor2 = System.Drawing.Color.SaddleBrown;
+            this.reg.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.reg.ButtonPressedColor = System.Drawing.Color.Chocolate;
+            this.reg.ButtonPressedColor2 = System.Drawing.Color.Chocolate;
+            this.reg.ButtonPressedForeColor = System.Drawing.Color.Black;
+            this.reg.ButtonRoundRadius = 30;
+            this.reg.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.reg.Location = new System.Drawing.Point(297, 377);
+            this.reg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reg.Name = "reg";
+            this.reg.Size = new System.Drawing.Size(352, 76);
+            this.reg.TabIndex = 14;
+            this.reg.Text = "Зарегистрироваться";
+            this.reg.Click += new System.EventHandler(this.credit_Click);
             // 
             // Back
             // 
@@ -244,7 +244,7 @@
             this.Controls.Add(this.lastname);
             this.Controls.Add(this.middlename);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.credit);
+            this.Controls.Add(this.reg);
             this.Controls.Add(this.confirm_password);
             this.Controls.Add(this.pswrd_2);
             this.Controls.Add(this.new_password);
@@ -274,7 +274,7 @@
         private System.Windows.Forms.TextBox new_password;
         private System.Windows.Forms.Label pswrd_2;
         private System.Windows.Forms.TextBox confirm_password;
-        private RoundButton credit;
+        private RoundButton reg;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox middlename;
         private System.Windows.Forms.TextBox lastname;

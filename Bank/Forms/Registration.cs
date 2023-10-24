@@ -66,7 +66,7 @@ namespace Bank
             {
                 MessageBox.Show("Такой логин уже используется", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            conn.Close();
         }
 
         private void Back_Click(object sender, EventArgs e)

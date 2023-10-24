@@ -94,7 +94,9 @@ namespace Bank
                 {
 
                 }
+                con.Close();
             }
+            
             else
             {
                 MessageBox.Show("Chose your role", "Recomendation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

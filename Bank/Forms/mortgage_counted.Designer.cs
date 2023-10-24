@@ -125,6 +125,7 @@
             this.Controls.Add(this.Send_req);
             this.Name = "mortgage_counted";
             this.Text = "mortgage_counted";
+            this.Load += new System.EventHandler(this.mortgage_counted_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
 ﻿using Bank.Data;
+using Bank.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,9 +46,11 @@ namespace Bank
 
         private void Mortgage_count_Click(object sender, EventArgs e)
         {
-            public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
-            public_class.Rate = (rate.Text).Substring(0, 0);
-
+            //public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
+            public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
+            this.Hide();
+            mortgage_counted counted = new mortgage_counted();
+            counted.Show();
         }
 
         private void rate8_Click(object sender, EventArgs e)

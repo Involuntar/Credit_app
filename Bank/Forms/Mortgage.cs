@@ -131,5 +131,29 @@ namespace Bank
             UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.1));
             firstpay.Text = Convert.ToString(first_payment);
         }
+
+        private void perc15_Click(object sender, EventArgs e)
+        {
+            UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.15));
+            firstpay.Text = Convert.ToString(first_payment);
+        }
+
+        private void perc20_Click(object sender, EventArgs e)
+        {
+            UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.2));
+            firstpay.Text = Convert.ToString(first_payment);
+        }
+
+        private void perc25_Click(object sender, EventArgs e)
+        {
+            UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.25));
+            firstpay.Text = Convert.ToString(first_payment);
+        }
+
+        private void perc30_Click(object sender, EventArgs e)
+        {
+            UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.3));
+            firstpay.Text = Convert.ToString(first_payment);
+        }
     }
 }

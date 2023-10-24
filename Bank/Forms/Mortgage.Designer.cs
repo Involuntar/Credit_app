@@ -241,6 +241,7 @@
             this.perc30.Size = new System.Drawing.Size(65, 36);
             this.perc30.TabIndex = 29;
             this.perc30.Text = "30%";
+            this.perc30.Click += new System.EventHandler(this.perc30_Click);
             // 
             // perc25
             // 
@@ -261,6 +262,7 @@
             this.perc25.Size = new System.Drawing.Size(65, 36);
             this.perc25.TabIndex = 28;
             this.perc25.Text = "25%";
+            this.perc25.Click += new System.EventHandler(this.perc25_Click);
             // 
             // perc20
             // 
@@ -281,6 +283,7 @@
             this.perc20.Size = new System.Drawing.Size(65, 36);
             this.perc20.TabIndex = 27;
             this.perc20.Text = "20%";
+            this.perc20.Click += new System.EventHandler(this.perc20_Click);
             // 
             // perc15
             // 
@@ -301,6 +304,7 @@
             this.perc15.Size = new System.Drawing.Size(65, 36);
             this.perc15.TabIndex = 26;
             this.perc15.Text = "15%";
+            this.perc15.Click += new System.EventHandler(this.perc15_Click);
             // 
             // perc10
             // 

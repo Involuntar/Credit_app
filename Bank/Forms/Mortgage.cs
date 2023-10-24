@@ -52,6 +52,7 @@ namespace Bank
                 public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
                 public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
                 UInt32 first_payment = Convert.ToUInt32(firstpay.Text);
+                public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
 
                 this.Hide();
                 mortgage_counted counted = new mortgage_counted();
@@ -77,19 +78,19 @@ namespace Bank
 
         private void rate136_Click(object sender, EventArgs e)
         {
-            rate.Text = "13.6%";
+            rate.Text = "13,6%";
             rate.Visible = true;
         }
 
         private void rate142_Click(object sender, EventArgs e)
         {
-            rate.Text = "14.2%";
+            rate.Text = "14,2%";
             rate.Visible = true;
         }
 
         private void rate155_Click(object sender, EventArgs e)
         {
-            rate.Text = "15.5%";
+            rate.Text = "15,5%";
             rate.Visible = true;
         }
 
@@ -127,7 +128,8 @@ namespace Bank
         {
             /*firstpay.Text = Convert.ToString(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) 
              * + (Convert.ToUInt32(Summ_morts.Text) * 0.1)));*/ // добавление 10% процентов к сумме ипотеки
-            firstpay.Text = Convert.ToString(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.1));
+            UInt32 first_payment = Convert.ToUInt32(Math.Ceiling(Convert.ToUInt32(Summ_morts.Text) * 0.1));
+            firstpay.Text = Convert.ToString(first_payment);
         }
     }
 }

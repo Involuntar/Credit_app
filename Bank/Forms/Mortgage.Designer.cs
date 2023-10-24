@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Summ_morts = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.firstpay = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,11 +42,11 @@
             this.term = new System.Windows.Forms.Label();
             this.rate = new System.Windows.Forms.Label();
             this.Mortgage_count = new Bank.RoundButton();
-            this.roundButton15 = new Bank.RoundButton();
-            this.roundButton14 = new Bank.RoundButton();
-            this.roundButton13 = new Bank.RoundButton();
-            this.roundButton12 = new Bank.RoundButton();
-            this.roundButton11 = new Bank.RoundButton();
+            this.perc30 = new Bank.RoundButton();
+            this.perc25 = new Bank.RoundButton();
+            this.perc20 = new Bank.RoundButton();
+            this.perc15 = new Bank.RoundButton();
+            this.perc10 = new Bank.RoundButton();
             this.rate155 = new Bank.RoundButton();
             this.rate142 = new Bank.RoundButton();
             this.rate136 = new Bank.RoundButton();
@@ -91,13 +91,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Первоначальный взнос";
             // 
-            // textBox2
+            // firstpay
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 148);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(405, 22);
-            this.textBox2.TabIndex = 7;
+            this.firstpay.Location = new System.Drawing.Point(16, 148);
+            this.firstpay.Margin = new System.Windows.Forms.Padding(4);
+            this.firstpay.Name = "firstpay";
+            this.firstpay.Size = new System.Drawing.Size(405, 22);
+            this.firstpay.TabIndex = 7;
             // 
             // label3
             // 
@@ -222,105 +222,106 @@
             this.Mortgage_count.Text = "Рассчитать";
             this.Mortgage_count.Click += new System.EventHandler(this.Mortgage_count_Click);
             // 
-            // roundButton15
+            // perc30
             // 
-            this.roundButton15.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton15.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton15.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton15.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton15.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton15.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton15.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton15.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton15.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton15.ButtonRoundRadius = 30;
-            this.roundButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton15.Location = new System.Drawing.Point(315, 180);
-            this.roundButton15.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton15.Name = "roundButton15";
-            this.roundButton15.Size = new System.Drawing.Size(65, 36);
-            this.roundButton15.TabIndex = 29;
-            this.roundButton15.Text = "30%";
+            this.perc30.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc30.BackColor2 = System.Drawing.Color.Silver;
+            this.perc30.ButtonBorderColor = System.Drawing.Color.Black;
+            this.perc30.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.perc30.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.perc30.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.perc30.ButtonPressedColor = System.Drawing.Color.Red;
+            this.perc30.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.perc30.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.perc30.ButtonRoundRadius = 30;
+            this.perc30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.perc30.Location = new System.Drawing.Point(315, 180);
+            this.perc30.Margin = new System.Windows.Forms.Padding(4);
+            this.perc30.Name = "perc30";
+            this.perc30.Size = new System.Drawing.Size(65, 36);
+            this.perc30.TabIndex = 29;
+            this.perc30.Text = "30%";
             // 
-            // roundButton14
+            // perc25
             // 
-            this.roundButton14.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton14.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton14.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton14.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton14.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton14.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton14.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton14.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton14.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton14.ButtonRoundRadius = 30;
-            this.roundButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton14.Location = new System.Drawing.Point(241, 180);
-            this.roundButton14.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.Size = new System.Drawing.Size(65, 36);
-            this.roundButton14.TabIndex = 28;
-            this.roundButton14.Text = "25%";
+            this.perc25.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc25.BackColor2 = System.Drawing.Color.Silver;
+            this.perc25.ButtonBorderColor = System.Drawing.Color.Black;
+            this.perc25.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.perc25.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.perc25.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.perc25.ButtonPressedColor = System.Drawing.Color.Red;
+            this.perc25.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.perc25.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.perc25.ButtonRoundRadius = 30;
+            this.perc25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.perc25.Location = new System.Drawing.Point(241, 180);
+            this.perc25.Margin = new System.Windows.Forms.Padding(4);
+            this.perc25.Name = "perc25";
+            this.perc25.Size = new System.Drawing.Size(65, 36);
+            this.perc25.TabIndex = 28;
+            this.perc25.Text = "25%";
             // 
-            // roundButton13
+            // perc20
             // 
-            this.roundButton13.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton13.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton13.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton13.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton13.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton13.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton13.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton13.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton13.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton13.ButtonRoundRadius = 30;
-            this.roundButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton13.Location = new System.Drawing.Point(168, 180);
-            this.roundButton13.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton13.Name = "roundButton13";
-            this.roundButton13.Size = new System.Drawing.Size(65, 36);
-            this.roundButton13.TabIndex = 27;
-            this.roundButton13.Text = "20%";
+            this.perc20.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc20.BackColor2 = System.Drawing.Color.Silver;
+            this.perc20.ButtonBorderColor = System.Drawing.Color.Black;
+            this.perc20.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.perc20.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.perc20.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.perc20.ButtonPressedColor = System.Drawing.Color.Red;
+            this.perc20.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.perc20.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.perc20.ButtonRoundRadius = 30;
+            this.perc20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.perc20.Location = new System.Drawing.Point(168, 180);
+            this.perc20.Margin = new System.Windows.Forms.Padding(4);
+            this.perc20.Name = "perc20";
+            this.perc20.Size = new System.Drawing.Size(65, 36);
+            this.perc20.TabIndex = 27;
+            this.perc20.Text = "20%";
             // 
-            // roundButton12
+            // perc15
             // 
-            this.roundButton12.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton12.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton12.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton12.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton12.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton12.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton12.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton12.ButtonRoundRadius = 30;
-            this.roundButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton12.Location = new System.Drawing.Point(95, 180);
-            this.roundButton12.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.Size = new System.Drawing.Size(65, 36);
-            this.roundButton12.TabIndex = 26;
-            this.roundButton12.Text = "15%";
+            this.perc15.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc15.BackColor2 = System.Drawing.Color.Silver;
+            this.perc15.ButtonBorderColor = System.Drawing.Color.Black;
+            this.perc15.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.perc15.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.perc15.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.perc15.ButtonPressedColor = System.Drawing.Color.Red;
+            this.perc15.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.perc15.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.perc15.ButtonRoundRadius = 30;
+            this.perc15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.perc15.Location = new System.Drawing.Point(95, 180);
+            this.perc15.Margin = new System.Windows.Forms.Padding(4);
+            this.perc15.Name = "perc15";
+            this.perc15.Size = new System.Drawing.Size(65, 36);
+            this.perc15.TabIndex = 26;
+            this.perc15.Text = "15%";
             // 
-            // roundButton11
+            // perc10
             // 
-            this.roundButton11.BackColor = System.Drawing.Color.Gainsboro;
-            this.roundButton11.BackColor2 = System.Drawing.Color.Silver;
-            this.roundButton11.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton11.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton11.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton11.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton11.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton11.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton11.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton11.ButtonRoundRadius = 30;
-            this.roundButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton11.Location = new System.Drawing.Point(21, 180);
-            this.roundButton11.Margin = new System.Windows.Forms.Padding(4);
-            this.roundButton11.Name = "roundButton11";
-            this.roundButton11.Size = new System.Drawing.Size(65, 36);
-            this.roundButton11.TabIndex = 25;
-            this.roundButton11.Text = "10%";
+            this.perc10.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc10.BackColor2 = System.Drawing.Color.Silver;
+            this.perc10.ButtonBorderColor = System.Drawing.Color.Black;
+            this.perc10.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.perc10.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.perc10.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.perc10.ButtonPressedColor = System.Drawing.Color.Red;
+            this.perc10.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.perc10.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.perc10.ButtonRoundRadius = 30;
+            this.perc10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.perc10.Location = new System.Drawing.Point(21, 180);
+            this.perc10.Margin = new System.Windows.Forms.Padding(4);
+            this.perc10.Name = "perc10";
+            this.perc10.Size = new System.Drawing.Size(65, 36);
+            this.perc10.TabIndex = 25;
+            this.perc10.Text = "10%";
+            this.perc10.Click += new System.EventHandler(this.perc10_Click);
             // 
             // rate155
             // 
@@ -543,11 +544,11 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.roundButton15);
-            this.Controls.Add(this.roundButton14);
-            this.Controls.Add(this.roundButton13);
-            this.Controls.Add(this.roundButton12);
-            this.Controls.Add(this.roundButton11);
+            this.Controls.Add(this.perc30);
+            this.Controls.Add(this.perc25);
+            this.Controls.Add(this.perc20);
+            this.Controls.Add(this.perc15);
+            this.Controls.Add(this.perc10);
             this.Controls.Add(this.rate155);
             this.Controls.Add(this.rate142);
             this.Controls.Add(this.rate136);
@@ -560,7 +561,7 @@
             this.Controls.Add(this.years5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.firstpay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Summ_morts);
             this.Controls.Add(this.label1);
@@ -578,7 +579,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Summ_morts;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox firstpay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private RoundButton years5;
@@ -591,11 +592,11 @@
         private RoundButton rate136;
         private RoundButton rate142;
         private RoundButton rate155;
-        private RoundButton roundButton11;
-        private RoundButton roundButton12;
-        private RoundButton roundButton13;
-        private RoundButton roundButton14;
-        private RoundButton roundButton15;
+        private RoundButton perc10;
+        private RoundButton perc15;
+        private RoundButton perc20;
+        private RoundButton perc25;
+        private RoundButton perc30;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

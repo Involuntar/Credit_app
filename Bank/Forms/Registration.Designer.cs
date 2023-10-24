@@ -147,39 +147,39 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(219, 114);
+            this.name.Location = new System.Drawing.Point(218, 186);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(200, 22);
             this.name.TabIndex = 15;
             // 
             // middlename
             // 
-            this.middlename.Location = new System.Drawing.Point(219, 186);
+            this.middlename.Location = new System.Drawing.Point(218, 250);
             this.middlename.Name = "middlename";
             this.middlename.Size = new System.Drawing.Size(200, 22);
             this.middlename.TabIndex = 16;
             // 
             // lastname
             // 
-            this.lastname.Location = new System.Drawing.Point(219, 250);
+            this.lastname.Location = new System.Drawing.Point(218, 114);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(200, 22);
             this.lastname.TabIndex = 17;
             // 
             // reg
             // 
-            this.reg.BackColor = System.Drawing.Color.DarkGray;
-            this.reg.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.reg.ButtonBorderColor = System.Drawing.Color.Black;
+            this.reg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.reg.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.reg.ButtonBorderColor = System.Drawing.Color.White;
             this.reg.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
             this.reg.ButtonHighlightColor2 = System.Drawing.Color.SaddleBrown;
-            this.reg.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.reg.ButtonHighlightForeColor = System.Drawing.Color.White;
             this.reg.ButtonPressedColor = System.Drawing.Color.Chocolate;
             this.reg.ButtonPressedColor2 = System.Drawing.Color.Chocolate;
-            this.reg.ButtonPressedForeColor = System.Drawing.Color.Black;
+            this.reg.ButtonPressedForeColor = System.Drawing.Color.White;
             this.reg.ButtonRoundRadius = 30;
             this.reg.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.reg.ForeColor = System.Drawing.Color.White;
             this.reg.Location = new System.Drawing.Point(297, 377);
             this.reg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reg.Name = "reg";
@@ -190,12 +190,15 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(980, 11);
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Back.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Back.ForeColor = System.Drawing.Color.White;
+            this.Back.Location = new System.Drawing.Point(960, 11);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(95, 35);
             this.Back.TabIndex = 18;
             this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // label5
@@ -203,7 +206,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.label5.Location = new System.Drawing.Point(214, 74);
+            this.label5.Location = new System.Drawing.Point(213, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 29);
             this.label5.TabIndex = 19;
@@ -214,7 +217,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.label6.Location = new System.Drawing.Point(214, 142);
+            this.label6.Location = new System.Drawing.Point(213, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 29);
             this.label6.TabIndex = 20;
@@ -225,7 +228,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.label7.Location = new System.Drawing.Point(224, 215);
+            this.label7.Location = new System.Drawing.Point(213, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 29);
             this.label7.TabIndex = 21;

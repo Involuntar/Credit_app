@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Send_req = new System.Windows.Forms.Button();
             this.Credit_summ = new System.Windows.Forms.Label();
             this.Rate = new System.Windows.Forms.Label();
             this.Term = new System.Windows.Forms.Label();
             this.Summ_show = new System.Windows.Forms.Label();
             this.Rate_show = new System.Windows.Forms.Label();
             this.Term_show = new System.Windows.Forms.Label();
-            this.Back = new System.Windows.Forms.Button();
+            this.Back = new Bank.RoundButton();
+            this.Send_req = new Bank.RoundButton();
             this.SuspendLayout();
-            // 
-            // Send_req
-            // 
-            this.Send_req.Location = new System.Drawing.Point(85, 369);
-            this.Send_req.Name = "Send_req";
-            this.Send_req.Size = new System.Drawing.Size(130, 44);
-            this.Send_req.TabIndex = 0;
-            this.Send_req.Text = "Оставить\r\nзаявку";
-            this.Send_req.UseVisualStyleBackColor = true;
             // 
             // Credit_summ
             // 
@@ -103,12 +94,41 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(227, 369);
+            this.Back.BackColor = System.Drawing.Color.Gainsboro;
+            this.Back.BackColor2 = System.Drawing.Color.Silver;
+            this.Back.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Back.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Back.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Back.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Back.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Back.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Back.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Back.ButtonRoundRadius = 30;
+            this.Back.Location = new System.Drawing.Point(234, 369);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(108, 44);
-            this.Back.TabIndex = 7;
-            this.Back.Text = "Вернуться\r\nк расчёту";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Size = new System.Drawing.Size(100, 40);
+            this.Back.TabIndex = 9;
+            this.Back.Text = "Вернуться к расчёту";
+            this.Back.Click += new System.EventHandler(this.Back_Click_1);
+            // 
+            // Send_req
+            // 
+            this.Send_req.BackColor = System.Drawing.Color.Gainsboro;
+            this.Send_req.BackColor2 = System.Drawing.Color.Silver;
+            this.Send_req.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Send_req.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Send_req.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Send_req.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Send_req.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Send_req.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Send_req.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Send_req.ButtonRoundRadius = 30;
+            this.Send_req.Location = new System.Drawing.Point(79, 369);
+            this.Send_req.Name = "Send_req";
+            this.Send_req.Size = new System.Drawing.Size(100, 40);
+            this.Send_req.TabIndex = 8;
+            this.Send_req.Text = "Оставить заявку";
+            this.Send_req.Click += new System.EventHandler(this.Send_req_Click);
             // 
             // mortgage_counted
             // 
@@ -116,13 +136,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Back);
+            this.Controls.Add(this.Send_req);
             this.Controls.Add(this.Term_show);
             this.Controls.Add(this.Rate_show);
             this.Controls.Add(this.Summ_show);
             this.Controls.Add(this.Term);
             this.Controls.Add(this.Rate);
             this.Controls.Add(this.Credit_summ);
-            this.Controls.Add(this.Send_req);
             this.Name = "mortgage_counted";
             this.Text = "mortgage_counted";
             this.Load += new System.EventHandler(this.mortgage_counted_Load);
@@ -132,14 +152,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Send_req;
         private System.Windows.Forms.Label Credit_summ;
         private System.Windows.Forms.Label Rate;
         private System.Windows.Forms.Label Term;
         private System.Windows.Forms.Label Summ_show;
         private System.Windows.Forms.Label Rate_show;
         private System.Windows.Forms.Label Term_show;
-        private System.Windows.Forms.Button Back;
+        private RoundButton Send_req;
+        private RoundButton Back;
     }
 }

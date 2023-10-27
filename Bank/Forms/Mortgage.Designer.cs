@@ -55,6 +55,8 @@
             this.years15 = new Bank.RoundButton();
             this.years10 = new Bank.RoundButton();
             this.years5 = new Bank.RoundButton();
+            this.Annuit = new System.Windows.Forms.RadioButton();
+            this.Diff = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +74,7 @@
             // Summ_morts
             // 
             this.Summ_morts.Location = new System.Drawing.Point(16, 55);
-            this.Summ_morts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Summ_morts.Margin = new System.Windows.Forms.Padding(4);
             this.Summ_morts.Name = "Summ_morts";
             this.Summ_morts.Size = new System.Drawing.Size(405, 22);
             this.Summ_morts.TabIndex = 5;
@@ -92,7 +94,7 @@
             // firstpay
             // 
             this.firstpay.Location = new System.Drawing.Point(16, 148);
-            this.firstpay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstpay.Margin = new System.Windows.Forms.Padding(4);
             this.firstpay.Name = "firstpay";
             this.firstpay.Size = new System.Drawing.Size(405, 22);
             this.firstpay.TabIndex = 7;
@@ -190,7 +192,7 @@
             this.Mortgage_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Mortgage_count.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Mortgage_count.Location = new System.Drawing.Point(21, 559);
-            this.Mortgage_count.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Mortgage_count.Margin = new System.Windows.Forms.Padding(4);
             this.Mortgage_count.Name = "Mortgage_count";
             this.Mortgage_count.Size = new System.Drawing.Size(176, 55);
             this.Mortgage_count.TabIndex = 33;
@@ -211,7 +213,7 @@
             this.perc30.ButtonRoundRadius = 30;
             this.perc30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc30.Location = new System.Drawing.Point(315, 180);
-            this.perc30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perc30.Margin = new System.Windows.Forms.Padding(4);
             this.perc30.Name = "perc30";
             this.perc30.Size = new System.Drawing.Size(65, 36);
             this.perc30.TabIndex = 29;
@@ -232,7 +234,7 @@
             this.perc25.ButtonRoundRadius = 30;
             this.perc25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc25.Location = new System.Drawing.Point(241, 180);
-            this.perc25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perc25.Margin = new System.Windows.Forms.Padding(4);
             this.perc25.Name = "perc25";
             this.perc25.Size = new System.Drawing.Size(65, 36);
             this.perc25.TabIndex = 28;
@@ -253,7 +255,7 @@
             this.perc20.ButtonRoundRadius = 30;
             this.perc20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc20.Location = new System.Drawing.Point(168, 180);
-            this.perc20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perc20.Margin = new System.Windows.Forms.Padding(4);
             this.perc20.Name = "perc20";
             this.perc20.Size = new System.Drawing.Size(65, 36);
             this.perc20.TabIndex = 27;
@@ -274,7 +276,7 @@
             this.perc15.ButtonRoundRadius = 30;
             this.perc15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc15.Location = new System.Drawing.Point(95, 180);
-            this.perc15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perc15.Margin = new System.Windows.Forms.Padding(4);
             this.perc15.Name = "perc15";
             this.perc15.Size = new System.Drawing.Size(65, 36);
             this.perc15.TabIndex = 26;
@@ -295,7 +297,7 @@
             this.perc10.ButtonRoundRadius = 30;
             this.perc10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc10.Location = new System.Drawing.Point(21, 180);
-            this.perc10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perc10.Margin = new System.Windows.Forms.Padding(4);
             this.perc10.Name = "perc10";
             this.perc10.Size = new System.Drawing.Size(65, 36);
             this.perc10.TabIndex = 25;
@@ -316,7 +318,7 @@
             this.rate155.ButtonRoundRadius = 30;
             this.rate155.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate155.Location = new System.Drawing.Point(304, 409);
-            this.rate155.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rate155.Margin = new System.Windows.Forms.Padding(4);
             this.rate155.Name = "rate155";
             this.rate155.Size = new System.Drawing.Size(75, 33);
             this.rate155.TabIndex = 24;
@@ -337,7 +339,7 @@
             this.rate142.ButtonRoundRadius = 30;
             this.rate142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate142.Location = new System.Drawing.Point(221, 409);
-            this.rate142.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rate142.Margin = new System.Windows.Forms.Padding(4);
             this.rate142.Name = "rate142";
             this.rate142.Size = new System.Drawing.Size(75, 33);
             this.rate142.TabIndex = 23;
@@ -358,7 +360,7 @@
             this.rate136.ButtonRoundRadius = 30;
             this.rate136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate136.Location = new System.Drawing.Point(139, 409);
-            this.rate136.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rate136.Margin = new System.Windows.Forms.Padding(4);
             this.rate136.Name = "rate136";
             this.rate136.Size = new System.Drawing.Size(75, 33);
             this.rate136.TabIndex = 22;
@@ -378,7 +380,7 @@
             this.rate8.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate8.ButtonRoundRadius = 30;
             this.rate8.Location = new System.Drawing.Point(79, 409);
-            this.rate8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rate8.Margin = new System.Windows.Forms.Padding(4);
             this.rate8.Name = "rate8";
             this.rate8.Size = new System.Drawing.Size(52, 33);
             this.rate8.TabIndex = 21;
@@ -398,7 +400,7 @@
             this.rate5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate5.ButtonRoundRadius = 30;
             this.rate5.Location = new System.Drawing.Point(19, 409);
-            this.rate5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rate5.Margin = new System.Windows.Forms.Padding(4);
             this.rate5.Name = "rate5";
             this.rate5.Size = new System.Drawing.Size(52, 33);
             this.rate5.TabIndex = 20;
@@ -419,7 +421,7 @@
             this.years30.ButtonRoundRadius = 30;
             this.years30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.years30.Location = new System.Drawing.Point(327, 290);
-            this.years30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.years30.Margin = new System.Windows.Forms.Padding(4);
             this.years30.Name = "years30";
             this.years30.Size = new System.Drawing.Size(75, 33);
             this.years30.TabIndex = 19;
@@ -440,7 +442,7 @@
             this.years20.ButtonRoundRadius = 30;
             this.years20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.years20.Location = new System.Drawing.Point(244, 290);
-            this.years20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.years20.Margin = new System.Windows.Forms.Padding(4);
             this.years20.Name = "years20";
             this.years20.Size = new System.Drawing.Size(75, 33);
             this.years20.TabIndex = 18;
@@ -461,7 +463,7 @@
             this.years15.ButtonRoundRadius = 30;
             this.years15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.years15.Location = new System.Drawing.Point(161, 290);
-            this.years15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.years15.Margin = new System.Windows.Forms.Padding(4);
             this.years15.Name = "years15";
             this.years15.Size = new System.Drawing.Size(75, 33);
             this.years15.TabIndex = 17;
@@ -482,7 +484,7 @@
             this.years10.ButtonRoundRadius = 30;
             this.years10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.years10.Location = new System.Drawing.Point(79, 290);
-            this.years10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.years10.Margin = new System.Windows.Forms.Padding(4);
             this.years10.Name = "years10";
             this.years10.Size = new System.Drawing.Size(75, 33);
             this.years10.TabIndex = 16;
@@ -502,12 +504,34 @@
             this.years5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years5.ButtonRoundRadius = 30;
             this.years5.Location = new System.Drawing.Point(19, 290);
-            this.years5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.years5.Margin = new System.Windows.Forms.Padding(4);
             this.years5.Name = "years5";
             this.years5.Size = new System.Drawing.Size(52, 33);
             this.years5.TabIndex = 15;
             this.years5.Text = "5 лет";
             this.years5.Click += new System.EventHandler(this.years5_Click);
+            // 
+            // Annuit
+            // 
+            this.Annuit.AutoSize = true;
+            this.Annuit.Location = new System.Drawing.Point(21, 520);
+            this.Annuit.Name = "Annuit";
+            this.Annuit.Size = new System.Drawing.Size(116, 20);
+            this.Annuit.TabIndex = 39;
+            this.Annuit.TabStop = true;
+            this.Annuit.Text = "Аннуитетный";
+            this.Annuit.UseVisualStyleBackColor = true;
+            // 
+            // Diff
+            // 
+            this.Diff.AutoSize = true;
+            this.Diff.Location = new System.Drawing.Point(159, 520);
+            this.Diff.Name = "Diff";
+            this.Diff.Size = new System.Drawing.Size(180, 20);
+            this.Diff.TabIndex = 40;
+            this.Diff.TabStop = true;
+            this.Diff.Text = "Дифференцированный";
+            this.Diff.UseVisualStyleBackColor = true;
             // 
             // Mortgage
             // 
@@ -515,6 +539,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(1073, 629);
+            this.Controls.Add(this.Diff);
+            this.Controls.Add(this.Annuit);
             this.Controls.Add(this.rate);
             this.Controls.Add(this.term);
             this.Controls.Add(this.Exit);
@@ -542,7 +568,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Summ_morts);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mortgage";
             this.Text = "Mortgage";
             this.Load += new System.EventHandler(this.Mortgage_Load);
@@ -580,5 +606,7 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Label term;
         private System.Windows.Forms.Label rate;
+        private System.Windows.Forms.RadioButton Annuit;
+        private System.Windows.Forms.RadioButton Diff;
     }
 }

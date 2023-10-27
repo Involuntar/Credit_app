@@ -55,16 +55,17 @@ namespace Bank
                 public_class.init_fee = firstpay.Text;
                 if (Annuit.Checked == true)
                 {
-                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
-                    public_class.credit_type_id = "1";
+                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * (Double.Parse(public_class.Rate) + 1)) - Convert.ToDouble(first_payment));
+                    public_class.credit_type_id = "3";
+                    public_class.monthly_pay = Convert.ToString(Math.Ceiling(Convert.ToDouble(public_class.End_Summ) / (12 * Convert.ToUInt16(public_class.Term))));
                     this.Hide();
                     mortgage_counted counted = new mortgage_counted();
                     counted.Show();
                 }
                 else if (Diff.Checked == true)
                 {
-                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
-                    public_class.credit_type_id = "2";
+                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * (Double.Parse(public_class.Rate) - 1)) - Convert.ToDouble(first_payment));
+                    public_class.credit_type_id = "4";
                     this.Hide();
                     mortgage_counted counted = new mortgage_counted();
                     counted.Show();

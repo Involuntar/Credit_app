@@ -16,5 +16,6 @@ namespace Bank.Data
         public static string Login;
         public static string Password;
         public static string credit_type_id;
+        public static string monthly_pay;
     }
 }

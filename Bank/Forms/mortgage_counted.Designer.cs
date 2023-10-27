@@ -36,7 +36,6 @@
             this.Term_show = new System.Windows.Forms.Label();
             this.Back = new Bank.RoundButton();
             this.Send_req = new Bank.RoundButton();
-            this.roundButton12 = new Bank.RoundButton();
             this.SuspendLayout();
             // 
             // Credit_summ
@@ -139,33 +138,11 @@
             this.Send_req.Text = "Оставить заявку";
             this.Send_req.Click += new System.EventHandler(this.Send_req_Click);
             // 
-            // roundButton12
-            // 
-            this.roundButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.roundButton12.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.roundButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.roundButton12.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton12.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton12.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton12.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton12.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton12.ButtonRoundRadius = 30;
-            this.roundButton12.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.roundButton12.ForeColor = System.Drawing.Color.White;
-            this.roundButton12.Location = new System.Drawing.Point(333, 274);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.Size = new System.Drawing.Size(173, 58);
-            this.roundButton12.TabIndex = 26;
-            this.roundButton12.Text = "Оставить заявку";
-            // 
             // mortgage_counted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.roundButton12);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Send_req);
             this.Controls.Add(this.Term_show);
@@ -192,6 +169,5 @@
         private System.Windows.Forms.Label Term_show;
         private RoundButton Send_req;
         private RoundButton Back;
-        private RoundButton roundButton12;
     }
 }

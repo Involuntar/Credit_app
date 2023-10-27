@@ -55,5 +55,20 @@ namespace Bank.Forms
             cmd.ExecuteScalar();
             MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Term_show_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Summ_show_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

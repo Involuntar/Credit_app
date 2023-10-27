@@ -359,24 +359,30 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(735, 11);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Exit.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(725, 11);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(56, 19);
+            this.Exit.Size = new System.Drawing.Size(66, 21);
             this.Exit.TabIndex = 26;
             this.Exit.Text = "Выход";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(674, 11);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Back.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Back.ForeColor = System.Drawing.Color.White;
+            this.Back.Location = new System.Drawing.Point(654, 11);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(56, 19);
+            this.Back.Size = new System.Drawing.Size(67, 21);
             this.Back.TabIndex = 27;
             this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Credit

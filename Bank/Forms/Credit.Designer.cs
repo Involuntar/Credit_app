@@ -46,7 +46,6 @@
             this.roundButton9 = new Bank.RoundButton();
             this.roundButton10 = new Bank.RoundButton();
             this.roundButton11 = new Bank.RoundButton();
-            this.roundButton12 = new Bank.RoundButton();
             this.Exit = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -106,9 +105,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.Location = new System.Drawing.Point(38, 319);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(142, 17);
+            this.radioButton2.Size = new System.Drawing.Size(163, 19);
             this.radioButton2.TabIndex = 10;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Дифференцированный";
@@ -117,9 +117,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton1.Location = new System.Drawing.Point(38, 296);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(91, 17);
+            this.radioButton1.Size = new System.Drawing.Size(102, 19);
             this.radioButton1.TabIndex = 13;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Аннуитетный";
@@ -329,33 +330,11 @@
             this.roundButton11.ButtonRoundRadius = 30;
             this.roundButton11.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.roundButton11.ForeColor = System.Drawing.Color.White;
-            this.roundButton11.Location = new System.Drawing.Point(25, 365);
+            this.roundButton11.Location = new System.Drawing.Point(34, 368);
             this.roundButton11.Name = "roundButton11";
-            this.roundButton11.Size = new System.Drawing.Size(162, 58);
+            this.roundButton11.Size = new System.Drawing.Size(155, 52);
             this.roundButton11.TabIndex = 24;
             this.roundButton11.Text = "Рассчитать";
-            // 
-            // roundButton12
-            // 
-            this.roundButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.roundButton12.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.roundButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.roundButton12.ButtonBorderColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.roundButton12.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.roundButton12.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.roundButton12.ButtonPressedColor = System.Drawing.Color.Red;
-            this.roundButton12.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.roundButton12.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.roundButton12.ButtonRoundRadius = 30;
-            this.roundButton12.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.roundButton12.ForeColor = System.Drawing.Color.White;
-            this.roundButton12.Location = new System.Drawing.Point(193, 365);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.Size = new System.Drawing.Size(173, 58);
-            this.roundButton12.TabIndex = 25;
-            this.roundButton12.Text = "Оставить заявку";
-            this.roundButton12.Click += new System.EventHandler(this.roundButton12_Click);
             // 
             // Exit
             // 
@@ -393,7 +372,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.roundButton12);
             this.Controls.Add(this.roundButton11);
             this.Controls.Add(this.roundButton10);
             this.Controls.Add(this.roundButton9);
@@ -440,7 +418,6 @@
         private RoundButton roundButton9;
         private RoundButton roundButton10;
         private RoundButton roundButton11;
-        private RoundButton roundButton12;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Back;
     }

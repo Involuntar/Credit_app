@@ -69,5 +69,10 @@ namespace Bank
             Product_choice product_ = new Product_choice();
             product_.Show();
         }
+
+        private void roundButton12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

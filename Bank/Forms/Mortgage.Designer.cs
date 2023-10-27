@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.Annuit = new System.Windows.Forms.RadioButton();
+            this.Diff = new System.Windows.Forms.RadioButton();
             this.Back = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.term = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Тип платежа";
             // 
-            // radioButton1
+            // Annuit
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(20, 424);
@@ -140,12 +140,13 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // Diff
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(121, 424);
+            this.radioButton2.Location = new System.Drawing.Point(161, 522);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(142, 17);
+            this.radioButton2.Size = new System.Drawing.Size(180, 20);
             this.radioButton2.TabIndex = 32;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Дифференцированный";
@@ -524,8 +525,8 @@
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Mortgage_count);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.Diff);
+            this.Controls.Add(this.Annuit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.perc30);
             this.Controls.Add(this.perc25);
@@ -580,8 +581,8 @@
         private RoundButton perc25;
         private RoundButton perc30;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton Annuit;
+        private System.Windows.Forms.RadioButton Diff;
         private RoundButton Mortgage_count;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Exit;

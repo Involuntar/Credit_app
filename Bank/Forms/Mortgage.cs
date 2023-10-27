@@ -52,11 +52,27 @@ namespace Bank
                 public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
                 public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
                 UInt32 first_payment = Convert.ToUInt32(firstpay.Text);
-                public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
-
-                this.Hide();
-                mortgage_counted counted = new mortgage_counted();
-                counted.Show();
+                public_class.init_fee = firstpay.Text;
+                if (Annuit.Checked == true)
+                {
+                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
+                    public_class.credit_type_id = "1";
+                    this.Hide();
+                    mortgage_counted counted = new mortgage_counted();
+                    counted.Show();
+                }
+                else if (Diff.Checked == true)
+                {
+                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * Double.Parse(public_class.Rate) * 1.01) - Convert.ToDouble(first_payment));
+                    public_class.credit_type_id = "2";
+                    this.Hide();
+                    mortgage_counted counted = new mortgage_counted();
+                    counted.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Выберите тип платежа", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (FormatException)
             {

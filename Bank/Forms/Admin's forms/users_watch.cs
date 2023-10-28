@@ -33,5 +33,22 @@ namespace Bank.Forms.Admin_s_forms
         {
             Display_users();
         }
+
+        private void dataGridUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                return;
+            }
+            if (e.ColumnIndex == 1)
+            {
+                if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    Connection.Delete_user(dataGridUsers.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display_users();
+                }
+                return;
+            }
+        }
     }
 }

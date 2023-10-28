@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Users_text = new System.Windows.Forms.Label();
-            this.Add_new = new Bank.RoundButton();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Add_new = new Bank.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.dataGridUsers.ShowEditingIcon = false;
             this.dataGridUsers.Size = new System.Drawing.Size(1149, 253);
             this.dataGridUsers.TabIndex = 0;
+            this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
             // 
             // panel1
             // 
@@ -99,25 +100,6 @@
             this.Users_text.Size = new System.Drawing.Size(267, 42);
             this.Users_text.TabIndex = 2;
             this.Users_text.Text = "Пользователи";
-            // 
-            // Add_new
-            // 
-            this.Add_new.BackColor = System.Drawing.Color.Gainsboro;
-            this.Add_new.BackColor2 = System.Drawing.Color.Silver;
-            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
-            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.Add_new.ButtonRoundRadius = 30;
-            this.Add_new.Location = new System.Drawing.Point(33, 26);
-            this.Add_new.Name = "Add_new";
-            this.Add_new.Size = new System.Drawing.Size(100, 40);
-            this.Add_new.TabIndex = 1;
-            this.Add_new.Text = "Добавить";
-            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
             // 
             // id
             // 
@@ -177,13 +159,13 @@
             // 
             // Edit
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SaddleBrown;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SaddleBrown;
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.HeaderText = "";
             this.Edit.MinimumWidth = 6;
@@ -196,13 +178,13 @@
             // 
             // Delete
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SaddleBrown;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SaddleBrown;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle4;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.HeaderText = "";
             this.Delete.MinimumWidth = 6;
@@ -210,6 +192,25 @@
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
+            // 
+            // Add_new
+            // 
+            this.Add_new.BackColor = System.Drawing.Color.Gainsboro;
+            this.Add_new.BackColor2 = System.Drawing.Color.Silver;
+            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Add_new.ButtonRoundRadius = 30;
+            this.Add_new.Location = new System.Drawing.Point(33, 26);
+            this.Add_new.Name = "Add_new";
+            this.Add_new.Size = new System.Drawing.Size(100, 40);
+            this.Add_new.TabIndex = 1;
+            this.Add_new.Text = "Добавить";
+            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
             // 
             // users_watch
             // 

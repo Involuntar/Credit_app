@@ -64,5 +64,12 @@ namespace Bank.Forms.Admin_s_forms
                 return;
             }
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form_for_admin for_Admin = new Form_for_admin();
+            for_Admin.Show();
+        }
     }
 }

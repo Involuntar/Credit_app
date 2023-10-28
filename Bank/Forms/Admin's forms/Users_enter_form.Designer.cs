@@ -41,6 +41,7 @@
             this.login_txt = new System.Windows.Forms.Label();
             this.password_txt = new System.Windows.Forms.Label();
             this.email_txt = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstnametxt
@@ -149,11 +150,22 @@
             this.email_txt.TabIndex = 12;
             this.email_txt.Text = "Почта";
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(580, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 13;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Users_enter_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 538);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.email_txt);
             this.Controls.Add(this.password_txt);
             this.Controls.Add(this.login_txt);
@@ -189,5 +201,6 @@
         private System.Windows.Forms.Label login_txt;
         private System.Windows.Forms.Label password_txt;
         private System.Windows.Forms.Label email_txt;
+        private System.Windows.Forms.Button Back;
     }
 }

@@ -33,6 +33,7 @@
             this.credits = new Bank.RoundButton();
             this.ipoteka = new Bank.RoundButton();
             this.users = new Bank.RoundButton();
+            this.Exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // stavki
@@ -150,12 +151,23 @@
             this.users.Text = "Пользователи";
             this.users.Click += new System.EventHandler(this.users_Click);
             // 
+            // Exit
+            // 
+            this.Exit.Location = new System.Drawing.Point(713, 13);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.TabIndex = 30;
+            this.Exit.Text = "Выйти";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Form_for_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.stavki);
             this.Controls.Add(this.types);
             this.Controls.Add(this.credits);
@@ -175,5 +187,6 @@
         private RoundButton credits;
         private RoundButton types;
         private RoundButton stavki;
+        private System.Windows.Forms.Button Exit;
     }
 }

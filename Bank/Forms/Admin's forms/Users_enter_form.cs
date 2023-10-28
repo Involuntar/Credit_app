@@ -15,6 +15,12 @@ namespace Bank.Forms.Admin_s_forms
     {
         private readonly users_watch _parent;
         public string id, firstname, middlename, lastname, login, password, email;
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public Users_enter_form(users_watch parent)
         {
             InitializeComponent();

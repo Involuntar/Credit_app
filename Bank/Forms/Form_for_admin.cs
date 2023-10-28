@@ -52,5 +52,10 @@ namespace Bank.Forms
             rates.Show();
             this.Hide();
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

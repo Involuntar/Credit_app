@@ -1,6 +1,6 @@
 ﻿namespace Bank.Forms.Admin_s_forms
 {
-    partial class mortgages_watch
+    partial class Mortgages_watch
     {
         /// <summary>
         /// Required designer variable.

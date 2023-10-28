@@ -259,7 +259,7 @@
             this.Controls.Add(this.Product_head);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
-            this.Text = "Registration";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

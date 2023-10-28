@@ -197,7 +197,7 @@
             this.show_grafik.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.show_grafik.ForeColor = System.Drawing.Color.White;
             this.show_grafik.Location = new System.Drawing.Point(333, 254);
-            this.show_grafik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.show_grafik.Margin = new System.Windows.Forms.Padding(4);
             this.show_grafik.Name = "show_grafik";
             this.show_grafik.Size = new System.Drawing.Size(127, 36);
             this.show_grafik.TabIndex = 13;
@@ -224,7 +224,7 @@
             this.Controls.Add(this.Credit_summ);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mortgage_counted";
-            this.Text = "mortgage_counted";
+            this.Text = "Рассчёт ипотеки";
             this.Load += new System.EventHandler(this.mortgage_counted_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

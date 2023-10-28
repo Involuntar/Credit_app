@@ -99,35 +99,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\public_class.cs" />
-    <Compile Include="Forms\Admin%27s forms\credits_watch.cs">
+    <Compile Include="Forms\Admin%27s forms\Credits_watch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\credits_watch.Designer.cs">
-      <DependentUpon>credits_watch.cs</DependentUpon>
+    <Compile Include="Forms\Admin%27s forms\Credits_watch.Designer.cs">
+      <DependentUpon>Credits_watch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\credit_types_watch.cs">
+    <Compile Include="Forms\Admin%27s forms\Credit_types_watch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\credit_types_watch.Designer.cs">
-      <DependentUpon>credit_types_watch.cs</DependentUpon>
+    <Compile Include="Forms\Admin%27s forms\Credit_types_watch.Designer.cs">
+      <DependentUpon>Credit_types_watch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\mortgages_watch.cs">
+    <Compile Include="Forms\Admin%27s forms\Mortgages_watch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\mortgages_watch.Designer.cs">
-      <DependentUpon>mortgages_watch.cs</DependentUpon>
+    <Compile Include="Forms\Admin%27s forms\Mortgages_watch.Designer.cs">
+      <DependentUpon>Mortgages_watch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\terms_watch.cs">
+    <Compile Include="Forms\Admin%27s forms\Rates_watch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\terms_watch.Designer.cs">
-      <DependentUpon>terms_watch.cs</DependentUpon>
+    <Compile Include="Forms\Admin%27s forms\Rates_watch.Designer.cs">
+      <DependentUpon>Rates_watch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\users_watch.cs">
+    <Compile Include="Forms\Admin%27s forms\Users_watch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\users_watch.Designer.cs">
-      <DependentUpon>users_watch.cs</DependentUpon>
+    <Compile Include="Forms\Admin%27s forms\Users_watch.Designer.cs">
+      <DependentUpon>Users_watch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Credit.cs">
       <SubType>Form</SubType>
@@ -183,8 +183,11 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\Admin%27s forms\credit_types_watch.resx">
-      <DependentUpon>credit_types_watch.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Credit_types_watch.resx">
+      <DependentUpon>Credit_types_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Users_watch.resx">
+      <DependentUpon>Users_watch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>

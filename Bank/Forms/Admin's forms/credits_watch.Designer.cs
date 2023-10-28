@@ -1,6 +1,6 @@
 ﻿namespace Bank.Forms.Admin_s_forms
 {
-    partial class credits_watch
+    partial class Credits_watch
     {
         /// <summary>
         /// Required designer variable.

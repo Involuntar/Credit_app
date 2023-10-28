@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Bank.Forms.Admin_s_forms
 {
-    public partial class credits_watch : Form
+    public partial class Credits_watch : Form
     {
-        public credits_watch()
+        public Credits_watch()
         {
             InitializeComponent();
         }

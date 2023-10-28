@@ -13,9 +13,12 @@ namespace Bank.Forms.Admin_s_forms
 {
     public partial class users_watch : Form
     {
+        Users_enter_form enter_Form;
+
         public users_watch()
         {
             InitializeComponent();
+            enter_Form = new Users_enter_form(this);
         }
 
         public void Display_users()
@@ -25,8 +28,8 @@ namespace Bank.Forms.Admin_s_forms
 
         private void Add_new_Click(object sender, EventArgs e)
         {
-            Users_enter_form users_Enter = new Users_enter_form(this);
-            users_Enter.ShowDialog();
+            enter_Form.Clear();
+            enter_Form.ShowDialog();
         }
 
         private void users_watch_Shown(object sender, EventArgs e)
@@ -38,6 +41,17 @@ namespace Bank.Forms.Admin_s_forms
         {
             if (e.ColumnIndex == 0)
             {
+                enter_Form.Clear();
+                enter_Form.id = dataGridUsers.Rows[e.RowIndex].Cells[2].Value.ToString();
+                enter_Form.firstname = dataGridUsers.Rows[e.RowIndex].Cells[3].Value.ToString();
+                enter_Form.middlename = dataGridUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
+                enter_Form.lastname = dataGridUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
+                enter_Form.login = dataGridUsers.Rows[e.RowIndex].Cells[5].Value.ToString();
+                enter_Form.password = dataGridUsers.Rows[e.RowIndex].Cells[6].Value.ToString();
+                enter_Form.email = dataGridUsers.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                enter_Form.UpdateUserInfo();
+                enter_Form.ShowDialog();
                 return;
             }
             if (e.ColumnIndex == 1)

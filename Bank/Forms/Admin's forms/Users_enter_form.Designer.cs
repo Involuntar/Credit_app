@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.firstname = new System.Windows.Forms.TextBox();
-            this.middlename = new System.Windows.Forms.TextBox();
-            this.lastname = new System.Windows.Forms.TextBox();
-            this.login = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.TextBox();
+            this.firstnametxt = new System.Windows.Forms.TextBox();
+            this.middlenametxt = new System.Windows.Forms.TextBox();
+            this.lastnametxt = new System.Windows.Forms.TextBox();
+            this.logintxt = new System.Windows.Forms.TextBox();
+            this.passwordtxt = new System.Windows.Forms.TextBox();
+            this.emailtxt = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.firstname_txt = new System.Windows.Forms.Label();
             this.middlename_txt = new System.Windows.Forms.Label();
@@ -43,47 +43,47 @@
             this.email_txt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // firstname
+            // firstnametxt
             // 
-            this.firstname.Location = new System.Drawing.Point(162, 73);
-            this.firstname.Name = "firstname";
-            this.firstname.Size = new System.Drawing.Size(100, 22);
-            this.firstname.TabIndex = 0;
+            this.firstnametxt.Location = new System.Drawing.Point(162, 73);
+            this.firstnametxt.Name = "firstnametxt";
+            this.firstnametxt.Size = new System.Drawing.Size(100, 22);
+            this.firstnametxt.TabIndex = 0;
             // 
-            // middlename
+            // middlenametxt
             // 
-            this.middlename.Location = new System.Drawing.Point(162, 122);
-            this.middlename.Name = "middlename";
-            this.middlename.Size = new System.Drawing.Size(100, 22);
-            this.middlename.TabIndex = 1;
+            this.middlenametxt.Location = new System.Drawing.Point(162, 122);
+            this.middlenametxt.Name = "middlenametxt";
+            this.middlenametxt.Size = new System.Drawing.Size(100, 22);
+            this.middlenametxt.TabIndex = 1;
             // 
-            // lastname
+            // lastnametxt
             // 
-            this.lastname.Location = new System.Drawing.Point(162, 170);
-            this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(100, 22);
-            this.lastname.TabIndex = 2;
+            this.lastnametxt.Location = new System.Drawing.Point(162, 170);
+            this.lastnametxt.Name = "lastnametxt";
+            this.lastnametxt.Size = new System.Drawing.Size(100, 22);
+            this.lastnametxt.TabIndex = 2;
             // 
-            // login
+            // logintxt
             // 
-            this.login.Location = new System.Drawing.Point(162, 220);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(100, 22);
-            this.login.TabIndex = 3;
+            this.logintxt.Location = new System.Drawing.Point(162, 220);
+            this.logintxt.Name = "logintxt";
+            this.logintxt.Size = new System.Drawing.Size(100, 22);
+            this.logintxt.TabIndex = 3;
             // 
-            // password
+            // passwordtxt
             // 
-            this.password.Location = new System.Drawing.Point(162, 272);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 22);
-            this.password.TabIndex = 4;
+            this.passwordtxt.Location = new System.Drawing.Point(162, 272);
+            this.passwordtxt.Name = "passwordtxt";
+            this.passwordtxt.Size = new System.Drawing.Size(100, 22);
+            this.passwordtxt.TabIndex = 4;
             // 
-            // email
+            // emailtxt
             // 
-            this.email.Location = new System.Drawing.Point(162, 322);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(100, 22);
-            this.email.TabIndex = 5;
+            this.emailtxt.Location = new System.Drawing.Point(162, 322);
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(100, 22);
+            this.emailtxt.TabIndex = 5;
             // 
             // Save
             // 
@@ -161,12 +161,12 @@
             this.Controls.Add(this.middlename_txt);
             this.Controls.Add(this.firstname_txt);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.login);
-            this.Controls.Add(this.lastname);
-            this.Controls.Add(this.middlename);
-            this.Controls.Add(this.firstname);
+            this.Controls.Add(this.emailtxt);
+            this.Controls.Add(this.passwordtxt);
+            this.Controls.Add(this.logintxt);
+            this.Controls.Add(this.lastnametxt);
+            this.Controls.Add(this.middlenametxt);
+            this.Controls.Add(this.firstnametxt);
             this.Name = "Users_enter_form";
             this.Text = "Ввод пользователей";
             this.ResumeLayout(false);
@@ -176,12 +176,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox firstname;
-        private System.Windows.Forms.TextBox middlename;
-        private System.Windows.Forms.TextBox lastname;
-        private System.Windows.Forms.TextBox login;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox firstnametxt;
+        private System.Windows.Forms.TextBox middlenametxt;
+        private System.Windows.Forms.TextBox lastnametxt;
+        private System.Windows.Forms.TextBox logintxt;
+        private System.Windows.Forms.TextBox passwordtxt;
+        private System.Windows.Forms.TextBox emailtxt;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label firstname_txt;
         private System.Windows.Forms.Label middlename_txt;

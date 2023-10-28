@@ -20,10 +20,12 @@ namespace Bank.Forms.Admin_s_forms
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Редактирование
             if (e.ColumnIndex == 0)
             {
                 return;
             }
+            //Удаление
             if (e.ColumnIndex == 1)
             {
                 if (MessageBox.Show("Вы уверены, что хотите удалить данный тип?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)

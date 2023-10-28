@@ -20,7 +20,7 @@ namespace Bank.Forms
 
         private void users_Click(object sender, EventArgs e)
         {
-            Users_watch users = new Users_watch();
+            users_watch users = new users_watch();
             users.Show();
             this.Hide();
         }

@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\public_class.cs" />
+    <Compile Include="Data\Users.cs" />
     <Compile Include="Forms\Admin%27s forms\Credits_watch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +123,12 @@
     </Compile>
     <Compile Include="Forms\Admin%27s forms\Rates_watch.Designer.cs">
       <DependentUpon>Rates_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_enter_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_enter_form.Designer.cs">
+      <DependentUpon>Users_enter_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin%27s forms\Users_watch.cs">
       <SubType>Form</SubType>
@@ -185,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Admin%27s forms\Credit_types_watch.resx">
       <DependentUpon>Credit_types_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Users_enter_form.resx">
+      <DependentUpon>Users_enter_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Users_watch.resx">
       <DependentUpon>Users_watch.cs</DependentUpon>

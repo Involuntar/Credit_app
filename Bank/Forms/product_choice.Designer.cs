@@ -39,10 +39,9 @@
             this.Product_head.AutoSize = true;
             this.Product_head.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.Product_head.Location = new System.Drawing.Point(30, 56);
-            this.Product_head.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Product_head.Location = new System.Drawing.Point(40, 69);
             this.Product_head.Name = "Product_head";
-            this.Product_head.Size = new System.Drawing.Size(524, 31);
+            this.Product_head.Size = new System.Drawing.Size(637, 38);
             this.Product_head.TabIndex = 0;
             this.Product_head.Text = "Выберите интересующую услугу";
             // 
@@ -60,10 +59,10 @@
             this.credit.ButtonRoundRadius = 30;
             this.credit.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.credit.ForeColor = System.Drawing.Color.White;
-            this.credit.Location = new System.Drawing.Point(74, 152);
-            this.credit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.credit.Location = new System.Drawing.Point(99, 187);
+            this.credit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.credit.Name = "credit";
-            this.credit.Size = new System.Drawing.Size(144, 70);
+            this.credit.Size = new System.Drawing.Size(192, 86);
             this.credit.TabIndex = 1;
             this.credit.Text = "Кредит";
             this.credit.Click += new System.EventHandler(this.credit_Click);
@@ -82,10 +81,10 @@
             this.mortgages.ButtonRoundRadius = 30;
             this.mortgages.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mortgages.ForeColor = System.Drawing.Color.White;
-            this.mortgages.Location = new System.Drawing.Point(307, 152);
-            this.mortgages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mortgages.Location = new System.Drawing.Point(409, 187);
+            this.mortgages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mortgages.Name = "mortgages";
-            this.mortgages.Size = new System.Drawing.Size(145, 70);
+            this.mortgages.Size = new System.Drawing.Size(193, 86);
             this.mortgages.TabIndex = 2;
             this.mortgages.Text = "Ипотека";
             this.mortgages.Click += new System.EventHandler(this.mortgages_Click);
@@ -95,10 +94,10 @@
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Exit.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(510, 11);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.Location = new System.Drawing.Point(680, 14);
+            this.Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(65, 22);
+            this.Exit.Size = new System.Drawing.Size(87, 27);
             this.Exit.TabIndex = 3;
             this.Exit.Text = "Выход";
             this.Exit.UseVisualStyleBackColor = false;
@@ -106,17 +105,18 @@
             // 
             // Product_choice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(586, 368);
+            this.ClientSize = new System.Drawing.Size(781, 453);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.mortgages);
             this.Controls.Add(this.credit);
             this.Controls.Add(this.Product_head);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Product_choice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Продукты";
             this.ResumeLayout(false);
             this.PerformLayout();

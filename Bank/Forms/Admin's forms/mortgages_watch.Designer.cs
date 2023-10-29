@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridMort = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Mortgagestxt = new System.Windows.Forms.Label();
-            this.Add_new = new Bank.RoundButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.init_fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +42,10 @@
             this.statuses_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Add_new = new Bank.RoundButton();
+            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMort)).BeginInit();
             this.panel1.SuspendLayout();
@@ -89,54 +89,6 @@
             this.dataGridMort.Size = new System.Drawing.Size(1181, 214);
             this.dataGridMort.TabIndex = 0;
             this.dataGridMort.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMort_CellClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.Add_new);
-            this.panel1.Controls.Add(this.dataGridMort);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 140);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 310);
-            this.panel1.TabIndex = 1;
-            // 
-            // Mortgagestxt
-            // 
-            this.Mortgagestxt.AutoSize = true;
-            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
-            this.Mortgagestxt.Location = new System.Drawing.Point(55, 53);
-            this.Mortgagestxt.Name = "Mortgagestxt";
-            this.Mortgagestxt.Size = new System.Drawing.Size(63, 16);
-            this.Mortgagestxt.TabIndex = 2;
-            this.Mortgagestxt.Text = "Ипотеки";
-            // 
-            // Add_new
-            // 
-            this.Add_new.BackColor = System.Drawing.Color.Gainsboro;
-            this.Add_new.BackColor2 = System.Drawing.Color.Silver;
-            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
-            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.Add_new.ButtonRoundRadius = 30;
-            this.Add_new.Location = new System.Drawing.Point(44, 28);
-            this.Add_new.Name = "Add_new";
-            this.Add_new.Size = new System.Drawing.Size(100, 40);
-            this.Add_new.TabIndex = 1;
-            this.Add_new.Text = "Добавить";
-            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(567, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 22);
-            this.textBox1.TabIndex = 2;
             // 
             // id
             // 
@@ -203,13 +155,13 @@
             // 
             // Edit
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Chocolate;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Chocolate;
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle1;
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.HeaderText = "";
             this.Edit.MinimumWidth = 6;
@@ -219,19 +171,67 @@
             // 
             // Delete
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Chocolate;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle2;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.HeaderText = "";
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Add_new);
+            this.panel1.Controls.Add(this.dataGridMort);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 140);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1205, 310);
+            this.panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(567, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(135, 22);
+            this.textBox1.TabIndex = 2;
+            // 
+            // Add_new
+            // 
+            this.Add_new.BackColor = System.Drawing.Color.Gainsboro;
+            this.Add_new.BackColor2 = System.Drawing.Color.Silver;
+            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Add_new.ButtonRoundRadius = 30;
+            this.Add_new.Location = new System.Drawing.Point(44, 28);
+            this.Add_new.Name = "Add_new";
+            this.Add_new.Size = new System.Drawing.Size(100, 40);
+            this.Add_new.TabIndex = 1;
+            this.Add_new.Text = "Добавить";
+            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
+            // 
+            // Mortgagestxt
+            // 
+            this.Mortgagestxt.AutoSize = true;
+            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
+            this.Mortgagestxt.Location = new System.Drawing.Point(55, 53);
+            this.Mortgagestxt.Name = "Mortgagestxt";
+            this.Mortgagestxt.Size = new System.Drawing.Size(63, 16);
+            this.Mortgagestxt.TabIndex = 2;
+            this.Mortgagestxt.Text = "Ипотеки";
             // 
             // Back
             // 
@@ -253,6 +253,7 @@
             this.Controls.Add(this.Mortgagestxt);
             this.Controls.Add(this.panel1);
             this.Name = "Mortgages_watch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mortgages_watch";
             this.Shown += new System.EventHandler(this.Mortgages_watch_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMort)).EndInit();

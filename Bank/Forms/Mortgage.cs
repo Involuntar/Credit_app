@@ -55,7 +55,7 @@ namespace Bank
                 public_class.init_fee = firstpay.Text;
                 if (Annuit.Checked == true)
                 {
-                    public_class.End_Summ = Convert.ToString(Math.Ceiling(public_class.Start_Summ * (Double.Parse(public_class.Rate) + 1)) - Convert.ToDouble(first_payment));
+                    public_class.End_Summ = Convert.ToString(Math.Ceiling((public_class.Start_Summ - Convert.ToDouble(first_payment)) * (Double.Parse(public_class.Rate) + 1)));
                     public_class.credit_type_id = "3";
                     public_class.monthly_pay = Convert.ToString(Math.Ceiling(Convert.ToDouble(public_class.End_Summ) / (12 * Convert.ToUInt16(public_class.Term))));
                     this.Hide();

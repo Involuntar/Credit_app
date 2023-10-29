@@ -224,6 +224,7 @@
             this.Controls.Add(this.Credit_summ);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mortgage_counted";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рассчёт ипотеки";
             this.Load += new System.EventHandler(this.mortgage_counted_Load);
             this.ResumeLayout(false);

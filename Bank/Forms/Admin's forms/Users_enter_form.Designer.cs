@@ -46,32 +46,32 @@
             // 
             // firstnametxt
             // 
-            this.firstnametxt.Location = new System.Drawing.Point(215, 89);
-            this.firstnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstnametxt.Location = new System.Drawing.Point(228, 89);
+            this.firstnametxt.Margin = new System.Windows.Forms.Padding(2);
             this.firstnametxt.Name = "firstnametxt";
-            this.firstnametxt.Size = new System.Drawing.Size(76, 22);
+            this.firstnametxt.Size = new System.Drawing.Size(76, 20);
             this.firstnametxt.TabIndex = 0;
             // 
             // middlenametxt
             // 
-            this.middlenametxt.Location = new System.Drawing.Point(148, 99);
-            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.middlenametxt.Location = new System.Drawing.Point(228, 115);
+            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2);
             this.middlenametxt.Name = "middlenametxt";
             this.middlenametxt.Size = new System.Drawing.Size(76, 20);
             this.middlenametxt.TabIndex = 1;
             // 
             // lastnametxt
             // 
-            this.lastnametxt.Location = new System.Drawing.Point(148, 138);
-            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastnametxt.Location = new System.Drawing.Point(216, 153);
+            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2);
             this.lastnametxt.Name = "lastnametxt";
             this.lastnametxt.Size = new System.Drawing.Size(76, 20);
             this.lastnametxt.TabIndex = 2;
             // 
             // logintxt
             // 
-            this.logintxt.Location = new System.Drawing.Point(122, 179);
-            this.logintxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logintxt.Location = new System.Drawing.Point(228, 186);
+            this.logintxt.Margin = new System.Windows.Forms.Padding(2);
             this.logintxt.Name = "logintxt";
             this.logintxt.Size = new System.Drawing.Size(76, 20);
             this.logintxt.TabIndex = 3;
@@ -79,16 +79,16 @@
             // 
             // passwordtxt
             // 
-            this.passwordtxt.Location = new System.Drawing.Point(159, 221);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordtxt.Location = new System.Drawing.Point(216, 221);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(76, 20);
             this.passwordtxt.TabIndex = 4;
             // 
             // emailtxt
             // 
-            this.emailtxt.Location = new System.Drawing.Point(148, 266);
-            this.emailtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailtxt.Location = new System.Drawing.Point(216, 271);
+            this.emailtxt.Margin = new System.Windows.Forms.Padding(2);
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.Size = new System.Drawing.Size(76, 20);
             this.emailtxt.TabIndex = 5;
@@ -171,7 +171,7 @@
             this.Back.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Back.ForeColor = System.Drawing.Color.White;
             this.Back.Location = new System.Drawing.Point(415, 10);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(76, 23);
             this.Back.TabIndex = 13;
@@ -191,7 +191,7 @@
             this.Save.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Save.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Save.ButtonRoundRadius = 30;
-            this.Save.Location = new System.Drawing.Point(77, 422);
+            this.Save.Location = new System.Drawing.Point(118, 325);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(139, 50);
             this.Save.TabIndex = 14;
@@ -218,7 +218,7 @@
             this.Controls.Add(this.lastnametxt);
             this.Controls.Add(this.middlenametxt);
             this.Controls.Add(this.firstnametxt);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Users_enter_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод пользователей";

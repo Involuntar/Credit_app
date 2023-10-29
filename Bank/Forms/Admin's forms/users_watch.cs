@@ -70,5 +70,15 @@ namespace Bank.Forms.Admin_s_forms
             Form_for_admin for_Admin = new Form_for_admin();
             for_Admin.Show();
         }
+
+        private void Users_text_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

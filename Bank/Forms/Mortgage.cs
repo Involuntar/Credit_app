@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,9 +56,14 @@ namespace Bank
                 public_class.init_fee = firstpay.Text;
                 if (Annuit.Checked == true)
                 {
-                    public_class.End_Summ = Convert.ToString(Math.Ceiling((public_class.Start_Summ - Convert.ToDouble(first_payment)) * (Double.Parse(public_class.Rate) + 1)));
                     public_class.credit_type_id = "3";
-                    public_class.monthly_pay = Convert.ToString(Math.Ceiling(Convert.ToDouble(public_class.End_Summ) / (12 * Convert.ToUInt16(public_class.Term))));
+                    double credit_summ = public_class.Start_Summ - first_payment;
+                    double abs_rate = Math.Pow(1 + Convert.ToDouble(public_class.Rate) * 0.01 / 12, Convert.ToUInt16(public_class.Term) * 12);
+                    public_class.monthly_pay = 
+                        Convert.ToString(Math.Round(credit_summ * Convert.ToDouble(public_class.Rate) * 0.01 / 12 * abs_rate / (abs_rate - 1), 2));
+                    public_class.End_Summ = 
+                        Convert.ToString(Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt16(public_class.Term));
+
                     this.Hide();
                     mortgage_counted counted = new mortgage_counted();
                     counted.Show();

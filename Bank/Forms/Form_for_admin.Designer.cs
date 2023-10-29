@@ -50,10 +50,9 @@
             this.stavki.ButtonRoundRadius = 30;
             this.stavki.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.stavki.ForeColor = System.Drawing.Color.White;
-            this.stavki.Location = new System.Drawing.Point(285, 224);
-            this.stavki.Margin = new System.Windows.Forms.Padding(4);
+            this.stavki.Location = new System.Drawing.Point(214, 182);
             this.stavki.Name = "stavki";
-            this.stavki.Size = new System.Drawing.Size(232, 65);
+            this.stavki.Size = new System.Drawing.Size(174, 53);
             this.stavki.TabIndex = 29;
             this.stavki.Text = "Ставки";
             this.stavki.Click += new System.EventHandler(this.stavki_Click);
@@ -73,10 +72,9 @@
             this.credits.ButtonRoundRadius = 30;
             this.credits.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.credits.ForeColor = System.Drawing.Color.White;
-            this.credits.Location = new System.Drawing.Point(552, 126);
-            this.credits.Margin = new System.Windows.Forms.Padding(4);
+            this.credits.Location = new System.Drawing.Point(414, 102);
             this.credits.Name = "credits";
-            this.credits.Size = new System.Drawing.Size(232, 65);
+            this.credits.Size = new System.Drawing.Size(174, 53);
             this.credits.TabIndex = 27;
             this.credits.Text = "Кредиты";
             this.credits.Click += new System.EventHandler(this.credits_Click);
@@ -96,10 +94,9 @@
             this.ipoteka.ButtonRoundRadius = 30;
             this.ipoteka.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ipoteka.ForeColor = System.Drawing.Color.White;
-            this.ipoteka.Location = new System.Drawing.Point(285, 126);
-            this.ipoteka.Margin = new System.Windows.Forms.Padding(4);
+            this.ipoteka.Location = new System.Drawing.Point(214, 102);
             this.ipoteka.Name = "ipoteka";
-            this.ipoteka.Size = new System.Drawing.Size(232, 65);
+            this.ipoteka.Size = new System.Drawing.Size(174, 53);
             this.ipoteka.TabIndex = 26;
             this.ipoteka.Text = "Ипотеки";
             this.ipoteka.Click += new System.EventHandler(this.ipoteka_Click);
@@ -119,36 +116,39 @@
             this.users.ButtonRoundRadius = 30;
             this.users.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.users.ForeColor = System.Drawing.Color.White;
-            this.users.Location = new System.Drawing.Point(16, 126);
-            this.users.Margin = new System.Windows.Forms.Padding(4);
+            this.users.Location = new System.Drawing.Point(12, 102);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(232, 65);
+            this.users.Size = new System.Drawing.Size(174, 53);
             this.users.TabIndex = 25;
             this.users.Text = "Пользователи";
             this.users.Click += new System.EventHandler(this.users_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(713, 13);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Exit.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(508, 11);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.Size = new System.Drawing.Size(81, 24);
             this.Exit.TabIndex = 30;
             this.Exit.Text = "Выйти";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Back_Click);
             // 
             // Form_for_admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.stavki);
             this.Controls.Add(this.credits);
             this.Controls.Add(this.ipoteka);
             this.Controls.Add(this.users);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_for_admin";
             this.Text = "Для администратора";
             this.ResumeLayout(false);

@@ -101,7 +101,6 @@
             this.Save.Size = new System.Drawing.Size(90, 19);
             this.Save.TabIndex = 6;
             this.Save.Text = "Сохранить";
-            this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // firstname_txt

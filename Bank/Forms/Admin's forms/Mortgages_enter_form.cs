@@ -19,7 +19,7 @@ namespace Bank.Forms.Admin_s_forms
 
         public void UpdateMortInfo()
         {
-            Save.Text = "Обвновить";
+            Save.Text = "Обновить";
             Cost_txt.Text = cost;
             Init_fee_txt.Text = init_fee;
             Credit_summ_txt.Text = credit_summ;
@@ -40,7 +40,7 @@ namespace Bank.Forms.Admin_s_forms
                 Connection.Add_mortgages(mortgages);
                 Clear();
             }
-            if (Save.Text == "Обвновить")
+            if (Save.Text == "Обновить")
             {
                 Mortgages mortgages = new Mortgages(Cost_txt.Text.Trim(), Init_fee_txt.Text.Trim(),
                 Credit_summ_txt.Text.Trim(), Term_id_txt.Text.Trim(), Rate_id_txt.Text.Trim(),

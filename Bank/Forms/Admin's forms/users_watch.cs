@@ -14,7 +14,6 @@ namespace Bank.Forms.Admin_s_forms
     public partial class users_watch : Form
     {
         Users_enter_form enter_Form;
-
         public users_watch()
         {
             InitializeComponent();

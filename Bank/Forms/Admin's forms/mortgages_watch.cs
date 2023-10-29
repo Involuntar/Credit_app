@@ -32,13 +32,13 @@ namespace Bank.Forms.Admin_s_forms
                 mortgages_enter_form.id = dataGridMort.Rows[e.RowIndex].Cells[2].Value.ToString();
                 mortgages_enter_form.cost = dataGridMort.Rows[e.RowIndex].Cells[3].Value.ToString();
                 mortgages_enter_form.init_fee = dataGridMort.Rows[e.RowIndex].Cells[4].Value.ToString();
-                mortgages_enter_form.credit_summ = dataGridMort.Rows[e.RowIndex].Cells[4].Value.ToString();
+                mortgages_enter_form.credit_summ = dataGridMort.Rows[e.RowIndex].Cells[5].Value.ToString();
                 
-                mortgages_enter_form.term_id = dataGridMort.Rows[e.RowIndex].Cells[5].Value.ToString();
-                mortgages_enter_form.rate_id = dataGridMort.Rows[e.RowIndex].Cells[6].Value.ToString();
-                mortgages_enter_form.credit_type_id = dataGridMort.Rows[e.RowIndex].Cells[7].Value.ToString();
-                mortgages_enter_form.users_id = dataGridMort.Rows[e.RowIndex].Cells[8].Value.ToString();
-                mortgages_enter_form.statuses_id = dataGridMort.Rows[e.RowIndex].Cells[9].Value.ToString();
+                mortgages_enter_form.term_id = dataGridMort.Rows[e.RowIndex].Cells[6].Value.ToString();
+                mortgages_enter_form.rate_id = dataGridMort.Rows[e.RowIndex].Cells[7].Value.ToString();
+                mortgages_enter_form.credit_type_id = dataGridMort.Rows[e.RowIndex].Cells[8].Value.ToString();
+                mortgages_enter_form.users_id = dataGridMort.Rows[e.RowIndex].Cells[9].Value.ToString();
+                mortgages_enter_form.statuses_id = dataGridMort.Rows[e.RowIndex].Cells[10].Value.ToString();
 
                 mortgages_enter_form.UpdateMortInfo();
                 mortgages_enter_form.ShowDialog();

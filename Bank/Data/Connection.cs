@@ -144,25 +144,6 @@ namespace Bank.Data
             con.Close();
         }
 
-        public static void Delete_type(string id)
-        {
-            string sql = "DELETE FROM credits_types WHERE id = @id";
-            MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Удалено успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Удаление произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            con.Close();
-        }
-
         public static void Delete_user(string id)
         {
             string sql = "DELETE FROM users WHERE id = @id";

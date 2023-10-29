@@ -39,13 +39,6 @@ namespace Bank.Forms
             this.Hide();
         }
 
-        private void types_Click(object sender, EventArgs e)
-        {
-            Credit_types_watch types_Watch = new Credit_types_watch();
-            types_Watch.Show();
-            this.Hide();
-        }
-
         private void stavki_Click(object sender, EventArgs e)
         {
             Rates_watch rates = new Rates_watch();

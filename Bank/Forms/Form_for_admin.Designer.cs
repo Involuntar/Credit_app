@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.stavki = new Bank.RoundButton();
-            this.types = new Bank.RoundButton();
             this.credits = new Bank.RoundButton();
             this.ipoteka = new Bank.RoundButton();
             this.users = new Bank.RoundButton();
@@ -51,36 +50,13 @@
             this.stavki.ButtonRoundRadius = 30;
             this.stavki.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.stavki.ForeColor = System.Drawing.Color.White;
-            this.stavki.Location = new System.Drawing.Point(431, 217);
+            this.stavki.Location = new System.Drawing.Point(285, 224);
             this.stavki.Margin = new System.Windows.Forms.Padding(4);
             this.stavki.Name = "stavki";
             this.stavki.Size = new System.Drawing.Size(232, 65);
             this.stavki.TabIndex = 29;
             this.stavki.Text = "Ставки";
             this.stavki.Click += new System.EventHandler(this.stavki_Click);
-            // 
-            // types
-            // 
-            this.types.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.types.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.types.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.types.ButtonBorderColor = System.Drawing.Color.Black;
-            this.types.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.types.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.types.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.types.ButtonPressedColor = System.Drawing.Color.Red;
-            this.types.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.types.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.types.ButtonRoundRadius = 30;
-            this.types.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.types.ForeColor = System.Drawing.Color.White;
-            this.types.Location = new System.Drawing.Point(133, 217);
-            this.types.Margin = new System.Windows.Forms.Padding(4);
-            this.types.Name = "types";
-            this.types.Size = new System.Drawing.Size(232, 65);
-            this.types.TabIndex = 28;
-            this.types.Text = "Типы";
-            this.types.Click += new System.EventHandler(this.types_Click);
             // 
             // credits
             // 
@@ -169,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.stavki);
-            this.Controls.Add(this.types);
             this.Controls.Add(this.credits);
             this.Controls.Add(this.ipoteka);
             this.Controls.Add(this.users);
@@ -185,7 +160,6 @@
         private RoundButton users;
         private RoundButton ipoteka;
         private RoundButton credits;
-        private RoundButton types;
         private RoundButton stavki;
         private System.Windows.Forms.Button Exit;
     }

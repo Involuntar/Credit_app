@@ -24,4 +24,6 @@ namespace Bank.Data
             Email = email;
         }
     }
+
+    
 }

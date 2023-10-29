@@ -46,72 +46,62 @@
             // 
             // firstnametxt
             // 
-            this.firstnametxt.Location = new System.Drawing.Point(163, 73);
-            this.firstnametxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.firstnametxt.Location = new System.Drawing.Point(168, 53);
+            this.firstnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.firstnametxt.Name = "firstnametxt";
-            this.firstnametxt.Size = new System.Drawing.Size(76, 20);
+            this.firstnametxt.Size = new System.Drawing.Size(174, 20);
             this.firstnametxt.TabIndex = 0;
             // 
             // middlenametxt
             // 
-            this.middlenametxt.Location = new System.Drawing.Point(148, 99);
-            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.middlenametxt.Location = new System.Drawing.Point(168, 81);
+            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2);
             this.middlenametxt.Name = "middlenametxt";
-            this.middlenametxt.Size = new System.Drawing.Size(76, 20);
+            this.middlenametxt.Size = new System.Drawing.Size(174, 20);
             this.middlenametxt.TabIndex = 1;
             // 
             // lastnametxt
             // 
-            this.lastnametxt.Location = new System.Drawing.Point(148, 138);
-            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastnametxt.Location = new System.Drawing.Point(168, 115);
+            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2);
             this.lastnametxt.Name = "lastnametxt";
-            this.lastnametxt.Size = new System.Drawing.Size(76, 20);
+            this.lastnametxt.Size = new System.Drawing.Size(174, 20);
             this.lastnametxt.TabIndex = 2;
             // 
             // logintxt
             // 
-            this.logintxt.Location = new System.Drawing.Point(122, 179);
-            this.logintxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logintxt.Location = new System.Drawing.Point(168, 150);
+            this.logintxt.Margin = new System.Windows.Forms.Padding(2);
             this.logintxt.Name = "logintxt";
-            this.logintxt.Size = new System.Drawing.Size(76, 20);
+            this.logintxt.Size = new System.Drawing.Size(174, 20);
             this.logintxt.TabIndex = 3;
             this.logintxt.TextChanged += new System.EventHandler(this.logintxt_TextChanged);
             // 
             // passwordtxt
             // 
-            this.passwordtxt.Location = new System.Drawing.Point(159, 221);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordtxt.Location = new System.Drawing.Point(168, 180);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(76, 20);
+            this.passwordtxt.Size = new System.Drawing.Size(174, 20);
             this.passwordtxt.TabIndex = 4;
             // 
             // emailtxt
             // 
-            this.emailtxt.Location = new System.Drawing.Point(148, 266);
-            this.emailtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailtxt.Location = new System.Drawing.Point(168, 216);
+            this.emailtxt.Margin = new System.Windows.Forms.Padding(2);
             this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(76, 20);
+            this.emailtxt.Size = new System.Drawing.Size(174, 20);
             this.emailtxt.TabIndex = 5;
-            // 
-            // Save
-            // 
-            this.Save.Location = new System.Drawing.Point(122, 306);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(90, 19);
-            this.Save.TabIndex = 6;
-            this.Save.Text = "Сохранить";
-            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // firstname_txt
             // 
             this.firstname_txt.AutoSize = true;
             this.firstname_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.firstname_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.firstname_txt.Location = new System.Drawing.Point(60, 59);
+            this.firstname_txt.Location = new System.Drawing.Point(32, 48);
             this.firstname_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.firstname_txt.Name = "firstname_txt";
-            this.firstname_txt.Size = new System.Drawing.Size(71, 29);
+            this.firstname_txt.Size = new System.Drawing.Size(57, 23);
             this.firstname_txt.TabIndex = 7;
             this.firstname_txt.Text = "Имя";
             // 
@@ -120,10 +110,10 @@
             this.middlename_txt.AutoSize = true;
             this.middlename_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.middlename_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.middlename_txt.Location = new System.Drawing.Point(9, 94);
+            this.middlename_txt.Location = new System.Drawing.Point(32, 76);
             this.middlename_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.middlename_txt.Name = "middlename_txt";
-            this.middlename_txt.Size = new System.Drawing.Size(152, 29);
+            this.middlename_txt.Size = new System.Drawing.Size(120, 23);
             this.middlename_txt.TabIndex = 8;
             this.middlename_txt.Text = "Отчество";
             // 
@@ -132,10 +122,10 @@
             this.lastname_txt.AutoSize = true;
             this.lastname_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lastname_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lastname_txt.Location = new System.Drawing.Point(32, 138);
+            this.lastname_txt.Location = new System.Drawing.Point(32, 112);
             this.lastname_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lastname_txt.Name = "lastname_txt";
-            this.lastname_txt.Size = new System.Drawing.Size(135, 29);
+            this.lastname_txt.Size = new System.Drawing.Size(106, 23);
             this.lastname_txt.TabIndex = 9;
             this.lastname_txt.Text = "Фамилия";
             // 
@@ -144,10 +134,10 @@
             this.login_txt.AutoSize = true;
             this.login_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.login_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.login_txt.Location = new System.Drawing.Point(43, 179);
+            this.login_txt.Location = new System.Drawing.Point(32, 147);
             this.login_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.login_txt.Name = "login_txt";
-            this.login_txt.Size = new System.Drawing.Size(94, 29);
+            this.login_txt.Size = new System.Drawing.Size(74, 23);
             this.login_txt.TabIndex = 10;
             this.login_txt.Text = "Логин";
             // 
@@ -156,10 +146,10 @@
             this.password_txt.AutoSize = true;
             this.password_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.password_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.password_txt.Location = new System.Drawing.Point(42, 221);
+            this.password_txt.Location = new System.Drawing.Point(32, 180);
             this.password_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.password_txt.Name = "password_txt";
-            this.password_txt.Size = new System.Drawing.Size(113, 29);
+            this.password_txt.Size = new System.Drawing.Size(87, 23);
             this.password_txt.TabIndex = 11;
             this.password_txt.Text = "Пароль";
             // 
@@ -168,28 +158,31 @@
             this.email_txt.AutoSize = true;
             this.email_txt.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.email_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.email_txt.Location = new System.Drawing.Point(56, 266);
+            this.email_txt.Location = new System.Drawing.Point(32, 216);
             this.email_txt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.email_txt.Name = "email_txt";
-            this.email_txt.Size = new System.Drawing.Size(106, 29);
+            this.email_txt.Size = new System.Drawing.Size(82, 23);
             this.email_txt.TabIndex = 12;
             this.email_txt.Text = "Почта";
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(580, 12);
-            this.Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Back.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Back.ForeColor = System.Drawing.Color.White;
+            this.Back.Location = new System.Drawing.Point(415, 10);
+            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(76, 23);
             this.Back.TabIndex = 13;
             this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Save
             // 
-            this.Save.BackColor = System.Drawing.Color.Gainsboro;
-            this.Save.BackColor2 = System.Drawing.Color.Silver;
+            this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Save.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Save.ButtonBorderColor = System.Drawing.Color.Black;
             this.Save.ButtonHighlightColor = System.Drawing.Color.Orange;
             this.Save.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
@@ -198,19 +191,22 @@
             this.Save.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Save.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Save.ButtonRoundRadius = 30;
-            this.Save.Location = new System.Drawing.Point(77, 422);
+            this.Save.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Save.ForeColor = System.Drawing.Color.White;
+            this.Save.Location = new System.Drawing.Point(117, 265);
+            this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(100, 40);
+            this.Save.Size = new System.Drawing.Size(139, 50);
             this.Save.TabIndex = 14;
             this.Save.Text = "Сохранить";
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Users_enter_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(667, 538);
+            this.ClientSize = new System.Drawing.Size(500, 437);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.email_txt);
@@ -225,7 +221,7 @@
             this.Controls.Add(this.lastnametxt);
             this.Controls.Add(this.middlenametxt);
             this.Controls.Add(this.firstnametxt);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Users_enter_form";
             this.Text = "Ввод пользователей";
             this.ResumeLayout(false);

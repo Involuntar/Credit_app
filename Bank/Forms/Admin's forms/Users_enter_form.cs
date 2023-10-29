@@ -29,7 +29,7 @@ namespace Bank.Forms.Admin_s_forms
 
         public void UpdateUserInfo()
         {
-            Save.Text = "Обвновить";
+            Save.Text = "Обновить";
             firstnametxt.Text = firstname;
             middlenametxt.Text = middlename;
             lastnametxt.Text = lastname;
@@ -52,7 +52,7 @@ namespace Bank.Forms.Admin_s_forms
                 Connection.Add_user(users);
                 Clear();
             }
-            if (Save.Text == "Обвновить")
+            if (Save.Text == "Обновить")
             {
                 Users users = new Users(firstnametxt.Text.Trim(), middlenametxt.Text.Trim(),
                 lastnametxt.Text.Trim(), logintxt.Text.Trim(), passwordtxt.Text.Trim(), emailtxt.Text.Trim());

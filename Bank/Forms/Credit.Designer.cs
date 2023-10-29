@@ -78,7 +78,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(49, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(405, 22);
             this.textBox1.TabIndex = 4;
@@ -112,7 +112,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.Location = new System.Drawing.Point(51, 393);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(191, 22);
             this.radioButton2.TabIndex = 10;
@@ -125,7 +125,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton1.Location = new System.Drawing.Point(51, 364);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(118, 22);
             this.radioButton1.TabIndex = 13;
@@ -147,7 +147,7 @@
             this.roundButton1.ButtonPressedForeColor = System.Drawing.Color.White;
             this.roundButton1.ButtonRoundRadius = 30;
             this.roundButton1.Location = new System.Drawing.Point(49, 158);
-            this.roundButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton1.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(52, 33);
             this.roundButton1.TabIndex = 14;
@@ -168,7 +168,7 @@
             this.roundButton2.ButtonRoundRadius = 30;
             this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton2.Location = new System.Drawing.Point(109, 158);
-            this.roundButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton2.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.Size = new System.Drawing.Size(75, 33);
             this.roundButton2.TabIndex = 15;
@@ -188,7 +188,7 @@
             this.roundButton3.ButtonRoundRadius = 30;
             this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton3.Location = new System.Drawing.Point(192, 158);
-            this.roundButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton3.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton3.Name = "roundButton3";
             this.roundButton3.Size = new System.Drawing.Size(75, 33);
             this.roundButton3.TabIndex = 16;
@@ -208,7 +208,7 @@
             this.roundButton4.ButtonRoundRadius = 30;
             this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton4.Location = new System.Drawing.Point(275, 158);
-            this.roundButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton4.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton4.Name = "roundButton4";
             this.roundButton4.Size = new System.Drawing.Size(75, 33);
             this.roundButton4.TabIndex = 17;
@@ -228,7 +228,7 @@
             this.roundButton5.ButtonRoundRadius = 30;
             this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton5.Location = new System.Drawing.Point(357, 158);
-            this.roundButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton5.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton5.Name = "roundButton5";
             this.roundButton5.Size = new System.Drawing.Size(75, 33);
             this.roundButton5.TabIndex = 18;
@@ -247,7 +247,7 @@
             this.roundButton6.ButtonPressedForeColor = System.Drawing.Color.White;
             this.roundButton6.ButtonRoundRadius = 30;
             this.roundButton6.Location = new System.Drawing.Point(45, 270);
-            this.roundButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton6.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton6.Name = "roundButton6";
             this.roundButton6.Size = new System.Drawing.Size(52, 33);
             this.roundButton6.TabIndex = 19;
@@ -266,7 +266,7 @@
             this.roundButton7.ButtonPressedForeColor = System.Drawing.Color.White;
             this.roundButton7.ButtonRoundRadius = 30;
             this.roundButton7.Location = new System.Drawing.Point(105, 270);
-            this.roundButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton7.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton7.Name = "roundButton7";
             this.roundButton7.Size = new System.Drawing.Size(52, 33);
             this.roundButton7.TabIndex = 20;
@@ -286,7 +286,7 @@
             this.roundButton8.ButtonRoundRadius = 30;
             this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton8.Location = new System.Drawing.Point(165, 270);
-            this.roundButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton8.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton8.Name = "roundButton8";
             this.roundButton8.Size = new System.Drawing.Size(75, 33);
             this.roundButton8.TabIndex = 21;
@@ -306,7 +306,7 @@
             this.roundButton9.ButtonRoundRadius = 30;
             this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton9.Location = new System.Drawing.Point(248, 270);
-            this.roundButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton9.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton9.Name = "roundButton9";
             this.roundButton9.Size = new System.Drawing.Size(75, 33);
             this.roundButton9.TabIndex = 22;
@@ -326,7 +326,7 @@
             this.roundButton10.ButtonRoundRadius = 30;
             this.roundButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roundButton10.Location = new System.Drawing.Point(331, 270);
-            this.roundButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton10.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton10.Name = "roundButton10";
             this.roundButton10.Size = new System.Drawing.Size(75, 33);
             this.roundButton10.TabIndex = 23;
@@ -348,7 +348,7 @@
             this.roundButton11.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.roundButton11.ForeColor = System.Drawing.Color.White;
             this.roundButton11.Location = new System.Drawing.Point(45, 453);
-            this.roundButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundButton11.Margin = new System.Windows.Forms.Padding(4);
             this.roundButton11.Name = "roundButton11";
             this.roundButton11.Size = new System.Drawing.Size(207, 64);
             this.roundButton11.TabIndex = 24;
@@ -409,8 +409,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Credit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рассчёт кредита";
             this.Load += new System.EventHandler(this.Credit_Load);
             this.ResumeLayout(false);

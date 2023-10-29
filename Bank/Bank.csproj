@@ -191,11 +191,17 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Admin%27s forms\credits_watch.resx">
+      <DependentUpon>Credits_watch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_enter_form.resx">
       <DependentUpon>Mortgages_enter_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_watch.resx">
       <DependentUpon>Mortgages_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Rates_watch.resx">
+      <DependentUpon>Rates_watch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Users_enter_form.resx">
       <DependentUpon>Users_enter_form.cs</DependentUpon>

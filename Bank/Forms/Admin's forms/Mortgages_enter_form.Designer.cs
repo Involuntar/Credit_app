@@ -229,6 +229,7 @@
             this.Controls.Add(this.Init_fee_txt);
             this.Controls.Add(this.Cost_txt);
             this.Name = "Mortgages_enter_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mortgages_enter_form";
             this.ResumeLayout(false);
             this.PerformLayout();

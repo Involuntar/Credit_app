@@ -49,59 +49,49 @@
             this.firstnametxt.Location = new System.Drawing.Point(163, 73);
             this.firstnametxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstnametxt.Name = "firstnametxt";
-            this.firstnametxt.Size = new System.Drawing.Size(76, 20);
+            this.firstnametxt.Size = new System.Drawing.Size(76, 22);
             this.firstnametxt.TabIndex = 0;
             // 
             // middlenametxt
             // 
             this.middlenametxt.Location = new System.Drawing.Point(148, 99);
-            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.middlenametxt.Margin = new System.Windows.Forms.Padding(2);
             this.middlenametxt.Name = "middlenametxt";
-            this.middlenametxt.Size = new System.Drawing.Size(76, 20);
+            this.middlenametxt.Size = new System.Drawing.Size(76, 22);
             this.middlenametxt.TabIndex = 1;
             // 
             // lastnametxt
             // 
             this.lastnametxt.Location = new System.Drawing.Point(148, 138);
-            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastnametxt.Margin = new System.Windows.Forms.Padding(2);
             this.lastnametxt.Name = "lastnametxt";
-            this.lastnametxt.Size = new System.Drawing.Size(76, 20);
+            this.lastnametxt.Size = new System.Drawing.Size(76, 22);
             this.lastnametxt.TabIndex = 2;
             // 
             // logintxt
             // 
             this.logintxt.Location = new System.Drawing.Point(122, 179);
-            this.logintxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logintxt.Margin = new System.Windows.Forms.Padding(2);
             this.logintxt.Name = "logintxt";
-            this.logintxt.Size = new System.Drawing.Size(76, 20);
+            this.logintxt.Size = new System.Drawing.Size(76, 22);
             this.logintxt.TabIndex = 3;
             this.logintxt.TextChanged += new System.EventHandler(this.logintxt_TextChanged);
             // 
             // passwordtxt
             // 
             this.passwordtxt.Location = new System.Drawing.Point(159, 221);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(76, 20);
+            this.passwordtxt.Size = new System.Drawing.Size(76, 22);
             this.passwordtxt.TabIndex = 4;
             // 
             // emailtxt
             // 
             this.emailtxt.Location = new System.Drawing.Point(148, 266);
-            this.emailtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailtxt.Margin = new System.Windows.Forms.Padding(2);
             this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(76, 20);
+            this.emailtxt.Size = new System.Drawing.Size(76, 22);
             this.emailtxt.TabIndex = 5;
-            // 
-            // Save
-            // 
-            this.Save.Location = new System.Drawing.Point(122, 306);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(90, 19);
-            this.Save.TabIndex = 6;
-            this.Save.Text = "Сохранить";
-            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // firstname_txt
             // 
@@ -199,6 +189,7 @@
             this.Save.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Save.ButtonRoundRadius = 30;
             this.Save.Location = new System.Drawing.Point(77, 422);
+            this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(100, 40);
             this.Save.TabIndex = 14;
@@ -227,6 +218,7 @@
             this.Controls.Add(this.firstnametxt);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Users_enter_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод пользователей";
             this.ResumeLayout(false);
             this.PerformLayout();

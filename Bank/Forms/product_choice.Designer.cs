@@ -39,7 +39,7 @@
             this.Product_head.AutoSize = true;
             this.Product_head.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
-            this.Product_head.Location = new System.Drawing.Point(72, 66);
+            this.Product_head.Location = new System.Drawing.Point(40, 69);
             this.Product_head.Name = "Product_head";
             this.Product_head.Size = new System.Drawing.Size(637, 38);
             this.Product_head.TabIndex = 0;
@@ -47,8 +47,8 @@
             // 
             // credit
             // 
-            this.credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.credit.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.credit.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.credit.ButtonBorderColor = System.Drawing.Color.Black;
             this.credit.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
             this.credit.ButtonHighlightColor2 = System.Drawing.Color.SaddleBrown;
@@ -57,18 +57,20 @@
             this.credit.ButtonPressedColor2 = System.Drawing.Color.Chocolate;
             this.credit.ButtonPressedForeColor = System.Drawing.Color.Black;
             this.credit.ButtonRoundRadius = 30;
-            this.credit.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.credit.Location = new System.Drawing.Point(113, 212);
+            this.credit.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.credit.ForeColor = System.Drawing.Color.White;
+            this.credit.Location = new System.Drawing.Point(99, 187);
+            this.credit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.credit.Name = "credit";
-            this.credit.Size = new System.Drawing.Size(154, 62);
+            this.credit.Size = new System.Drawing.Size(192, 86);
             this.credit.TabIndex = 1;
             this.credit.Text = "Кредит";
             this.credit.Click += new System.EventHandler(this.credit_Click);
             // 
             // mortgages
             // 
-            this.mortgages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.mortgages.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.mortgages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.mortgages.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.mortgages.ButtonBorderColor = System.Drawing.Color.Black;
             this.mortgages.ButtonHighlightColor = System.Drawing.Color.SaddleBrown;
             this.mortgages.ButtonHighlightColor2 = System.Drawing.Color.SaddleBrown;
@@ -77,22 +79,28 @@
             this.mortgages.ButtonPressedColor2 = System.Drawing.Color.Chocolate;
             this.mortgages.ButtonPressedForeColor = System.Drawing.Color.Black;
             this.mortgages.ButtonRoundRadius = 30;
-            this.mortgages.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mortgages.Location = new System.Drawing.Point(490, 212);
+            this.mortgages.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mortgages.ForeColor = System.Drawing.Color.White;
+            this.mortgages.Location = new System.Drawing.Point(409, 187);
+            this.mortgages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mortgages.Name = "mortgages";
-            this.mortgages.Size = new System.Drawing.Size(154, 62);
+            this.mortgages.Size = new System.Drawing.Size(193, 86);
             this.mortgages.TabIndex = 2;
             this.mortgages.Text = "Ипотека";
             this.mortgages.Click += new System.EventHandler(this.mortgages_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(695, 13);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Exit.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(680, 14);
+            this.Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.Size = new System.Drawing.Size(87, 27);
             this.Exit.TabIndex = 3;
             this.Exit.Text = "Выход";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Product_choice
@@ -100,13 +108,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ClientSize = new System.Drawing.Size(781, 453);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.mortgages);
             this.Controls.Add(this.credit);
             this.Controls.Add(this.Product_head);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Product_choice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Продукты";
             this.ResumeLayout(false);
             this.PerformLayout();

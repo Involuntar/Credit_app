@@ -35,14 +35,14 @@ namespace Bank
         {
             if (User.Checked == true)
             {
-                string login_check = Login.Text;
-                string password_check = Password.Text;
+                public_class.Login = Login.Text;
+                public_class.Password = Password.Text;
                 MySqlConnection con = Connection.GetConnection();
                 string sql = $"SELECT login, password FROM users " +
                     $"WHERE login LIKE @login AND password LIKE @password";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login_check;
-                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password_check;
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
 
                 try
                 {

@@ -116,9 +116,9 @@
             this.users.ButtonRoundRadius = 30;
             this.users.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.users.ForeColor = System.Drawing.Color.White;
-            this.users.Location = new System.Drawing.Point(73, 146);
+            this.users.Location = new System.Drawing.Point(97, 158);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(167, 58);
+            this.users.Size = new System.Drawing.Size(162, 55);
             this.users.TabIndex = 25;
             this.users.Text = "Пользователи";
             this.users.Click += new System.EventHandler(this.users_Click);

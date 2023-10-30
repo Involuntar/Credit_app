@@ -76,5 +76,10 @@ namespace Bank.Forms
         {
 
         }
+
+        private void show_grafik_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -129,7 +129,7 @@
             // 
             // roundButton1
             // 
-            this.roundButton1.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton1.BackColor = System.Drawing.Color.White;
             this.roundButton1.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton1.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton1.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -148,7 +148,7 @@
             // 
             // roundButton2
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton2.BackColor = System.Drawing.Color.White;
             this.roundButton2.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton2.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton2.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -167,7 +167,7 @@
             // 
             // roundButton3
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton3.BackColor = System.Drawing.Color.White;
             this.roundButton3.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton3.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton3.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -186,7 +186,7 @@
             // 
             // roundButton4
             // 
-            this.roundButton4.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton4.BackColor = System.Drawing.Color.White;
             this.roundButton4.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton4.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton4.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -205,7 +205,7 @@
             // 
             // roundButton5
             // 
-            this.roundButton5.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton5.BackColor = System.Drawing.Color.White;
             this.roundButton5.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton5.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton5.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -224,7 +224,7 @@
             // 
             // roundButton6
             // 
-            this.roundButton6.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton6.BackColor = System.Drawing.Color.White;
             this.roundButton6.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton6.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton6.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -242,7 +242,7 @@
             // 
             // roundButton7
             // 
-            this.roundButton7.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton7.BackColor = System.Drawing.Color.White;
             this.roundButton7.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton7.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton7.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -260,7 +260,7 @@
             // 
             // roundButton8
             // 
-            this.roundButton8.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton8.BackColor = System.Drawing.Color.White;
             this.roundButton8.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton8.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton8.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -279,7 +279,7 @@
             // 
             // roundButton9
             // 
-            this.roundButton9.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton9.BackColor = System.Drawing.Color.White;
             this.roundButton9.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton9.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton9.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -298,7 +298,7 @@
             // 
             // roundButton10
             // 
-            this.roundButton10.BackColor = System.Drawing.Color.Gainsboro;
+            this.roundButton10.BackColor = System.Drawing.Color.White;
             this.roundButton10.BackColor2 = System.Drawing.Color.Silver;
             this.roundButton10.ButtonBorderColor = System.Drawing.Color.Black;
             this.roundButton10.ButtonHighlightColor = System.Drawing.Color.Orange;

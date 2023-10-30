@@ -16,6 +16,11 @@ namespace Bank.Forms.Admin_s_forms
         private readonly users_watch _parent;
         public string id, firstname, middlename, lastname, login, password, email;
 
+        private void firstname_txt_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void logintxt_TextChanged(object sender, EventArgs e)
         {
 

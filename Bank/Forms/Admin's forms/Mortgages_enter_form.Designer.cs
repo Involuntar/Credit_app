@@ -45,6 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Cost_txt
@@ -221,6 +223,15 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Код статуса";
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(541, 13);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 0;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            // 
             // Mortgages_enter_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +259,7 @@
             this.Name = "Mortgages_enter_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mortgages_enter_form";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +284,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Back;
     }
 }

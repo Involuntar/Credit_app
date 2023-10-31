@@ -1,4 +1,5 @@
 ﻿using Bank.Data;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,38 @@ namespace Bank.Forms
             Rate.Text = public_class.Rate + '%';
             Term.Text = public_class.Term + " лет";
             Payment.Text = public_class.monthly_pay;
+        }
+
+        private void Send_req_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = Connection.GetConnection();
+            string sql = "INSERT INTO credits VALUES (NULL, (SELECT id FROM terms WHERE len LIKE @len), @summ, " +
+                "(SELECT id FROM rates WHERE coefficient LIKE @coeff), " +
+                "@credit_type_id, 4, (SELECT id FROM users WHERE login = @login AND password = @password))";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.Add("@len", MySqlDbType.UInt16).Value = public_class.Term;
+            cmd.Parameters.Add("@summ", MySqlDbType.Double).Value = public_class.End_Summ;
+            cmd.Parameters.Add("@coeff", MySqlDbType.Double).Value = public_class.Rate;
+            
+            cmd.Parameters.Add("@credit_type_id", MySqlDbType.UInt16).Value = public_class.credit_type_id;
+            cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
+            try 
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Credit credit = new Credit();
+            credit.Show();
         }
     }
 }

@@ -129,6 +129,7 @@
             this.Send_req.Size = new System.Drawing.Size(100, 40);
             this.Send_req.TabIndex = 8;
             this.Send_req.Text = "Оставить заявку";
+            this.Send_req.Click += new System.EventHandler(this.Send_req_Click);
             // 
             // Back
             // 
@@ -147,6 +148,7 @@
             this.Back.Size = new System.Drawing.Size(100, 40);
             this.Back.TabIndex = 7;
             this.Back.Text = "Вернуться к расчёту";
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Credit_counted
             // 

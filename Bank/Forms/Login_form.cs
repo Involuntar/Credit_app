@@ -99,7 +99,7 @@ namespace Bank
             
             else
             {
-                MessageBox.Show("Chose your role", "Recomendation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Выберите роль", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

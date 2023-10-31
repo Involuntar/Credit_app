@@ -67,6 +67,7 @@ namespace Bank.Forms
             {
                 MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            conn.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

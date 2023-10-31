@@ -50,6 +50,7 @@ namespace Bank.Forms
             {
                 MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            con.Close();
         }
 
         private void Back_Click(object sender, EventArgs e)

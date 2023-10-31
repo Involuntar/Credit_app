@@ -35,13 +35,15 @@
             this.Mortgagestxt = new System.Windows.Forms.Label();
             this.Add_new2 = new Bank.RoundButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.credit_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itog_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.term = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.credit_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
@@ -82,13 +84,15 @@
             this.dataGridCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridCredit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column8,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.credit_sum,
+            this.itog_sum,
+            this.term,
+            this.rate,
+            this.credit_type,
+            this.user_id,
+            this.status,
+            this.Edit,
+            this.Delete});
             this.dataGridCredit.Location = new System.Drawing.Point(12, 68);
             this.dataGridCredit.MultiSelect = false;
             this.dataGridCredit.Name = "dataGridCredit";
@@ -147,40 +151,60 @@
             this.Column1.HeaderText = "#";
             this.Column1.Name = "Column1";
             // 
-            // Column8
+            // credit_sum
             // 
-            this.Column8.HeaderText = "Сумма займа";
-            this.Column8.Name = "Column8";
+            this.credit_sum.HeaderText = "Сумма займа";
+            this.credit_sum.Name = "credit_sum";
             // 
-            // Column2
+            // itog_sum
             // 
-            this.Column2.HeaderText = "Итоговая сумма";
-            this.Column2.Name = "Column2";
+            this.itog_sum.HeaderText = "Итоговая сумма";
+            this.itog_sum.Name = "itog_sum";
             // 
-            // Column3
+            // term
             // 
-            this.Column3.HeaderText = "Срок выплаты";
-            this.Column3.Name = "Column3";
+            this.term.HeaderText = "Срок выплаты";
+            this.term.Name = "term";
             // 
-            // Column4
+            // rate
             // 
-            this.Column4.HeaderText = "Ставка";
-            this.Column4.Name = "Column4";
+            this.rate.HeaderText = "Ставка";
+            this.rate.Name = "rate";
             // 
-            // Column5
+            // credit_type
             // 
-            this.Column5.HeaderText = "Тип кредита";
-            this.Column5.Name = "Column5";
+            this.credit_type.HeaderText = "Тип кредита";
+            this.credit_type.Name = "credit_type";
             // 
-            // Column6
+            // user_id
             // 
-            this.Column6.HeaderText = "Код пользователя";
-            this.Column6.Name = "Column6";
+            this.user_id.HeaderText = "Код пользователя";
+            this.user_id.Name = "user_id";
             // 
-            // Column7
+            // status
             // 
-            this.Column7.HeaderText = "Статус";
-            this.Column7.Name = "Column7";
+            this.status.HeaderText = "Статус";
+            this.status.Name = "status";
+            // 
+            // Edit
+            // 
+            this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit.HeaderText = "";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Изменить";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Удалить";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // Credits_watch
             // 
@@ -211,12 +235,14 @@
         private System.Windows.Forms.Label Mortgagestxt;
         private RoundButton Add_new2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credit_sum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itog_sum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn term;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credit_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

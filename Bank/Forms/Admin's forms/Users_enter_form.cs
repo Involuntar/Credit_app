@@ -55,6 +55,36 @@ namespace Bank.Forms.Admin_s_forms
 
         private void Save_Click(object sender, EventArgs e)
         {
+            if (lastnametxt.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Фамилия должна содердать как минимум 3 символа");
+                return;
+            }
+            if (middlenametxt.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Отчество должно содержать как минимум 3 символа");
+                return;
+            }
+            if (firstnametxt.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Имя должно содержать как минимум 3 символа");
+                return;
+            }
+            if (logintxt.Text.Trim().Length < 5)
+            {
+                MessageBox.Show("Логин должен содержать как минимум 5 символов");
+                return;
+            }
+            if (passwordtxt.Text.Trim().Length < 8)
+            {
+                MessageBox.Show("Пароль должен содержать как минимум 8 символов");
+                return;
+            }
+            if (emailtxt.Text.Trim().Length < 10)
+            {
+                MessageBox.Show("Почта должна содержать как минимум 10 символов");
+                return;
+            }
             if (Save.Text == "Сохранить")
             {
                 Users users = new Users(firstnametxt.Text.Trim(), middlenametxt.Text.Trim(),

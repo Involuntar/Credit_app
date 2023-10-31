@@ -37,6 +37,21 @@ namespace Bank.Forms.Admin_s_forms
 
         private void Save_Click(object sender, EventArgs e)
         {
+            if (Cost_txt.Text.Trim().Length < 100000)
+            {
+                MessageBox.Show("Минимальная сумма займа 100.000");
+                return;
+            }
+            if (Init_fee_txt.Text.Trim().Length < 50000)
+            {
+                MessageBox.Show("Минимальная сумма первого взноса 50.000");
+                return;
+            }
+            if (Credit_summ_txt.Text.Trim().Length < 100000)
+            {
+                MessageBox.Show("Минимальная сумма кредита 100.000");
+                return;
+            }
             if (Save.Text == "Сохранить")
             {
                 Mortgages mortgages = new Mortgages(Cost_txt.Text.Trim(), Init_fee_txt.Text.Trim(),

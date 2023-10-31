@@ -17,6 +17,11 @@ namespace Bank.Forms.Admin_s_forms
         private readonly Mortgages_watch _Watch;
         public string id, cost, init_fee, credit_summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void UpdateMortInfo()
         {
             Save.Text = "Обновить";

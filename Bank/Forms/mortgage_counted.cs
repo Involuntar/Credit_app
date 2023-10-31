@@ -58,8 +58,15 @@ namespace Bank.Forms
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
             cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

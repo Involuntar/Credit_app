@@ -45,9 +45,9 @@ namespace Bank
             MySqlCommand cmd_insert = new MySqlCommand(sql_insert, conn);
             cmd_insert.Parameters.Add("@new_email", MySqlDbType.VarChar).Value = email.Text;
             cmd_insert.Parameters.Add("@new_login", MySqlDbType.VarChar).Value = new_login.Text;
-            cmd_insert.Parameters.Add("@new_password", MySqlDbType.VarChar).Value = new_password.Text;
+            cmd_insert.Parameters.Add("@new_password", MySqlDbType.VarChar).Value = BCrypt.Net.BCrypt.HashPassword(new_password.Text); 
             cmd_insert.Parameters.Add("@name", MySqlDbType.VarChar).Value = name.Text;
-            cmd_insert.Parameters.Add("@middlename", MySqlDbType.VarChar).Value = middlename.Text;
+            cmd_insert.Parameters.Add("@middlename", MySqlDbType.VarChar).Value = middlename.Text; 
             cmd_insert.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = lastname.Text;
             cmd_check_user.Parameters.Add("@new_login", MySqlDbType.VarChar).Value = new_login.Text;
             object check_user = cmd_check_user.ExecuteScalar();
@@ -74,6 +74,11 @@ namespace Bank
             this.Hide();
             Login_form login = new Login_form();
             login.Show();
+        }
+
+        private void new_password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

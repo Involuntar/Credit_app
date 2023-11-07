@@ -1,6 +1,7 @@
 ﻿using Bank.Data;
 using Bank.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Tls.Crypto;
 using System;
 using System.Collections.Generic;
@@ -39,67 +40,54 @@ namespace Bank
                 public_class.Password = Password.Text;
                 MySqlConnection con = Connection.GetConnection();
                 string sql = $"SELECT login, password FROM users " +
-                    $"WHERE login LIKE @login AND password LIKE @password";
+                    $"WHERE login LIKE @login";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
-
-                try
+                string sql_2 = $"SELECT password FROM users";
+                MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                string passwords = (string)cmd_2.ExecuteScalar();
+                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
-                    object pass_check = cmd.ExecuteScalar();
-                    if (pass_check != null)
-                    {
-                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        Product_choice pr_ch = new Product_choice();
-                        pr_ch.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Product_choice pr_ch = new Product_choice();
+                    pr_ch.Show();
                 }
-                catch
+                else
                 {
-
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                con.Close();
             }
             else if (Admin.Checked == true)
             {
-                string login_check = Login.Text;
-                string password_check = Password.Text;
+                public_class.Login = Login.Text;
+                public_class.Password = Password.Text;
                 MySqlConnection con = Connection.GetConnection();
                 string sql = $"SELECT login, password FROM admins " +
                     $"WHERE login LIKE @login AND password LIKE @password";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login_check;
-                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password_check;
-
-                try
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login; 
+                string sql_2 = $"SELECT password FROM admins";
+                MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                string passwords = (string)cmd_2.ExecuteScalar();
+                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
-                    object pass_check = cmd.ExecuteScalar();
-                    if (pass_check != null)
-                    {
-                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        Form_for_admin admin = new Form_for_admin();
-                        admin.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Form_for_admin for_Admin = new Form_for_admin();
+                    for_Admin.Show();
                 }
-                catch
+                else
                 {
-
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 con.Close();
             }
-            
+
             else
             {
-                MessageBox.Show("Chose your role", "Recomendation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Выберите роль!", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

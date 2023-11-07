@@ -45,7 +45,7 @@ namespace Bank.Forms
                 $"credit_type_id, users_id, statuses_id) " +
                 $"VALUES (@cost, @init_fee, @credit_summ, (SELECT id FROM terms WHERE len LIKE @len), " +
                 $"(SELECT id FROM rates WHERE coefficient LIKE @coeff), @credit_type_id, (SELECT id FROM users " +
-                $"WHERE login LIKE @login AND password LIKE @password), 4)";
+                $"WHERE login LIKE @login), 4)"; /*вернёшься- иди на форму логина снова*/
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = public_class.Start_Summ;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = public_class.init_fee;
@@ -56,10 +56,10 @@ namespace Bank.Forms
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = public_class.credit_type_id;
 
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
-
             cmd.ExecuteNonQuery();
             MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            conn.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

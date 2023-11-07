@@ -118,6 +118,7 @@
             this.new_password.Name = "new_password";
             this.new_password.Size = new System.Drawing.Size(305, 20);
             this.new_password.TabIndex = 11;
+            this.new_password.TextChanged += new System.EventHandler(this.new_password_TextChanged);
             // 
             // pswrd_2
             // 
@@ -141,7 +142,7 @@
             // name
             // 
             this.name.Location = new System.Drawing.Point(164, 151);
-            this.name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.name.Margin = new System.Windows.Forms.Padding(2);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(151, 20);
             this.name.TabIndex = 15;
@@ -149,7 +150,7 @@
             // middlename
             // 
             this.middlename.Location = new System.Drawing.Point(164, 203);
-            this.middlename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.middlename.Margin = new System.Windows.Forms.Padding(2);
             this.middlename.Name = "middlename";
             this.middlename.Size = new System.Drawing.Size(151, 20);
             this.middlename.TabIndex = 16;
@@ -157,7 +158,7 @@
             // lastname
             // 
             this.lastname.Location = new System.Drawing.Point(164, 93);
-            this.lastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastname.Margin = new System.Windows.Forms.Padding(2);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(151, 20);
             this.lastname.TabIndex = 17;
@@ -177,7 +178,7 @@
             this.reg.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reg.ForeColor = System.Drawing.Color.White;
             this.reg.Location = new System.Drawing.Point(223, 306);
-            this.reg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reg.Margin = new System.Windows.Forms.Padding(2);
             this.reg.Name = "reg";
             this.reg.Size = new System.Drawing.Size(264, 62);
             this.reg.TabIndex = 14;
@@ -190,7 +191,7 @@
             this.Back.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Back.ForeColor = System.Drawing.Color.White;
             this.Back.Location = new System.Drawing.Point(720, 9);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(71, 28);
             this.Back.TabIndex = 18;

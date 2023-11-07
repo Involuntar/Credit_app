@@ -1,5 +1,7 @@
 ﻿using Bank.Data;
+using Bank.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Tls.Crypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,35 +28,35 @@ namespace Bank
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Log_in_Click(object sender, EventArgs e)
         {
             if (User.Checked == true)
             {
-                string login_check = Login.Text;
-                string password_check = Password.Text;
+                public_class.Login = Login.Text;
+                public_class.Password = Password.Text;
                 MySqlConnection con = Connection.GetConnection();
                 string sql = $"SELECT login, password FROM users " +
                     $"WHERE login LIKE @login AND password LIKE @password";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login_check;
-                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password_check;
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
 
                 try
                 {
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         Product_choice pr_ch = new Product_choice();
                         pr_ch.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
@@ -78,18 +80,23 @@ namespace Bank
                     object pass_check = cmd.ExecuteScalar();
                     if (pass_check != null)
                     {
-                        MessageBox.Show("Login successful", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Form_for_admin admin = new Form_for_admin();
+                        admin.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login denied", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
                 {
 
                 }
+                con.Close();
             }
+            
             else
             {
                 MessageBox.Show("Chose your role", "Recomendation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -100,6 +107,13 @@ namespace Bank
         {
             Check_conn check = new Check_conn();
             check.Show();
+        }
+
+        private void Reg_Click(object sender, EventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.Show();
+            this.Hide();
         }
     }
 }

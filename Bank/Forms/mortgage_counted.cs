@@ -45,7 +45,7 @@ namespace Bank.Forms
                 $"credit_type_id, users_id, statuses_id) " +
                 $"VALUES (@cost, @init_fee, @credit_summ, (SELECT id FROM terms WHERE len LIKE @len), " +
                 $"(SELECT id FROM rates WHERE coefficient LIKE @coeff), @credit_type_id, (SELECT id FROM users " +
-                $"WHERE login LIKE @login), 4)"; /*вернёшься- иди на форму логина снова*/
+                $"WHERE login LIKE @login), 4)";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = public_class.Start_Summ;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = public_class.init_fee;

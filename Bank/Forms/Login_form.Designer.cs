@@ -48,6 +48,7 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(287, 24);
             this.Password.TabIndex = 0;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Login
             // 

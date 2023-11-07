@@ -103,5 +103,20 @@ namespace Bank
             reg.Show();
             this.Hide();
         }
+
+        private void Log_in_txt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

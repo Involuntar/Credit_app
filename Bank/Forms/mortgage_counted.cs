@@ -56,9 +56,17 @@ namespace Bank.Forms
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = public_class.credit_type_id;
 
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = public_class.Password;
 
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Заявка отправлена на рассмотрение", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             conn.Close();
         }
 
@@ -73,6 +81,11 @@ namespace Bank.Forms
         }
 
         private void Summ_show_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void show_grafik_Click(object sender, EventArgs e)
         {
 
         }

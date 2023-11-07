@@ -85,6 +85,10 @@ namespace Bank
             {
                 MessageBox.Show("Введите целое число", "Неверная сумма", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (System.ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Выберите ставку и срок", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void rate8_Click(object sender, EventArgs e)

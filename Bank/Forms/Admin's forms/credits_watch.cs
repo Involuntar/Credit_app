@@ -16,5 +16,10 @@ namespace Bank.Forms.Admin_s_forms
         {
             InitializeComponent();
         }
+
+        private void dataGridMort_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

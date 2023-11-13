@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Bank.Forms.Admin_s_forms
 {
@@ -81,12 +83,17 @@ namespace Bank.Forms.Admin_s_forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            (DataGridView.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";
+            (dataGridMort.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";
         }
 
         private void Mortgages_watch_Load(object sender, EventArgs e)
         {
-
+            MySqlConnection con = Connection.GetConnection();
+            con.Open();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter("SELECT * FROM mortgages", con);
+            DataSet db = new DataSet();
+            dataAdapter.Fill(db);
+            dataGridMort.DataSource = db.Tables[0];
         }
     }
 }

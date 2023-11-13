@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace Bank.Forms.Admin_s_forms
@@ -81,6 +82,11 @@ namespace Bank.Forms.Admin_s_forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             (DataGridView.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";
+        }
+
+        private void Mortgages_watch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

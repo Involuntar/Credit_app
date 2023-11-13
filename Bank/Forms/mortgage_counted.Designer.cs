@@ -101,6 +101,7 @@
             this.Rate_show.Size = new System.Drawing.Size(94, 20);
             this.Rate_show.TabIndex = 5;
             this.Rate_show.Text = "Проценты";
+            this.Rate_show.Click += new System.EventHandler(this.Rate_show_Click);
             // 
             // Term_show
             // 
@@ -128,8 +129,8 @@
             this.Back.ButtonRoundRadius = 30;
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(37, 270);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Location = new System.Drawing.Point(36, 272);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(201, 52);
             this.Back.TabIndex = 9;
@@ -150,8 +151,8 @@
             this.Send_req.ButtonRoundRadius = 30;
             this.Send_req.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Send_req.ForeColor = System.Drawing.Color.White;
-            this.Send_req.Location = new System.Drawing.Point(254, 270);
-            this.Send_req.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Send_req.Location = new System.Drawing.Point(254, 272);
+            this.Send_req.Margin = new System.Windows.Forms.Padding(2);
             this.Send_req.Name = "Send_req";
             this.Send_req.Size = new System.Drawing.Size(188, 52);
             this.Send_req.TabIndex = 8;
@@ -188,7 +189,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Goudy Stout", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(32, 206);
+            this.label3.Location = new System.Drawing.Point(31, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 26);
@@ -206,7 +207,7 @@
             this.show_grafik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_grafik.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_grafik.ForeColor = System.Drawing.Color.White;
-            this.show_grafik.Location = new System.Drawing.Point(221, 208);
+            this.show_grafik.Location = new System.Drawing.Point(220, 208);
             this.show_grafik.Name = "show_grafik";
             this.show_grafik.Size = new System.Drawing.Size(105, 26);
             this.show_grafik.TabIndex = 13;
@@ -219,7 +220,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(250, 54);
+            this.label2.Location = new System.Drawing.Point(379, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 22);
@@ -245,7 +246,7 @@
             this.Controls.Add(this.Term);
             this.Controls.Add(this.Rate);
             this.Controls.Add(this.Credit_summ);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mortgage_counted";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рассчёт ипотеки";

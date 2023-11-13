@@ -72,5 +72,15 @@ namespace Bank.Forms.Admin_s_forms
             Form_for_admin for_Admin = new Form_for_admin();
             for_Admin.Show();
         }
+
+        private void dataGridMort_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            (DataGridView.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";
+        }
     }
 }

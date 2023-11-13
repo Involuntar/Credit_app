@@ -89,5 +89,10 @@ namespace Bank.Forms
         {
 
         }
+
+        private void Rate_show_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

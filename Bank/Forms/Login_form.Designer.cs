@@ -46,6 +46,7 @@
             this.Password.Location = new System.Drawing.Point(156, 183);
             this.Password.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.Password.Name = "Password";
+            this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(287, 24);
             this.Password.TabIndex = 0;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);

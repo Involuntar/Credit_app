@@ -24,7 +24,7 @@ namespace Bank.Forms.Admin_s_forms
 
         public void Display_credit()
         {
-            Connection.Display("SELECT * FROM mortgages", dataGridCredit);
+            Connection.Display("SELECT * FROM credits", dataGridCredit);
         }
 
         private void dataGridMort_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -32,20 +32,15 @@ namespace Bank.Forms.Admin_s_forms
 
         }
 
-        private void Credits_watch_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            public_class.Search = textBox1.Text;
+            Connection.Search("SELECT * FROM credits WHERE summ LIKE @search", dataGridCredit);
         }
 
         private void Credits_watch_Shown(object sender, EventArgs e)
         {
             Display_credit();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            public_class.Search = textBox1.Text;
-            Connection.Search("SELECT * FROM credits WHERE summ LIKE @search", dataGridCredit);
         }
     }
 }

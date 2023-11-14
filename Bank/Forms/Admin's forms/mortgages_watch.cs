@@ -81,7 +81,7 @@ namespace Bank.Forms.Admin_s_forms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        /*private void textBox1_TextChanged(object sender, EventArgs e)
         {
             (dataGridMort.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";
         }
@@ -94,6 +94,6 @@ namespace Bank.Forms.Admin_s_forms
             DataSet db = new DataSet();
             dataAdapter.Fill(db);
             dataGridMort.DataSource = db.Tables[0];
-        }
+        }*/
     }
 }

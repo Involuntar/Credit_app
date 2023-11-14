@@ -75,6 +75,7 @@ namespace Bank.Forms.Admin_s_forms
             InitializeComponent();
             _Watch = Watch;
         }
+
         public void Clear()
         {
             Cost_txt.Text = Init_fee_txt.Text = Credit_summ_txt.Text = Term_id_txt.Text = Rate_id_txt.Text =

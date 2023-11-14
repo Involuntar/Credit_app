@@ -101,9 +101,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Credits.cs" />
     <Compile Include="Data\Mortgages.cs" />
     <Compile Include="Data\public_class.cs" />
     <Compile Include="Data\Users.cs" />
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.Designer.cs">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin%27s forms\Credits_watch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +207,9 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Credits_enter_form.resx">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\credits_watch.resx">
       <DependentUpon>Credits_watch.cs</DependentUpon>
     </EmbeddedResource>

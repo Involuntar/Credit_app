@@ -53,6 +53,30 @@ namespace Bank.Data
             con.Close();
         }
 
+        public static void Add_credit(Credits credit)
+        {
+            string sql = $"INSERT INTO credits VALUES (NULL, @term_id, @summ, @rate_id, @credit_type_id, @statuses_id, @users_id)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = credit.Term_id;
+            cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
+            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@credit_type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = credit.Users_id; 
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Кредит добавлен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Добавление произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
         public static void Add_mortgages(Mortgages mortgages)
         {
             string sql = $"INSERT INTO mortgages VALUES (NULL, @cost, @init_fee, @credit_summ, " +
@@ -111,6 +135,32 @@ namespace Bank.Data
             con.Close();
         }
 
+        public static void Update_credit(Credits credit, string id)   
+        {
+            string sql = "UPDATE credits SET term_id = @term_id, summ = @summ," +
+                "rate_id = @rate_id, credit_type = @credit_type, statuses_id = @statuse_id, users_id = @users_id " +
+                "WHERE id = @id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = credit.Term_id;
+            cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
+            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@credit_type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = credit.Users_id;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Изменения произведены успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Изменение произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+
         public static void Update_mortgages(Mortgages mortgages, string id)
         {
             string sql = $"UPDATE mortgages SET cost = @cost, init_fee = @init_fee, credit_summ = @credit_summ, " +
@@ -147,6 +197,25 @@ namespace Bank.Data
         public static void Delete_user(string id)
         {
             string sql = "DELETE FROM users WHERE id = @id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Удалено успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Удаление произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+
+        public static void Delete_credit(string id)/*а. и ещё. проверь ещё раз запрос выше. найди что не так*/
+        {
+            string sql = "DELETE FROM credits WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;

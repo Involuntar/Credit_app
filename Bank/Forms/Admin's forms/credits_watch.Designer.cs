@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridCredit = new System.Windows.Forms.DataGridView();
-            this.Back = new System.Windows.Forms.Button();
-            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.Add_new2 = new Bank.RoundButton();
+            this.dataGridCredit = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.credit_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itog_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,9 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
@@ -60,13 +60,26 @@
             this.panel1.Size = new System.Drawing.Size(904, 252);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // Add_new2
             // 
-            this.textBox1.Location = new System.Drawing.Point(712, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Поиск";
+            this.Add_new2.BackColor = System.Drawing.Color.DimGray;
+            this.Add_new2.BackColor2 = System.Drawing.Color.DimGray;
+            this.Add_new2.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Add_new2.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Add_new2.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Add_new2.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Add_new2.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Add_new2.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Add_new2.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Add_new2.ButtonRoundRadius = 30;
+            this.Add_new2.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_new2.ForeColor = System.Drawing.Color.White;
+            this.Add_new2.Location = new System.Drawing.Point(38, 8);
+            this.Add_new2.Margin = new System.Windows.Forms.Padding(2);
+            this.Add_new2.Name = "Add_new2";
+            this.Add_new2.Size = new System.Drawing.Size(105, 36);
+            this.Add_new2.TabIndex = 4;
+            this.Add_new2.Text = "Добавить";
             // 
             // dataGridCredit
             // 
@@ -103,48 +116,6 @@
             this.dataGridCredit.ShowEditingIcon = false;
             this.dataGridCredit.Size = new System.Drawing.Size(880, 172);
             this.dataGridCredit.TabIndex = 0;
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(817, 12);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 1;
-            this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
-            // 
-            // Mortgagestxt
-            // 
-            this.Mortgagestxt.AutoSize = true;
-            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
-            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
-            this.Mortgagestxt.Location = new System.Drawing.Point(44, 39);
-            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Mortgagestxt.Name = "Mortgagestxt";
-            this.Mortgagestxt.Size = new System.Drawing.Size(151, 40);
-            this.Mortgagestxt.TabIndex = 4;
-            this.Mortgagestxt.Text = "Кредиты";
-            // 
-            // Add_new2
-            // 
-            this.Add_new2.BackColor = System.Drawing.Color.DimGray;
-            this.Add_new2.BackColor2 = System.Drawing.Color.DimGray;
-            this.Add_new2.ButtonBorderColor = System.Drawing.Color.Black;
-            this.Add_new2.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.Add_new2.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.Add_new2.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.Add_new2.ButtonPressedColor = System.Drawing.Color.Red;
-            this.Add_new2.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.Add_new2.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.Add_new2.ButtonRoundRadius = 30;
-            this.Add_new2.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_new2.ForeColor = System.Drawing.Color.White;
-            this.Add_new2.Location = new System.Drawing.Point(38, 8);
-            this.Add_new2.Margin = new System.Windows.Forms.Padding(2);
-            this.Add_new2.Name = "Add_new2";
-            this.Add_new2.Size = new System.Drawing.Size(105, 36);
-            this.Add_new2.TabIndex = 4;
-            this.Add_new2.Text = "Добавить";
             // 
             // Column1
             // 
@@ -206,6 +177,35 @@
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(712, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Поиск";
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(817, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 1;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            // 
+            // Mortgagestxt
+            // 
+            this.Mortgagestxt.AutoSize = true;
+            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
+            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
+            this.Mortgagestxt.Location = new System.Drawing.Point(44, 39);
+            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Mortgagestxt.Name = "Mortgagestxt";
+            this.Mortgagestxt.Size = new System.Drawing.Size(151, 40);
+            this.Mortgagestxt.TabIndex = 4;
+            this.Mortgagestxt.Text = "Кредиты";
+            // 
             // Credits_watch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +218,7 @@
             this.Name = "Credits_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "credits_watch";
+            this.Load += new System.EventHandler(this.Credits_watch_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).EndInit();

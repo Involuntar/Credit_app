@@ -19,7 +19,7 @@ namespace Bank.Forms.Admin_s_forms
         public Credits_watch()
         {
             InitializeComponent();
-            credits_enter_form = new Credits_enter_form(this);/**/
+            credits_enter_form = new Credits_enter_form(this);
 
         }
 

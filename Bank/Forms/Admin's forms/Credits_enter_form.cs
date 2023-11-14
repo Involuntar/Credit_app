@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bank.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,49 @@ namespace Bank.Forms.Admin_s_forms
 {
     public partial class Credits_enter_form : Form
     {
-        public Credits_enter_form()
+        private readonly Credits_watch _Watch;
+        public string id, summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
+        
+        public Credits_enter_form(Credits_watch Watch)
         {
             InitializeComponent();
+            _Watch = Watch;
+        }
+
+        private void Credits_enter_form_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void save_cr_Click(object sender, EventArgs e)
+        {
+            if (summ_txt.Text.Trim().Length < 100000)
+            {
+                MessageBox.Show("Минимальная сумма кредита 100.000");
+                return;
+            }
+            if (save_cr.Text == "Сохранить")
+            {
+                Credits credits = new Credits(summ_txt.Text.Trim(), term_id.Text.Trim(),
+                rate_id.Text.Trim(), credit_type_id.Text.Trim(), users_id.Text.Trim(),
+                statuses_id.Text.Trim());
+                Connection.Add_credit(credits);
+                Clear();
+            }
+            if (save_cr.Text == "Обновить")
+            {
+                Credits credits = new Credits(summ_txt.Text.Trim(), term_id.Text.Trim(),
+                rate_id.Text.Trim(), credit_type_id.Text.Trim(), users_id.Text.Trim(),
+                statuses_id.Text.Trim());
+                Connection.Update_credit(credits, id);
+            }
+            _Watch.Display_mort();
+        }
+
+        public void Clear()
+        {
+            summ_txt.Text = term_id.Text = rate_id.Text = credit_type_id.Text = users_id.Text =
+                statuses_id.Text = string.Empty;
         }
     }
 }

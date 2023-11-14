@@ -22,6 +22,7 @@ namespace Bank.Forms.Admin_s_forms
             InitializeComponent();
             mortgages_enter_form = new Mortgages_enter_form(this);
         }
+
         public void Display_mort()
         {
             Connection.Display("SELECT * FROM mortgages", dataGridMort);

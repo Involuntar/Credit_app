@@ -36,26 +36,26 @@ namespace Bank.Forms.Admin_s_forms
             }
             if (save_cr.Text == "Сохранить")
             {
-                Credits credits = new Credits(summ_txt.Text.Trim(), term_id.Text.Trim(),
-                rate_id.Text.Trim(), credit_type_id.Text.Trim(), users_id.Text.Trim(),
-                statuses_id.Text.Trim());
+                Credits credits = new Credits(summ_txt.Text.Trim(), term_id_txt.Text.Trim(),
+                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), users_id_txt.Text.Trim(),
+                statuses_id_txt.Text.Trim());
                 Connection.Add_credit(credits);
                 Clear();
             }
             if (save_cr.Text == "Обновить")
             {
-                Credits credits = new Credits(summ_txt.Text.Trim(), term_id.Text.Trim(),
-                rate_id.Text.Trim(), credit_type_id.Text.Trim(), users_id.Text.Trim(),
-                statuses_id.Text.Trim());
+                Credits credits = new Credits(summ_txt.Text.Trim(), term_id_txt.Text.Trim(),
+                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), users_id_txt.Text.Trim(),
+                statuses_id_txt.Text.Trim());
                 Connection.Update_credit(credits, id);
             }
-            _Watch.Display_mort();
+            _Watch.Display_credit();
         }
 
         public void Clear()
         {
-            summ_txt.Text = term_id.Text = rate_id.Text = credit_type_id.Text = users_id.Text =
-                statuses_id.Text = string.Empty;
+            summ_txt.Text = term_id_txt.Text = rate_id_txt.Text = credit_type_id_txt.Text = users_id_txt.Text =
+                statuses_id_txt.Text = string.Empty;
         }
     }
 }

@@ -213,7 +213,7 @@ namespace Bank.Data
             con.Close();
         }
 
-        public static void Delete_credit(string id)/*а. и ещё. проверь ещё раз запрос выше. найди что не так*/
+        public static void Delete_credit(string id)
         {
             string sql = "DELETE FROM credits WHERE id = @id";
             MySqlConnection con = GetConnection();
@@ -255,6 +255,19 @@ namespace Bank.Data
             string sql = query;
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand( sql, con);
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
+        }
+
+        public static void Search(string query, DataGridView dgv)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.Add("@search", MySqlDbType.VarChar).Value = public_class.Search;
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);

@@ -37,11 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.save_cr = new Bank.RoundButton();
-            this.statuses_id = new System.Windows.Forms.TextBox();
-            this.users_id = new System.Windows.Forms.TextBox();
-            this.credit_type_id = new System.Windows.Forms.TextBox();
-            this.rate_id = new System.Windows.Forms.TextBox();
-            this.term_id = new System.Windows.Forms.TextBox();
             this.summ_txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -154,46 +149,6 @@
             this.save_cr.Text = "Сохранить";
             this.save_cr.Click += new System.EventHandler(this.save_cr_Click);
             // 
-            // statuses_id
-            // 
-            this.statuses_id.Location = new System.Drawing.Point(596, 236);
-            this.statuses_id.Margin = new System.Windows.Forms.Padding(2);
-            this.statuses_id.Name = "statuses_id";
-            this.statuses_id.Size = new System.Drawing.Size(76, 20);
-            this.statuses_id.TabIndex = 27;
-            // 
-            // users_id
-            // 
-            this.users_id.Location = new System.Drawing.Point(596, 194);
-            this.users_id.Margin = new System.Windows.Forms.Padding(2);
-            this.users_id.Name = "users_id";
-            this.users_id.Size = new System.Drawing.Size(76, 20);
-            this.users_id.TabIndex = 26;
-            // 
-            // credit_type_id
-            // 
-            this.credit_type_id.Location = new System.Drawing.Point(596, 153);
-            this.credit_type_id.Margin = new System.Windows.Forms.Padding(2);
-            this.credit_type_id.Name = "credit_type_id";
-            this.credit_type_id.Size = new System.Drawing.Size(76, 20);
-            this.credit_type_id.TabIndex = 25;
-            // 
-            // rate_id
-            // 
-            this.rate_id.Location = new System.Drawing.Point(284, 238);
-            this.rate_id.Margin = new System.Windows.Forms.Padding(2);
-            this.rate_id.Name = "rate_id";
-            this.rate_id.Size = new System.Drawing.Size(76, 20);
-            this.rate_id.TabIndex = 24;
-            // 
-            // term_id
-            // 
-            this.term_id.Location = new System.Drawing.Point(284, 196);
-            this.term_id.Margin = new System.Windows.Forms.Padding(2);
-            this.term_id.Name = "term_id";
-            this.term_id.Size = new System.Drawing.Size(76, 20);
-            this.term_id.TabIndex = 23;
-            // 
             // summ_txt
             // 
             this.summ_txt.Location = new System.Drawing.Point(284, 156);
@@ -217,11 +172,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.save_cr);
-            this.Controls.Add(this.statuses_id);
-            this.Controls.Add(this.users_id);
-            this.Controls.Add(this.credit_type_id);
-            this.Controls.Add(this.rate_id);
-            this.Controls.Add(this.term_id);
             this.Controls.Add(this.summ_txt);
             this.Name = "Credits_enter_form";
             this.Text = "Credits_enter_form";
@@ -242,11 +192,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private RoundButton save_cr;
-        private System.Windows.Forms.TextBox statuses_id;
-        private System.Windows.Forms.TextBox users_id;
-        private System.Windows.Forms.TextBox credit_type_id;
-        private System.Windows.Forms.TextBox rate_id;
-        private System.Windows.Forms.TextBox term_id;
         private System.Windows.Forms.TextBox summ_txt;
     }
 }

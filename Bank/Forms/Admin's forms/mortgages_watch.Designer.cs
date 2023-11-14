@@ -219,7 +219,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 20);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Add_new
             // 
@@ -279,7 +278,6 @@
             this.Name = "Mortgages_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mortgages_watch";
-            this.Load += new System.EventHandler(this.Mortgages_watch_Load);
             this.Shown += new System.EventHandler(this.Mortgages_watch_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMort)).EndInit();
             this.panel1.ResumeLayout(false);

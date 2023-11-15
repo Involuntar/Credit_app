@@ -82,6 +82,19 @@ namespace Bank.Forms.Admin_s_forms
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != String.Empty)
+            {
+                public_class.Search = textBox1.Text;
+                Connection.Search("SELECT * FROM mortgages WHERE cost LIKE @search", dataGridMort);
+            }
+            else 
+            {
+                Connection.Display("SELECT * FROM mortgages", dataGridMort);
+            }
+        }
+
         /*private void textBox1_TextChanged(object sender, EventArgs e)
         {
             (dataGridMort.DataSource as DataTable).DefaultView.RowFilter = $"user_id LIKE '%{textBox1.Text}%'";

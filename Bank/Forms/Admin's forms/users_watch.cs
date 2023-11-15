@@ -80,5 +80,28 @@ namespace Bank.Forms.Admin_s_forms
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
+            {
+                public_class.Search = textBox1.Text;
+                Connection.Search("SELECT * FROM users WHERE firstname LIKE @search", dataGridUsers);
+            }
+            else 
+            {
+                Connection.Display("SELECT * FROM users", dataGridUsers);
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            textBox1.Text = "Поиск";
+        }
     }
 }

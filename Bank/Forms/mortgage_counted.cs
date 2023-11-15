@@ -22,7 +22,7 @@ namespace Bank.Forms
         private void mortgage_counted_Load(object sender, EventArgs e)
         {
             Summ_show.Text = public_class.End_Summ;
-            Rate_show.Text = public_class.Rate + '%';
+            Rate_show.Text = Convert.ToString(Convert.ToDouble(public_class.Rate) * Convert.ToDouble(public_class.Start_Summ));
             Term_show.Text = public_class.Term + " лет";
             Monthly_pay.Text = public_class.monthly_pay;
         }

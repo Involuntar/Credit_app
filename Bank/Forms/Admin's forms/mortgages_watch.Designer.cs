@@ -79,8 +79,8 @@
             this.Edit,
             this.Delete});
             this.dataGridMort.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.dataGridMort.Location = new System.Drawing.Point(9, 68);
-            this.dataGridMort.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridMort.Location = new System.Drawing.Point(12, 84);
+            this.dataGridMort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridMort.MultiSelect = false;
             this.dataGridMort.Name = "dataGridMort";
             this.dataGridMort.RowHeadersVisible = false;
@@ -88,7 +88,7 @@
             this.dataGridMort.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridMort.RowTemplate.Height = 24;
             this.dataGridMort.ShowEditingIcon = false;
-            this.dataGridMort.Size = new System.Drawing.Size(886, 174);
+            this.dataGridMort.Size = new System.Drawing.Size(1181, 214);
             this.dataGridMort.TabIndex = 0;
             this.dataGridMort.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMort_CellClick);
             this.dataGridMort.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMort_CellContentClick);
@@ -196,29 +196,31 @@
             this.panel1.Controls.Add(this.Add_new);
             this.panel1.Controls.Add(this.dataGridMort);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 114);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 140);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 252);
+            this.panel1.Size = new System.Drawing.Size(1205, 310);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(657, 23);
+            this.label1.Location = new System.Drawing.Point(876, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Поиск";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(717, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(956, 28);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.Size = new System.Drawing.Size(220, 22);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Add_new
             // 
@@ -234,10 +236,10 @@
             this.Add_new.ButtonRoundRadius = 30;
             this.Add_new.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_new.ForeColor = System.Drawing.Color.White;
-            this.Add_new.Location = new System.Drawing.Point(29, 7);
-            this.Add_new.Margin = new System.Windows.Forms.Padding(2);
+            this.Add_new.Location = new System.Drawing.Point(39, 9);
+            this.Add_new.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Add_new.Name = "Add_new";
-            this.Add_new.Size = new System.Drawing.Size(105, 36);
+            this.Add_new.Size = new System.Drawing.Size(140, 44);
             this.Add_new.TabIndex = 1;
             this.Add_new.Text = "Добавить";
             this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
@@ -247,19 +249,18 @@
             this.Mortgagestxt.AutoSize = true;
             this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
             this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
-            this.Mortgagestxt.Location = new System.Drawing.Point(41, 43);
-            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Mortgagestxt.Location = new System.Drawing.Point(55, 53);
             this.Mortgagestxt.Name = "Mortgagestxt";
-            this.Mortgagestxt.Size = new System.Drawing.Size(145, 40);
+            this.Mortgagestxt.Size = new System.Drawing.Size(184, 51);
             this.Mortgagestxt.TabIndex = 2;
             this.Mortgagestxt.Text = "Ипотеки";
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(834, 10);
-            this.Back.Margin = new System.Windows.Forms.Padding(2);
+            this.Back.Location = new System.Drawing.Point(1112, 12);
+            this.Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(61, 22);
+            this.Back.Size = new System.Drawing.Size(81, 27);
             this.Back.TabIndex = 3;
             this.Back.Text = "Назад";
             this.Back.UseVisualStyleBackColor = true;
@@ -267,14 +268,14 @@
             // 
             // Mortgages_watch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(904, 366);
+            this.ClientSize = new System.Drawing.Size(1205, 450);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Mortgagestxt);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Mortgages_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mortgages_watch";

@@ -195,7 +195,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Поиск";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // Back
             // 
@@ -206,6 +209,7 @@
             this.Back.TabIndex = 1;
             this.Back.Text = "Назад";
             this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Mortgagestxt
             // 

@@ -43,72 +43,81 @@
             // Summ
             // 
             this.Summ.AutoSize = true;
-            this.Summ.Location = new System.Drawing.Point(319, 106);
+            this.Summ.Location = new System.Drawing.Point(239, 86);
+            this.Summ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Summ.Name = "Summ";
-            this.Summ.Size = new System.Drawing.Size(48, 16);
+            this.Summ.Size = new System.Drawing.Size(40, 13);
             this.Summ.TabIndex = 0;
             this.Summ.Text = "сумма";
             // 
             // Rate
             // 
             this.Rate.AutoSize = true;
-            this.Rate.Location = new System.Drawing.Point(319, 157);
+            this.Rate.Location = new System.Drawing.Point(239, 128);
+            this.Rate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Rate.Name = "Rate";
-            this.Rate.Size = new System.Drawing.Size(52, 16);
+            this.Rate.Size = new System.Drawing.Size(42, 13);
             this.Rate.TabIndex = 1;
             this.Rate.Text = "ставка";
             // 
             // Term
             // 
             this.Term.AutoSize = true;
-            this.Term.Location = new System.Drawing.Point(322, 205);
+            this.Term.Location = new System.Drawing.Point(242, 167);
+            this.Term.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Term.Name = "Term";
-            this.Term.Size = new System.Drawing.Size(37, 16);
+            this.Term.Size = new System.Drawing.Size(31, 13);
             this.Term.TabIndex = 2;
             this.Term.Text = "срок";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 205);
+            this.label4.Location = new System.Drawing.Point(84, 167);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Срок";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(109, 157);
+            this.label5.Location = new System.Drawing.Point(82, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ставка";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(109, 106);
+            this.label6.Location = new System.Drawing.Point(82, 86);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 16);
+            this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "Сумма кредита";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(167, 58);
+            this.label7.Font = new System.Drawing.Font("Goudy Stout", 20.25F);
+            this.label7.Location = new System.Drawing.Point(92, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 16);
+            this.label7.Size = new System.Drawing.Size(418, 37);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Ежемесячный платёж";
+            this.label7.Text = "Ваш ежемесячный платёж";
             // 
             // Payment
             // 
             this.Payment.AutoSize = true;
-            this.Payment.Location = new System.Drawing.Point(361, 58);
+            this.Payment.Location = new System.Drawing.Point(267, 46);
+            this.Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(55, 16);
+            this.Payment.Size = new System.Drawing.Size(44, 13);
             this.Payment.TabIndex = 9;
             this.Payment.Text = "платёж";
             // 
@@ -124,9 +133,10 @@
             this.Send_req.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Send_req.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Send_req.ButtonRoundRadius = 30;
-            this.Send_req.Location = new System.Drawing.Point(262, 312);
+            this.Send_req.Location = new System.Drawing.Point(196, 254);
+            this.Send_req.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Send_req.Name = "Send_req";
-            this.Send_req.Size = new System.Drawing.Size(100, 40);
+            this.Send_req.Size = new System.Drawing.Size(75, 32);
             this.Send_req.TabIndex = 8;
             this.Send_req.Text = "Оставить заявку";
             this.Send_req.Click += new System.EventHandler(this.Send_req_Click);
@@ -143,18 +153,20 @@
             this.Back.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Back.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Back.ButtonRoundRadius = 30;
-            this.Back.Location = new System.Drawing.Point(95, 312);
+            this.Back.Location = new System.Drawing.Point(71, 254);
+            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(100, 40);
+            this.Back.Size = new System.Drawing.Size(75, 32);
             this.Back.TabIndex = 7;
             this.Back.Text = "Вернуться к расчёту";
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Credit_counted
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.Payment);
             this.Controls.Add(this.Send_req);
             this.Controls.Add(this.Back);
@@ -165,6 +177,7 @@
             this.Controls.Add(this.Term);
             this.Controls.Add(this.Rate);
             this.Controls.Add(this.Summ);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Credit_counted";
             this.Text = "Credit_counted";
             this.Load += new System.EventHandler(this.Credit_counted_Load);

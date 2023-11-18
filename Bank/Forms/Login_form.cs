@@ -34,67 +34,60 @@ namespace Bank
 
         private void Log_in_Click(object sender, EventArgs e)
         {
-            try
+            if (User.Checked == true)
             {
-                if (User.Checked == true)
+                public_class.Login = Login.Text;
+                public_class.Password = Password.Text;
+                MySqlConnection con = Connection.GetConnection();
+                string sql = $"SELECT login, password FROM users " +
+                    $"WHERE login LIKE @login";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                string sql_2 = $"SELECT password FROM users";
+                MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                string passwords = (string)cmd_2.ExecuteScalar();
+                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
-                    public_class.Login = Login.Text;
-                    public_class.Password = Password.Text;
-                    MySqlConnection con = Connection.GetConnection();
-                    string sql = $"SELECT login, password FROM users " +
-                        $"WHERE login LIKE @login";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-                    string sql_2 = $"SELECT password FROM users";
-                    MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
-                    string passwords = (string)cmd_2.ExecuteScalar();
-                    if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
-                    {
-                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        Product_choice pr_ch = new Product_choice();
-                        pr_ch.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    con.Close();
+                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Product_choice pr_ch = new Product_choice();
+                    pr_ch.Show();
                 }
-                else if (Admin.Checked == true)
-                {
-                    public_class.Login = Login.Text;
-                    public_class.Password = Password.Text;
-                    MySqlConnection con = Connection.GetConnection();
-                    string sql = $"SELECT login, password FROM admins " +
-                        $"WHERE login LIKE @login AND password LIKE @password";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-                    string sql_2 = $"SELECT password FROM admins";
-                    MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
-                    string passwords = (string)cmd_2.ExecuteScalar();
-                    if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
-                    {
-                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        Form_for_admin for_Admin = new Form_for_admin();
-                        for_Admin.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    con.Close();
-                }
-
                 else
                 {
-                    MessageBox.Show("Выберите роль!", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                con.Close();
             }
-            catch (MySqlException)
+            else if (Admin.Checked == true)
             {
-                MessageBox.Show("Ошибка подключения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                public_class.Login = Login.Text;
+                public_class.Password = Password.Text;
+                MySqlConnection con = Connection.GetConnection();
+                string sql = $"SELECT login, password FROM admins " +
+                    $"WHERE login LIKE @login AND password LIKE @password";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                string sql_2 = $"SELECT password FROM admins";
+                MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                string passwords = (string)cmd_2.ExecuteScalar();
+                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                {
+                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Form_for_admin for_Admin = new Form_for_admin();
+                    for_Admin.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                con.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Выберите роль!", "Рекомендация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -123,7 +116,7 @@ namespace Bank
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

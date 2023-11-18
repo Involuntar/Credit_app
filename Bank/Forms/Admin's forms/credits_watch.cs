@@ -33,8 +33,8 @@ namespace Bank.Forms.Admin_s_forms
             {
                 credits_enter_form.Clear();
                 credits_enter_form.id = dataGridCredit.Rows[e.RowIndex].Cells[2].Value.ToString();
-                credits_enter_form.summ  = dataGridCredit.Rows[e.RowIndex].Cells[3].Value.ToString();
-                credits_enter_form.term_id = dataGridCredit.Rows[e.RowIndex].Cells[4].Value.ToString();
+                credits_enter_form.summ  = dataGridCredit.Rows[e.RowIndex].Cells[4].Value.ToString();
+                credits_enter_form.term_id = dataGridCredit.Rows[e.RowIndex].Cells[3].Value.ToString();
                 credits_enter_form.rate_id = dataGridCredit.Rows[e.RowIndex].Cells[5].Value.ToString();
 
                 credits_enter_form.credit_type_id = dataGridCredit.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -47,7 +47,7 @@ namespace Bank.Forms.Admin_s_forms
             }
             if(e.ColumnIndex == 1)
             {
-                if(MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if(MessageBox.Show("Вы уверены, что хотите удалить кредит?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Connection.Delete_credit(dataGridCredit.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_credit();

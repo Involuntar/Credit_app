@@ -14,7 +14,7 @@ namespace Bank.Forms.Admin_s_forms
     public partial class Credits_enter_form : Form
     {
         private readonly Credits_watch _Watch;
-        public string id, summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
+        public string  id, summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
         
         public Credits_enter_form(Credits_watch Watch)
         {

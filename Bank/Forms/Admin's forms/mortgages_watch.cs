@@ -52,7 +52,7 @@ namespace Bank.Forms.Admin_s_forms
             {
                 if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Connection.Delete_user(dataGridMort.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Connection.Delete_mortgages(dataGridMort.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_mort();
                 }
                 return;

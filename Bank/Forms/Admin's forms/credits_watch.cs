@@ -49,7 +49,7 @@ namespace Bank.Forms.Admin_s_forms
             {
                 if(MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Connection.Delete_user(dataGridCredit.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Connection.Delete_credit(dataGridCredit.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_credit();
                 }
                 return;

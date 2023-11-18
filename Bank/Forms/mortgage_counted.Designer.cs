@@ -282,6 +282,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Term_show;
         private System.Windows.Forms.Label Start_summ;
-        private System.Windows.Forms.Label label3;
     }
 }

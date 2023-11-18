@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Add_new2 = new Bank.RoundButton();
             this.dataGridCredit = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.term = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itog_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +43,6 @@
             this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Back = new System.Windows.Forms.Button();
-            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +54,9 @@
             this.panel1.Controls.Add(this.dataGridCredit);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 140);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 114);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 310);
+            this.panel1.Size = new System.Drawing.Size(904, 252);
             this.panel1.TabIndex = 0;
             // 
             // Add_new2
@@ -74,10 +73,10 @@
             this.Add_new2.ButtonRoundRadius = 30;
             this.Add_new2.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_new2.ForeColor = System.Drawing.Color.White;
-            this.Add_new2.Location = new System.Drawing.Point(51, 10);
-            this.Add_new2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Add_new2.Location = new System.Drawing.Point(38, 8);
+            this.Add_new2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_new2.Name = "Add_new2";
-            this.Add_new2.Size = new System.Drawing.Size(140, 44);
+            this.Add_new2.Size = new System.Drawing.Size(105, 36);
             this.Add_new2.TabIndex = 4;
             this.Add_new2.Text = "Добавить";
             this.Add_new2.Click += new System.EventHandler(this.Add_new2_Click);
@@ -106,8 +105,7 @@
             this.user_id,
             this.Edit,
             this.Delete});
-            this.dataGridCredit.Location = new System.Drawing.Point(16, 84);
-            this.dataGridCredit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridCredit.Location = new System.Drawing.Point(12, 68);
             this.dataGridCredit.MultiSelect = false;
             this.dataGridCredit.Name = "dataGridCredit";
             this.dataGridCredit.RowHeadersVisible = false;
@@ -115,55 +113,88 @@
             this.dataGridCredit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridCredit.RowTemplate.Height = 24;
             this.dataGridCredit.ShowEditingIcon = false;
-            this.dataGridCredit.Size = new System.Drawing.Size(1173, 212);
+            this.dataGridCredit.Size = new System.Drawing.Size(880, 172);
             this.dataGridCredit.TabIndex = 0;
             this.dataGridCredit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCredit_CellClick);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(712, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Поиск";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(817, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 1;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Mortgagestxt
+            // 
+            this.Mortgagestxt.AutoSize = true;
+            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
+            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
+            this.Mortgagestxt.Location = new System.Drawing.Point(44, 39);
+            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Mortgagestxt.Name = "Mortgagestxt";
+            this.Mortgagestxt.Size = new System.Drawing.Size(151, 40);
+            this.Mortgagestxt.TabIndex = 4;
+            this.Mortgagestxt.Text = "Кредиты";
+            // 
             // id
             // 
-            this.id.DataPropertyName = "id";
+            this.id.DataPropertyName = "credits.id";
             this.id.HeaderText = "#";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
             // 
             // term
             // 
-            this.term.DataPropertyName = "term_id";
+            this.term.DataPropertyName = "term.len";
             this.term.HeaderText = "Срок выплаты";
             this.term.MinimumWidth = 6;
             this.term.Name = "term";
             // 
             // itog_sum
             // 
-            this.itog_sum.DataPropertyName = "summ";
+            this.itog_sum.DataPropertyName = "credits.summ";
             this.itog_sum.HeaderText = "Итоговая сумма";
             this.itog_sum.MinimumWidth = 6;
             this.itog_sum.Name = "itog_sum";
             // 
             // rate
             // 
-            this.rate.DataPropertyName = "rate_id";
+            this.rate.DataPropertyName = "rate.coefficient";
             this.rate.HeaderText = "Ставка";
             this.rate.MinimumWidth = 6;
             this.rate.Name = "rate";
             // 
             // credit_type
             // 
-            this.credit_type.DataPropertyName = "credit_type_id";
+            this.credit_type.DataPropertyName = "credit_type.name";
             this.credit_type.HeaderText = "Тип кредита";
             this.credit_type.MinimumWidth = 6;
             this.credit_type.Name = "credit_type";
             // 
             // status
             // 
-            this.status.DataPropertyName = "statuses_id";
+            this.status.DataPropertyName = "statuses.name";
             this.status.HeaderText = "Статус";
             this.status.MinimumWidth = 6;
             this.status.Name = "status";
             // 
             // user_id
             // 
-            this.user_id.DataPropertyName = "users_id";
+            this.user_id.DataPropertyName = "users.lastname";
             this.user_id.HeaderText = "Код пользователя";
             this.user_id.MinimumWidth = 6;
             this.user_id.Name = "user_id";
@@ -190,50 +221,15 @@
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(949, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Поиск";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(1089, 15);
-            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(100, 28);
-            this.Back.TabIndex = 1;
-            this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // Mortgagestxt
-            // 
-            this.Mortgagestxt.AutoSize = true;
-            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
-            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
-            this.Mortgagestxt.Location = new System.Drawing.Point(59, 48);
-            this.Mortgagestxt.Name = "Mortgagestxt";
-            this.Mortgagestxt.Size = new System.Drawing.Size(190, 51);
-            this.Mortgagestxt.TabIndex = 4;
-            this.Mortgagestxt.Text = "Кредиты";
-            // 
             // Credits_watch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1205, 450);
+            this.ClientSize = new System.Drawing.Size(904, 366);
             this.Controls.Add(this.Mortgagestxt);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Credits_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "credits_watch";

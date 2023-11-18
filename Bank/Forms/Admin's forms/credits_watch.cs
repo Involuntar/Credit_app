@@ -24,7 +24,13 @@ namespace Bank.Forms.Admin_s_forms
 
         public void Display_credit()
         {
-            Connection.Display("SELECT * FROM credits", dataGridCredit);
+            Connection.Display("SELECT credits.id, terms.len, credits.summ, rates.coefficient, credits_types.name, statuses.name, users.lastname" +
+                " FROM credits " +
+                " JOIN terms ON credits.term_id = terms.id" +
+                " JOIN rates ON credits.rate_id = rates.id" +
+                " JOIN users ON credits.users_id = users.id" +
+                " JOIN statuses ON credits.statuses_id = statuses.id" +
+                " JOIN credits_types ON credits.credit_type_id = credits_types.id", dataGridCredit);
         }
 
         private void dataGridCredit_CellClick(object sender, DataGridViewCellEventArgs e)

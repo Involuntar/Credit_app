@@ -22,9 +22,16 @@ namespace Bank.Forms
         private void mortgage_counted_Load(object sender, EventArgs e)
         {
             Summ_show.Text = public_class.End_Summ;
-            Rate_show.Text = Convert.ToString(Convert.ToDouble(public_class.Rate) * Convert.ToDouble(public_class.Start_Summ));
             Term_show.Text = public_class.Term + " лет";
             Monthly_pay.Text = public_class.monthly_pay;
+            Double Percents = 0;
+            Double End_summ = Convert.ToDouble(public_class.End_Summ);
+            for (int i = 0; i < Convert.ToUInt16(public_class.Term); ++i)
+            {
+                Percents += End_summ * Convert.ToDouble(public_class.Rate);
+                End_summ -= Convert.ToDouble(public_class.monthly_pay);
+            }
+            Rate_show.Text = Convert.ToString(Percents);
         }
 
         private void Back_Click(object sender, EventArgs e)

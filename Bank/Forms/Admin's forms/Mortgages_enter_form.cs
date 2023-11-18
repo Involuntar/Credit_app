@@ -17,6 +17,11 @@ namespace Bank.Forms.Admin_s_forms
         private readonly Mortgages_watch _Watch;
         public string id, cost, init_fee, credit_summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
 
+        private void Mortgages_enter_form_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

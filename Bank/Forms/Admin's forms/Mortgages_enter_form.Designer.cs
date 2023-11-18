@@ -53,7 +53,7 @@
             // Cost_txt
             // 
             this.Cost_txt.Location = new System.Drawing.Point(154, 89);
-            this.Cost_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cost_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Cost_txt.Name = "Cost_txt";
             this.Cost_txt.Size = new System.Drawing.Size(76, 20);
             this.Cost_txt.TabIndex = 0;
@@ -61,7 +61,7 @@
             // Init_fee_txt
             // 
             this.Init_fee_txt.Location = new System.Drawing.Point(154, 133);
-            this.Init_fee_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Init_fee_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Init_fee_txt.Name = "Init_fee_txt";
             this.Init_fee_txt.Size = new System.Drawing.Size(76, 20);
             this.Init_fee_txt.TabIndex = 1;
@@ -69,7 +69,7 @@
             // Credit_summ_txt
             // 
             this.Credit_summ_txt.Location = new System.Drawing.Point(154, 174);
-            this.Credit_summ_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Credit_summ_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Credit_summ_txt.Name = "Credit_summ_txt";
             this.Credit_summ_txt.Size = new System.Drawing.Size(76, 20);
             this.Credit_summ_txt.TabIndex = 2;
@@ -77,7 +77,7 @@
             // Term_id_txt
             // 
             this.Term_id_txt.Location = new System.Drawing.Point(154, 214);
-            this.Term_id_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Term_id_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Term_id_txt.Name = "Term_id_txt";
             this.Term_id_txt.Size = new System.Drawing.Size(76, 20);
             this.Term_id_txt.TabIndex = 3;
@@ -85,7 +85,7 @@
             // Rate_id_txt
             // 
             this.Rate_id_txt.Location = new System.Drawing.Point(492, 91);
-            this.Rate_id_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rate_id_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Rate_id_txt.Name = "Rate_id_txt";
             this.Rate_id_txt.Size = new System.Drawing.Size(76, 20);
             this.Rate_id_txt.TabIndex = 4;
@@ -93,7 +93,7 @@
             // Credit_type_id_txt
             // 
             this.Credit_type_id_txt.Location = new System.Drawing.Point(492, 131);
-            this.Credit_type_id_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Credit_type_id_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Credit_type_id_txt.Name = "Credit_type_id_txt";
             this.Credit_type_id_txt.Size = new System.Drawing.Size(76, 20);
             this.Credit_type_id_txt.TabIndex = 5;
@@ -101,7 +101,7 @@
             // Users_id_txt
             // 
             this.Users_id_txt.Location = new System.Drawing.Point(492, 172);
-            this.Users_id_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Users_id_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Users_id_txt.Name = "Users_id_txt";
             this.Users_id_txt.Size = new System.Drawing.Size(76, 20);
             this.Users_id_txt.TabIndex = 6;
@@ -109,7 +109,7 @@
             // Statuses_id_txt
             // 
             this.Statuses_id_txt.Location = new System.Drawing.Point(492, 214);
-            this.Statuses_id_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Statuses_id_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Statuses_id_txt.Name = "Statuses_id_txt";
             this.Statuses_id_txt.Size = new System.Drawing.Size(76, 20);
             this.Statuses_id_txt.TabIndex = 7;
@@ -226,7 +226,7 @@
             this.Save.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(200, 267);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(158, 48);
             this.Save.TabIndex = 9;
@@ -236,7 +236,7 @@
             // Cancel
             // 
             this.Cancel.Location = new System.Drawing.Point(537, 11);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(56, 19);
             this.Cancel.TabIndex = 18;
@@ -280,10 +280,11 @@
             this.Controls.Add(this.Credit_summ_txt);
             this.Controls.Add(this.Init_fee_txt);
             this.Controls.Add(this.Cost_txt);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Mortgages_enter_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mortgages_enter_form";
+            this.Load += new System.EventHandler(this.Mortgages_enter_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

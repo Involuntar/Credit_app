@@ -21,6 +21,16 @@ namespace Bank.Forms.Admin_s_forms
             InitializeComponent();
             _Watch = Watch;
         }
+        public void UpdateCreditInfo()
+        {
+            save_cr.Text = "Обновить";
+            summ_txt.Text = summ;
+            term_id_txt.Text = term_id;
+            rate_id_txt.Text = rate_id;
+            credit_type_id_txt.Text = credit_type_id;
+            users_id_txt.Text = users_id;
+            statuses_id_txt.Text = statuses_id;
+        }
 
         private void Credits_enter_form_Load(object sender, EventArgs e)
         {

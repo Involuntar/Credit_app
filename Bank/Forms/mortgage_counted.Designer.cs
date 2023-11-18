@@ -178,26 +178,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "График платежей:";
             // 
-            // show_grafik
-            // 
-            this.show_grafik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.show_grafik.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.show_grafik.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.show_grafik.FlatAppearance.BorderSize = 3;
-            this.show_grafik.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.show_grafik.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.show_grafik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_grafik.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.show_grafik.ForeColor = System.Drawing.Color.White;
-            this.show_grafik.Location = new System.Drawing.Point(293, 256);
-            this.show_grafik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.show_grafik.Name = "show_grafik";
-            this.show_grafik.Size = new System.Drawing.Size(140, 32);
-            this.show_grafik.TabIndex = 13;
-            this.show_grafik.Text = "Показать";
-            this.show_grafik.UseVisualStyleBackColor = false;
-            this.show_grafik.Click += new System.EventHandler(this.show_grafik_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;

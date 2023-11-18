@@ -27,7 +27,7 @@ namespace Bank.Forms.Admin_s_forms
             Connection.Display("SELECT * FROM credits", dataGridCredit);
         }
 
-        private void dataGridCredit_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridCredit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == 0)
             {

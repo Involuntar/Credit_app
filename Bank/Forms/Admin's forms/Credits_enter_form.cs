@@ -39,24 +39,19 @@ namespace Bank.Forms.Admin_s_forms
 
         private void save_cr_Click(object sender, EventArgs e)
         {
-            if (summ_txt.Text.Trim().Length < 100000)
-            {
-                MessageBox.Show("Минимальная сумма кредита 100.000");
-                return;
-            }
             if (save_cr.Text == "Сохранить")
             {
-                Credits credits = new Credits(summ_txt.Text.Trim(), term_id_txt.Text.Trim(),
-                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), users_id_txt.Text.Trim(),
-                statuses_id_txt.Text.Trim());
+                Credits credits = new Credits(term_id_txt.Text.Trim(), summ_txt.Text.Trim(),
+                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), statuses_id_txt.Text.Trim(), 
+                users_id_txt.Text.Trim());
                 Connection.Add_credit(credits);
                 Clear();
             }
             if (save_cr.Text == "Обновить")
             {
-                Credits credits = new Credits(summ_txt.Text.Trim(), term_id_txt.Text.Trim(),
-                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), users_id_txt.Text.Trim(),
-                statuses_id_txt.Text.Trim());
+                Credits credits = new Credits(term_id_txt.Text.Trim(), summ_txt.Text.Trim(),
+                rate_id_txt.Text.Trim(), credit_type_id_txt.Text.Trim(), statuses_id_txt.Text.Trim(),
+                users_id_txt.Text.Trim());
                 Connection.Update_credit(credits, id);
             }
             _Watch.Display_credit();

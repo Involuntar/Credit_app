@@ -55,17 +55,24 @@ namespace Bank.Data
 
         public static void Add_credit(Credits credit)
         {
-            string sql = $"INSERT INTO credits VALUES (NULL, @term_id, @summ, @rate_id, @credit_type_id, @statuses_id, @users_id)";
+            string sql = $"INSERT INTO credits VALUES (NULL, " +
+                $"(SELECT id FROM terms WHERE len = @term), " +
+                $"@summ, " +
+                $"(SELECT id FROM rates WHERE coefficient = @rate), " +
+                $"(SELECT id FROM credits_types WHERE name LIKE @type), " +
+                $"(SELECT id FROM statuses WHERE name LIKE @status), " +
+                $"(SELECT id FROM users WHERE lastname LIKE @user))";
+
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = credit.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = credit.Term_id;
             cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = credit.Rate_id;
-            cmd.Parameters.Add("@credit_type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
-            cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = credit.Statuses_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = credit.Users_id; 
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@status", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = credit.Users_id; 
             try
             {
                 cmd.ExecuteNonQuery();
@@ -137,18 +144,26 @@ namespace Bank.Data
 
         public static void Update_credit(Credits credit, string id)   
         {
-            string sql = "UPDATE credits SET term_id = @term_id, summ = @summ," +
-                "rate_id = @rate_id, credit_type = @credit_type, statuses_id = @statuse_id, users_id = @users_id " +
+            string sql = "UPDATE credits SET " +
+                "term_id = (SELECT id FROM terms WHERE len = @term), " +
+                "summ = @summ, " +
+                "rate_id = (SELECT id FROM rates WHERE coefficient LIKE @rate), " +
+                "credit_type_id = (SELECT id FROM credits_types WHERE name LIKE @type), " +
+                "statuses_id = (SELECT id FROM statuses WHERE name LIKE @status), " +
+                "users_id = (SELECT id FROM users WHERE lastname = @user) " +
                 "WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = credit.Term_id;
+
+            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = credit.Term_id;
             cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = credit.Rate_id;
-            cmd.Parameters.Add("@credit_type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
-            cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = credit.Statuses_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = credit.Users_id;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@status", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = credit.Users_id;
             try
             {
                 cmd.ExecuteNonQuery();

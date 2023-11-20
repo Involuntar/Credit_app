@@ -24,18 +24,10 @@ namespace Bank.Forms
             Summ_show.Text = public_class.End_Summ;
             Term_show.Text = public_class.Term + " лет";
             Monthly_pay.Text = public_class.monthly_pay;
-            Double Percents = 0;
-            Double End_summ = Convert.ToDouble(public_class.End_Summ);
-            for (int i = 0; i < Convert.ToUInt16(public_class.Term); ++i)
-            {
-                Percents += End_summ * Convert.ToDouble(public_class.Rate);
-                End_summ -= Convert.ToDouble(public_class.monthly_pay);
-            }
-            Rate_show.Text = Convert.ToString(Percents);
-        }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
+            double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term) - public_class.Start_Summ;
+
+            Rate_show.Text = Convert.ToString(Percents);
         }
 
         private void Back_Click_1(object sender, EventArgs e)

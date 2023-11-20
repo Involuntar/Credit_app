@@ -49,18 +49,17 @@ namespace Bank
         {
             try
             {
-                public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text);
+                UInt32 first_payment = Convert.ToUInt32(firstpay.Text);
+                public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text) - first_payment;
                 public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
                 public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
-                UInt32 first_payment = Convert.ToUInt32(firstpay.Text);
                 public_class.init_fee = firstpay.Text;
                 if (Annuit.Checked == true)
                 {
                     public_class.credit_type_id = "3";
-                    double credit_summ = public_class.Start_Summ - first_payment;
                     double abs_rate = Math.Pow(1 + Convert.ToDouble(public_class.Rate) * 0.01 / 12, Convert.ToUInt16(public_class.Term) * 12);
                     public_class.monthly_pay = 
-                        Convert.ToString(Math.Round(credit_summ * Convert.ToDouble(public_class.Rate) * 0.01 / 12 * abs_rate / (abs_rate - 1), 2));
+                        Convert.ToString(Math.Round(public_class.Start_Summ * Convert.ToDouble(public_class.Rate) * 0.01 / 12 * abs_rate / (abs_rate - 1), 2));
                     public_class.End_Summ = 
                         Convert.ToString(Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt16(public_class.Term));
 

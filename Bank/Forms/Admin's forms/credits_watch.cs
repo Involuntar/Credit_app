@@ -44,8 +44,8 @@ namespace Bank.Forms.Admin_s_forms
                 credits_enter_form.rate_id = dataGridCredit.Rows[e.RowIndex].Cells[5].Value.ToString();
 
                 credits_enter_form.credit_type_id = dataGridCredit.Rows[e.RowIndex].Cells[6].Value.ToString();
-                credits_enter_form.users_id = dataGridCredit.Rows[e.RowIndex].Cells[7].Value.ToString();
-                credits_enter_form.statuses_id = dataGridCredit.Rows[e.RowIndex].Cells[8].Value.ToString();
+                credits_enter_form.users_id = dataGridCredit.Rows[e.RowIndex].Cells[8].Value.ToString();
+                credits_enter_form.statuses_id = dataGridCredit.Rows[e.RowIndex].Cells[7].Value.ToString();
 
                 credits_enter_form.UpdateCreditInfo();
                 credits_enter_form.ShowDialog();
@@ -67,11 +67,23 @@ namespace Bank.Forms.Admin_s_forms
             if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
             {
                 public_class.Search = textBox1.Text;
-                Connection.Search("SELECT * FROM credits WHERE summ LIKE @search", dataGridCredit);
+                Connection.Search("SELECT credits.id, terms.len, credits.summ, rates.coefficient, credits_types.name, statuses.name, users.lastname" +
+                " FROM credits " +
+                " JOIN terms ON credits.term_id = terms.id" +
+                " JOIN rates ON credits.rate_id = rates.id" +
+                " JOIN users ON credits.users_id = users.id" +
+                " JOIN statuses ON credits.statuses_id = statuses.id" +
+                " JOIN credits_types ON credits.credit_type_id = credits_types.id WHERE summ LIKE @search", dataGridCredit);
             }
             else
             {
-                Connection.Display("SELECT * FROM credits", dataGridCredit);
+                Connection.Display("SELECT credits.id, terms.len, credits.summ, rates.coefficient, credits_types.name, statuses.name, users.lastname" +
+                " FROM credits " +
+                " JOIN terms ON credits.term_id = terms.id" +
+                " JOIN rates ON credits.rate_id = rates.id" +
+                " JOIN users ON credits.users_id = users.id" +
+                " JOIN statuses ON credits.statuses_id = statuses.id" +
+                " JOIN credits_types ON credits.credit_type_id = credits_types.id", dataGridCredit);
             }
         }
 

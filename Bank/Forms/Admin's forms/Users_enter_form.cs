@@ -60,11 +60,6 @@ namespace Bank.Forms.Admin_s_forms
                 MessageBox.Show("Фамилия должна содердать как минимум 3 символа");
                 return;
             }
-            if (middlenametxt.Text.Trim().Length < 3)
-            {
-                MessageBox.Show("Отчество должно содержать как минимум 3 символа");
-                return;
-            }
             if (firstnametxt.Text.Trim().Length < 3)
             {
                 MessageBox.Show("Имя должно содержать как минимум 3 символа");

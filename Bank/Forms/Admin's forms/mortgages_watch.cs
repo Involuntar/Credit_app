@@ -25,12 +25,20 @@ namespace Bank.Forms.Admin_s_forms
 
         public void Display_mort()
         {
-            Connection.Display("SELECT * FROM mortgages", dataGridMort);
+            Connection.Display("SELECT mortgages.id, mortgages.cost, mortgages.init_fee, mortgages.credit_summ, " +
+                "terms.len, rates.coefficient, credits_types.name, users.login, statuses.name " +
+                "FROM mortgages " +
+                "JOIN terms ON mortgages.term_id = terms.id " +
+                "JOIN rates ON mortgages.rate_id = rates.id " +
+                "JOIN users ON mortgages.users_id = users.id " +
+                "JOIN statuses ON mortgages.statuses_id = statuses.id " +
+                "JOIN credits_types ON mortgages.credit_type_id = credits_types.id", dataGridMort);
         }
 
         private void dataGridMort_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
+
             {
                 mortgages_enter_form.Clear();
                 mortgages_enter_form.id = dataGridMort.Rows[e.RowIndex].Cells[2].Value.ToString();

@@ -117,11 +117,11 @@
             this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
             this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.Font = new System.Drawing.Font("Goudy Stout", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
             this.Exit.Location = new System.Drawing.Point(429, 8);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(90, 32);
+            this.Exit.Size = new System.Drawing.Size(90, 29);
             this.Exit.TabIndex = 12;
             this.Exit.Text = "Выход";
             this.Exit.UseVisualStyleBackColor = false;

@@ -258,7 +258,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Monthly_pay;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button show_grafik;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Term_show;
         private System.Windows.Forms.Label Start_summ;

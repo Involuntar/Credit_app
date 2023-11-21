@@ -92,11 +92,9 @@ namespace Bank.Forms.Admin_s_forms
                     "lastname LIKE @search OR " +
                     "login LIKE @search OR " +
                     "password LIKE @search OR " +
-                    "email LIKE @search", dataGridUsers);//я всё, а это правильно вообще?
+                    "email LIKE @search", dataGridUsers);
             }
-            else /* //|\\ //|\\ //|\\ //|\\
-                  * \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|//
-                  ну вроде всё. должен работать*/
+            else 
             {
                 Connection.Display("SELECT * FROM users", dataGridUsers);
             }

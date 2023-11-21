@@ -30,13 +30,16 @@ namespace Bank.Forms
         private void Send_req_Click(object sender, EventArgs e)
         {
             MySqlConnection con = Connection.GetConnection();
-            string sql = "INSERT INTO credits VALUES (NULL, " +
-                "(SELECT id FROM terms WHERE len = @len), " +
-                "@summ, " +
-                "(SELECT id FROM rates WHERE coefficient = @coeff), " +
-                "@credit_type_id, " +
-                "4, " +
-                "(SELECT id FROM users WHERE login LIKE @login)";
+            string sql = $"INSERT INTO credits (term_id, summ, rate_id, credit_type_id, statuses_id, " +
+                $"users_id) " +
+                $"VALUES (" +
+                $"(SELECT id FROM terms WHERE len = @len), " +
+                $"@summ, " +
+                $"(SELECT id FROM rates WHERE coefficient = @coeff), " +
+                $"@credit_type_id, " +
+                $"4, " +
+                $"(SELECT id FROM users WHERE login LIKE @login))";
+
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.Parameters.Add("@len", MySqlDbType.UInt16).Value = public_class.Term;
             cmd.Parameters.Add("@summ", MySqlDbType.Double).Value = public_class.End_Summ;

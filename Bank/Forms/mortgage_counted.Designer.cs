@@ -69,11 +69,11 @@
             this.Term.AutoSize = true;
             this.Term.Font = new System.Drawing.Font("Goudy Stout", 14.25F);
             this.Term.ForeColor = System.Drawing.Color.Black;
-            this.Term.Location = new System.Drawing.Point(43, 204);
+            this.Term.Location = new System.Drawing.Point(43, 202);
             this.Term.Name = "Term";
-            this.Term.Size = new System.Drawing.Size(214, 26);
+            this.Term.Size = new System.Drawing.Size(64, 26);
             this.Term.TabIndex = 3;
-            this.Term.Text = "Кредит + Проценты:";
+            this.Term.Text = "Срок:";
             // 
             // Summ_show
             // 
@@ -170,7 +170,7 @@
             // 
             this.Term_show.AutoSize = true;
             this.Term_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Term_show.Location = new System.Drawing.Point(333, 208);
+            this.Term_show.Location = new System.Drawing.Point(123, 208);
             this.Term_show.Name = "Term_show";
             this.Term_show.Size = new System.Drawing.Size(135, 20);
             this.Term_show.TabIndex = 6;

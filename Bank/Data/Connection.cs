@@ -122,7 +122,7 @@ namespace Bank.Data
         public static void Update_users(Users users, string id)
         {
             string sql = "UPDATE users SET firstname = @firstname, middlename = @middlename," +
-                "lastname = @lastname, login = @login, password = @password, email = @email " +
+                "lastname = @lastname, login = @login, email = @email " +
                 "WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -133,7 +133,6 @@ namespace Bank.Data
             cmd.Parameters.Add("@middlename", MySqlDbType.VarChar).Value = users.Middlename;
             cmd.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = users.Lastname;
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = users.Login;
-            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = users.Password;
             cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = users.Email;
             try
             {

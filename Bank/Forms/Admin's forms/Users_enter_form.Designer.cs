@@ -85,6 +85,7 @@
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(181, 20);
             this.passwordtxt.TabIndex = 4;
+            this.passwordtxt.Visible = false;
             // 
             // emailtxt
             // 
@@ -154,6 +155,7 @@
             this.password_txt.Size = new System.Drawing.Size(78, 26);
             this.password_txt.TabIndex = 11;
             this.password_txt.Text = "Пароль";
+            this.password_txt.Visible = false;
             // 
             // email_txt
             // 

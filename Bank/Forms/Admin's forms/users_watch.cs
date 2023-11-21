@@ -46,9 +46,8 @@ namespace Bank.Forms.Admin_s_forms
                 enter_Form.middlename = dataGridUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
                 enter_Form.lastname = dataGridUsers.Rows[e.RowIndex].Cells[5].Value.ToString();
                 enter_Form.login = dataGridUsers.Rows[e.RowIndex].Cells[6].Value.ToString();
-                enter_Form.password = dataGridUsers.Rows[e.RowIndex].Cells[7].Value.ToString();
-                enter_Form.email = dataGridUsers.Rows[e.RowIndex].Cells[8].Value.ToString();
-
+                enter_Form.email = dataGridUsers.Rows[e.RowIndex].Cells[7].Value.ToString();
+                
                 enter_Form.UpdateUserInfo();
                 enter_Form.ShowDialog();
                 return;
@@ -91,7 +90,6 @@ namespace Bank.Forms.Admin_s_forms
                     "middlename LIKE @search OR " +
                     "lastname LIKE @search OR " +
                     "login LIKE @search OR " +
-                    "password LIKE @search OR " +
                     "email LIKE @search", dataGridUsers);
             }
             else 

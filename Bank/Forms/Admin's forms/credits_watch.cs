@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Bank.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Bank.Forms.Admin_s_forms
 {
@@ -35,7 +36,8 @@ namespace Bank.Forms.Admin_s_forms
 
         private void dataGridCredit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 0)
+            System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            if (e.ColumnIndex == 0)
             {
                 credits_enter_form.Clear();
                 credits_enter_form.id = dataGridCredit.Rows[e.RowIndex].Cells[2].Value.ToString();

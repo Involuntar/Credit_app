@@ -22,7 +22,7 @@ namespace Bank.Forms.Admin_s_forms
 
         public void Display_users()
         {
-            Connection.Display("SELECT * FROM users", dataGridUsers);
+            Connection.Display("SELECT id, firstname, middlename, lastname, login, email FROM users", dataGridUsers);
         }
 
         private void Add_new_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace Bank.Forms.Admin_s_forms
             if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
             {
                 public_class.Search = textBox1.Text;
-                Connection.Search("SELECT * FROM users WHERE " +
+                Connection.Search("SELECT id, firstname, middlename, lastname, login, email FROM users WHERE " +
                     "firstname LIKE @search OR " +
                     "middlename LIKE @search OR " +
                     "lastname LIKE @search OR " +
@@ -94,7 +94,7 @@ namespace Bank.Forms.Admin_s_forms
             }
             else 
             {
-                Connection.Display("SELECT * FROM users", dataGridUsers);
+                Connection.Display("SELECT id, firstname, middlename, lastname, login, email FROM users", dataGridUsers);
             }
         }
 

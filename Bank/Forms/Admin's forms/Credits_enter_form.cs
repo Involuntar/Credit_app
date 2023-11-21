@@ -15,7 +15,12 @@ namespace Bank.Forms.Admin_s_forms
     {
         private readonly Credits_watch _Watch;
         public string  id, summ, term_id, rate_id, credit_type_id, users_id, statuses_id;
-        
+
+        private void cancel_cr_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public Credits_enter_form(Credits_watch Watch)
         {
             InitializeComponent();

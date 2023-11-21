@@ -36,13 +36,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.save_cr = new Bank.RoundButton();
             this.summ_txt = new System.Windows.Forms.TextBox();
             this.term_id_txt = new System.Windows.Forms.TextBox();
             this.rate_id_txt = new System.Windows.Forms.TextBox();
             this.credit_type_id_txt = new System.Windows.Forms.TextBox();
             this.users_id_txt = new System.Windows.Forms.TextBox();
             this.statuses_id_txt = new System.Windows.Forms.TextBox();
+            this.save_cr = new Bank.RoundButton();
             this.SuspendLayout();
             // 
             // label9
@@ -65,6 +65,7 @@
             this.cancel_cr.TabIndex = 37;
             this.cancel_cr.Text = "Назад";
             this.cancel_cr.UseVisualStyleBackColor = true;
+            this.cancel_cr.Click += new System.EventHandler(this.cancel_cr_Click);
             // 
             // label8
             // 
@@ -132,28 +133,6 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Сумма кредита";
             // 
-            // save_cr
-            // 
-            this.save_cr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.save_cr.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.save_cr.ButtonBorderColor = System.Drawing.Color.Black;
-            this.save_cr.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.save_cr.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.save_cr.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.save_cr.ButtonPressedColor = System.Drawing.Color.Red;
-            this.save_cr.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.save_cr.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.save_cr.ButtonRoundRadius = 30;
-            this.save_cr.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_cr.ForeColor = System.Drawing.Color.White;
-            this.save_cr.Location = new System.Drawing.Point(309, 312);
-            this.save_cr.Margin = new System.Windows.Forms.Padding(2);
-            this.save_cr.Name = "save_cr";
-            this.save_cr.Size = new System.Drawing.Size(158, 48);
-            this.save_cr.TabIndex = 28;
-            this.save_cr.Text = "Сохранить";
-            this.save_cr.Click += new System.EventHandler(this.save_cr_Click);
-            // 
             // summ_txt
             // 
             this.summ_txt.Location = new System.Drawing.Point(284, 156);
@@ -196,6 +175,28 @@
             this.statuses_id_txt.Name = "statuses_id_txt";
             this.statuses_id_txt.Size = new System.Drawing.Size(76, 20);
             this.statuses_id_txt.TabIndex = 43;
+            // 
+            // save_cr
+            // 
+            this.save_cr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.save_cr.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.save_cr.ButtonBorderColor = System.Drawing.Color.Black;
+            this.save_cr.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.save_cr.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.save_cr.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.save_cr.ButtonPressedColor = System.Drawing.Color.Red;
+            this.save_cr.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.save_cr.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.save_cr.ButtonRoundRadius = 30;
+            this.save_cr.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_cr.ForeColor = System.Drawing.Color.White;
+            this.save_cr.Location = new System.Drawing.Point(309, 312);
+            this.save_cr.Margin = new System.Windows.Forms.Padding(2);
+            this.save_cr.Name = "save_cr";
+            this.save_cr.Size = new System.Drawing.Size(158, 48);
+            this.save_cr.TabIndex = 28;
+            this.save_cr.Text = "Сохранить";
+            this.save_cr.Click += new System.EventHandler(this.save_cr_Click);
             // 
             // Credits_enter_form
             // 

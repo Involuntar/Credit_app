@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,7 +88,12 @@ namespace Bank.Data
         public static void Add_mortgages(Mortgages mortgages)
         {
             string sql = $"INSERT INTO mortgages VALUES (NULL, @cost, @init_fee, @credit_summ, " +
-                $"@term_id, @rate_id, @credit_type_id, @users_id, @statuses_id)";
+                $"(SELECT id FROM terms WHERE len = @term), " +
+                $"(SELECT id FROM rates WHERE coefficient = @rate), " +
+                $"(SELECT id FROM credits_types WHERE name LIKE @credit_type_id), " +
+                $"(SELECT id FROM users WHERE login LIKE @user), " +
+                $"(SELECT id FROM statuses WHERE name LIKE @statuses_id))";
+            
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -95,11 +101,11 @@ namespace Bank.Data
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = mortgages.Cost;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = mortgages.Init_fee;
             cmd.Parameters.Add("@credit_summ", MySqlDbType.VarChar).Value = mortgages.Credit_summ;
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = mortgages.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = mortgages.Term_id;
 
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = mortgages.Rate_id;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = mortgages.Rate_id;
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = mortgages.Credit_type_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = mortgages.Users_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = mortgages.Users_id;
             cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = mortgages.Statuses_id;
             
             try
@@ -144,6 +150,7 @@ namespace Bank.Data
 
         public static void Update_credit(Credits credit, string id)   
         {
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
             string sql = "UPDATE credits SET " +
                 "term_id = (SELECT id FROM terms WHERE len = @term), " +
                 "summ = @summ, " +
@@ -178,23 +185,29 @@ namespace Bank.Data
 
         public static void Update_mortgages(Mortgages mortgages, string id)
         {
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
             string sql = $"UPDATE mortgages SET cost = @cost, init_fee = @init_fee, credit_summ = @credit_summ, " +
-                $"term_id = @term_id, rate_id = @rate_id, credit_type_id = @credit_type_id, " +
-                $"users_id = @users_id, statuses_id = @statuses_id " +
+                $"term_id = (SELECT id FROM terms WHERE len = @term), " +
+                $"rate_id = (SELECT id FROM rates WHERE coefficient LIKE @rate), " +
+                $"credit_type_id = (SELECT id FROM credits_types WHERE name LIKE @credit_type_id), " + 
+                $"users_id = (SELECT id FROM users WHERE login = @users), " +
+                $"statuses_id = (SELECT id FROM statuses WHERE name LIKE @statuses_id) " +
                 $"WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
             cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                                                                       
+                                                                 
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = mortgages.Cost;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = mortgages.Init_fee;
             cmd.Parameters.Add("@credit_summ", MySqlDbType.VarChar).Value = mortgages.Credit_summ;
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = mortgages.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = mortgages.Term_id;
 
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = mortgages.Rate_id;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = mortgages.Rate_id;
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = mortgages.Credit_type_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = mortgages.Users_id;
+            cmd.Parameters.Add("@users", MySqlDbType.VarChar).Value = mortgages.Users_id;
             cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = mortgages.Statuses_id;
 
             try

@@ -37,7 +37,6 @@
             this.Send_req = new Bank.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.Monthly_pay = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Term_show = new System.Windows.Forms.Label();
             this.Start_summ = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -113,7 +112,7 @@
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
             this.Back.Location = new System.Drawing.Point(36, 272);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(201, 52);
             this.Back.TabIndex = 9;
@@ -135,7 +134,7 @@
             this.Send_req.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Send_req.ForeColor = System.Drawing.Color.White;
             this.Send_req.Location = new System.Drawing.Point(254, 272);
-            this.Send_req.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Send_req.Margin = new System.Windows.Forms.Padding(2);
             this.Send_req.Name = "Send_req";
             this.Send_req.Size = new System.Drawing.Size(188, 52);
             this.Send_req.TabIndex = 8;
@@ -167,28 +166,6 @@
             this.Monthly_pay.TabIndex = 11;
             this.Monthly_pay.Text = "ежемесячный_платёж";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Goudy Stout", 14.25F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(41, 254);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 32);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "График платежей:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(505, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 27);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "тыс";
-            // 
             // Term_show
             // 
             this.Term_show.AutoSize = true;
@@ -214,6 +191,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Goudy Stout", 14.25F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(50, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(219, 32);
@@ -225,8 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.Monthly_pay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Back);
@@ -237,7 +214,7 @@
             this.Controls.Add(this.Term);
             this.Controls.Add(this.Rate);
             this.Controls.Add(this.Credit_summ);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mortgage_counted";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рассчёт ипотеки";
@@ -258,7 +235,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Monthly_pay;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Term_show;
         private System.Windows.Forms.Label Start_summ;
     }

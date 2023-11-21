@@ -43,62 +43,69 @@
             // Summ
             // 
             this.Summ.AutoSize = true;
-            this.Summ.Location = new System.Drawing.Point(239, 86);
+            this.Summ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Summ.Location = new System.Drawing.Point(271, 108);
             this.Summ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Summ.Name = "Summ";
-            this.Summ.Size = new System.Drawing.Size(40, 13);
+            this.Summ.Size = new System.Drawing.Size(60, 20);
             this.Summ.TabIndex = 0;
             this.Summ.Text = "сумма";
             // 
             // Rate
             // 
             this.Rate.AutoSize = true;
-            this.Rate.Location = new System.Drawing.Point(239, 128);
+            this.Rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Rate.Location = new System.Drawing.Point(199, 150);
             this.Rate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Rate.Name = "Rate";
-            this.Rate.Size = new System.Drawing.Size(42, 13);
+            this.Rate.Size = new System.Drawing.Size(67, 20);
             this.Rate.TabIndex = 1;
             this.Rate.Text = "ставка";
             // 
             // Term
             // 
             this.Term.AutoSize = true;
-            this.Term.Location = new System.Drawing.Point(242, 167);
+            this.Term.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Term.Location = new System.Drawing.Point(199, 189);
             this.Term.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Term.Name = "Term";
-            this.Term.Size = new System.Drawing.Size(31, 13);
+            this.Term.Size = new System.Drawing.Size(47, 20);
             this.Term.TabIndex = 2;
             this.Term.Text = "срок";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 167);
+            this.label4.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(94, 186);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.Size = new System.Drawing.Size(64, 26);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Срок";
+            this.label4.Text = "Срок:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 128);
+            this.label5.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(94, 147);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(83, 26);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Ставка";
+            this.label5.Text = "Ставка:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(82, 86);
+            this.label6.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(94, 105);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.Size = new System.Drawing.Size(162, 26);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Сумма кредита";
+            this.label6.Text = "Сумма кредита:";
             // 
             // label7
             // 
@@ -114,17 +121,18 @@
             // Payment
             // 
             this.Payment.AutoSize = true;
-            this.Payment.Location = new System.Drawing.Point(267, 46);
+            this.Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Payment.Location = new System.Drawing.Point(271, 58);
             this.Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(44, 13);
+            this.Payment.Size = new System.Drawing.Size(72, 20);
             this.Payment.TabIndex = 9;
             this.Payment.Text = "платёж";
             // 
             // Send_req
             // 
-            this.Send_req.BackColor = System.Drawing.Color.Gainsboro;
-            this.Send_req.BackColor2 = System.Drawing.Color.Silver;
+            this.Send_req.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Send_req.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Send_req.ButtonBorderColor = System.Drawing.Color.Black;
             this.Send_req.ButtonHighlightColor = System.Drawing.Color.Orange;
             this.Send_req.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
@@ -133,18 +141,20 @@
             this.Send_req.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Send_req.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Send_req.ButtonRoundRadius = 30;
-            this.Send_req.Location = new System.Drawing.Point(196, 254);
-            this.Send_req.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Send_req.Font = new System.Drawing.Font("Goudy Stout", 12F);
+            this.Send_req.ForeColor = System.Drawing.Color.White;
+            this.Send_req.Location = new System.Drawing.Point(316, 253);
+            this.Send_req.Margin = new System.Windows.Forms.Padding(2);
             this.Send_req.Name = "Send_req";
-            this.Send_req.Size = new System.Drawing.Size(75, 32);
+            this.Send_req.Size = new System.Drawing.Size(194, 51);
             this.Send_req.TabIndex = 8;
             this.Send_req.Text = "Оставить заявку";
             this.Send_req.Click += new System.EventHandler(this.Send_req_Click);
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.Gainsboro;
-            this.Back.BackColor2 = System.Drawing.Color.Silver;
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Back.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Back.ButtonBorderColor = System.Drawing.Color.Black;
             this.Back.ButtonHighlightColor = System.Drawing.Color.Orange;
             this.Back.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
@@ -153,10 +163,12 @@
             this.Back.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Back.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Back.ButtonRoundRadius = 30;
-            this.Back.Location = new System.Drawing.Point(71, 254);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Font = new System.Drawing.Font("Goudy Stout", 12F);
+            this.Back.ForeColor = System.Drawing.Color.White;
+            this.Back.Location = new System.Drawing.Point(99, 253);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 32);
+            this.Back.Size = new System.Drawing.Size(194, 51);
             this.Back.TabIndex = 7;
             this.Back.Text = "Вернуться к расчёту";
             this.Back.Click += new System.EventHandler(this.Back_Click);
@@ -177,7 +189,7 @@
             this.Controls.Add(this.Term);
             this.Controls.Add(this.Rate);
             this.Controls.Add(this.Summ);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credit_counted";
             this.Text = "Credit_counted";
             this.Load += new System.EventHandler(this.Credit_counted_Load);

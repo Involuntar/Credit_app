@@ -80,5 +80,10 @@ namespace Bank
         {
 
         }
+
+        private void middlename_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

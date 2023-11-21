@@ -47,7 +47,7 @@ namespace Bank.Forms.Admin_s_forms
                 mortgages_enter_form.cost = dataGridMort.Rows[e.RowIndex].Cells[3].Value.ToString();
                 mortgages_enter_form.init_fee = dataGridMort.Rows[e.RowIndex].Cells[4].Value.ToString();
                 mortgages_enter_form.credit_summ = dataGridMort.Rows[e.RowIndex].Cells[5].Value.ToString();
-                
+
                 mortgages_enter_form.term_id = dataGridMort.Rows[e.RowIndex].Cells[6].Value.ToString();
                 mortgages_enter_form.rate_id = dataGridMort.Rows[e.RowIndex].Cells[7].Value.ToString();
                 mortgages_enter_form.credit_type_id = dataGridMort.Rows[e.RowIndex].Cells[8].Value.ToString();
@@ -60,7 +60,7 @@ namespace Bank.Forms.Admin_s_forms
             }
             if (e.ColumnIndex == 1)
             {
-                if (MessageBox.Show("Вы уверены, что хотите удалить ипотеку?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Вы уверены, что хотите удалить ипотеку?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Connection.Delete_mortgages(dataGridMort.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_mort();
@@ -94,15 +94,40 @@ namespace Bank.Forms.Admin_s_forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != String.Empty)
+            if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
             {
                 public_class.Search = textBox1.Text;
-                Connection.Search("SELECT * FROM mortgages WHERE cost LIKE @search", dataGridMort);
+                Connection.Search("SELECT mortgages.id, mortgages.cost, mortgages.init_fee, mortgages.credit_summ, " +
+                "terms.len, rates.coefficient, credits_types.name, users.login, statuses.name " +
+                "FROM mortgages " +
+                "JOIN terms ON mortgages.term_id = terms.id " +
+                "JOIN rates ON mortgages.rate_id = rates.id " +
+                "JOIN users ON mortgages.users_id = users.id " +
+                "JOIN statuses ON mortgages.statuses_id = statuses.id " +
+                "JOIN credits_types ON mortgages.credit_type_id = credits_types.id", dataGridMort);
             }
-            else 
+            else
             {
-                Connection.Display("SELECT * FROM mortgages", dataGridMort);
+                Connection.Display("SELECT mortgages.id, mortgages.cost, mortgages.init_fee, mortgages.credit_summ, " +
+                "terms.len, rates.coefficient, credits_types.name, users.login, statuses.name " +
+                "FROM mortgages " +
+                "JOIN terms ON mortgages.term_id = terms.id " +
+                "JOIN rates ON mortgages.rate_id = rates.id " +
+                "JOIN users ON mortgages.users_id = users.id " +
+                "JOIN statuses ON mortgages.statuses_id = statuses.id " +
+                "JOIN credits_types ON mortgages.credit_type_id = credits_types.id", dataGridMort);
             }
+        }/*ага тут этого нет. так. там надо в событиях найти два свойства а где они таам
+          * нет их я не вижу не получилось значит я не правильно делаю
+          ну бывает. то*/
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            textBox1.Text = "Поиск";
         }
     }
 }

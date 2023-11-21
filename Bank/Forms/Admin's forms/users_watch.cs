@@ -55,7 +55,7 @@ namespace Bank.Forms.Admin_s_forms
             }
             if (e.ColumnIndex == 1)
             {
-                if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Connection.Delete_user(dataGridUsers.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_users();

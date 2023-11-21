@@ -86,9 +86,17 @@ namespace Bank.Forms.Admin_s_forms
             if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
             {
                 public_class.Search = textBox1.Text;
-                Connection.Search("SELECT * FROM users WHERE firstname LIKE @search", dataGridUsers);
+                Connection.Search("SELECT * FROM users WHERE " +
+                    "firstname LIKE @search OR " +
+                    "middlename LIKE @search OR " +
+                    "lastname LIKE @search OR " +
+                    "login LIKE @search OR " +
+                    "password LIKE @search OR " +
+                    "email LIKE @search", dataGridUsers);//я всё, а это правильно вообще?
             }
-            else 
+            else /* //|\\ //|\\ //|\\ //|\\
+                  * \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|// \\|//
+                  ну вроде всё. должен работать*/
             {
                 Connection.Display("SELECT * FROM users", dataGridUsers);
             }

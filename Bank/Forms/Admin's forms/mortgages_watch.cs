@@ -97,14 +97,19 @@ namespace Bank.Forms.Admin_s_forms
             if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
             {
                 public_class.Search = textBox1.Text;
-                Connection.Search("SELECT mortgages.id, mortgages.cost, mortgages.init_fee, mortgages.credit_summ, " +
+                Connection.Search("SELECT mortgages.id, mortgages.cost, mortgages.init_fee, mortgages.credit_summ, " + 
                 "terms.len, rates.coefficient, credits_types.name, users.login, statuses.name " +
                 "FROM mortgages " +
                 "JOIN terms ON mortgages.term_id = terms.id " +
                 "JOIN rates ON mortgages.rate_id = rates.id " +
                 "JOIN users ON mortgages.users_id = users.id " +
                 "JOIN statuses ON mortgages.statuses_id = statuses.id " +
-                "JOIN credits_types ON mortgages.credit_type_id = credits_types.id", dataGridMort);
+                "JOIN credits_types ON mortgages.credit_type_id = credits_types.id WHERE " +
+                "users.login LIKE @search OR " +
+                "mortgages.cost = @search OR " +
+                "credits_types.name LIKE @search OR " +
+                "rates.coefficient = @search OR " +
+                "statuses.name LIKE @search", dataGridMort);
             }
             else
             {
@@ -117,9 +122,8 @@ namespace Bank.Forms.Admin_s_forms
                 "JOIN statuses ON mortgages.statuses_id = statuses.id " +
                 "JOIN credits_types ON mortgages.credit_type_id = credits_types.id", dataGridMort);
             }
-        }/*ага тут этого нет. так. там надо в событиях найти два свойства а где они таам
-          * нет их я не вижу не получилось значит я не правильно делаю
-          ну бывает. то*/
+        }
+
         private void textBox1_Enter(object sender, EventArgs e)
         {
             textBox1.Text = String.Empty;

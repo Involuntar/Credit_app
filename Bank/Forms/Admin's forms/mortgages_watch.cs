@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 
 namespace Bank.Forms.Admin_s_forms
@@ -37,6 +38,7 @@ namespace Bank.Forms.Admin_s_forms
 
         private void dataGridMort_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             if (e.ColumnIndex == 0)
 
             {

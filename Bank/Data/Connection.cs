@@ -150,7 +150,7 @@ namespace Bank.Data
 
         public static void Update_credit(Credits credit, string id)   
         {
-            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             string sql = "UPDATE credits SET " +
                 "term_id = (SELECT id FROM terms WHERE len = @term), " +
                 "summ = @summ, " +
@@ -185,7 +185,7 @@ namespace Bank.Data
 
         public static void Update_mortgages(Mortgages mortgages, string id)
         {
-            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             string sql = $"UPDATE mortgages SET cost = @cost, init_fee = @init_fee, credit_summ = @credit_summ, " +
                 $"term_id = (SELECT id FROM terms WHERE len = @term), " +
                 $"rate_id = (SELECT id FROM rates WHERE coefficient LIKE @rate), " +

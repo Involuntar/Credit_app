@@ -49,8 +49,8 @@
             this.credits.ButtonRoundRadius = 30;
             this.credits.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.credits.ForeColor = System.Drawing.Color.White;
-            this.credits.Location = new System.Drawing.Point(407, 194);
-            this.credits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.credits.Location = new System.Drawing.Point(515, 180);
+            this.credits.Margin = new System.Windows.Forms.Padding(10, 4, 10, 4);
             this.credits.Name = "credits";
             this.credits.Size = new System.Drawing.Size(223, 68);
             this.credits.TabIndex = 27;
@@ -72,8 +72,8 @@
             this.ipoteka.ButtonRoundRadius = 30;
             this.ipoteka.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipoteka.ForeColor = System.Drawing.Color.White;
-            this.ipoteka.Location = new System.Drawing.Point(407, 87);
-            this.ipoteka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ipoteka.Location = new System.Drawing.Point(272, 180);
+            this.ipoteka.Margin = new System.Windows.Forms.Padding(10, 4, 10, 4);
             this.ipoteka.Name = "ipoteka";
             this.ipoteka.Size = new System.Drawing.Size(223, 70);
             this.ipoteka.TabIndex = 26;
@@ -95,8 +95,8 @@
             this.users.ButtonRoundRadius = 30;
             this.users.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.users.ForeColor = System.Drawing.Color.White;
-            this.users.Location = new System.Drawing.Point(129, 194);
-            this.users.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.users.Location = new System.Drawing.Point(36, 182);
+            this.users.Margin = new System.Windows.Forms.Padding(10, 4, 10, 4);
             this.users.Name = "users";
             this.users.Size = new System.Drawing.Size(216, 68);
             this.users.TabIndex = 25;

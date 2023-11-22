@@ -30,6 +30,7 @@ namespace Bank.Forms
         private void Send_req_Click(object sender, EventArgs e)
         {
             MySqlConnection con = Connection.GetConnection();
+
             string sql = $"INSERT INTO credits (term_id, summ, rate_id, credit_type_id, statuses_id, " +
                 $"users_id) " +
                 $"VALUES (" +

@@ -87,11 +87,11 @@ namespace Bank.Data
         public static void Add_mortgages(Mortgages mortgages)
         {
             string sql = $"INSERT INTO mortgages VALUES (NULL, @cost, @init_fee, @credit_summ, " +
-                $"(SELECT id FROM terms WHERE len = @term), " +
-                $"(SELECT id FROM rates WHERE coefficient = @rate), " +
-                $"(SELECT id FROM credits_types WHERE name LIKE @credit_type_id), " +
+                $"@term, " +
+                $"@rate, " +
+                $"@credit_type_id, " +
                 $"(SELECT id FROM users WHERE login LIKE @user), " +
-                $"(SELECT id FROM statuses WHERE name LIKE @statuses_id))";
+                $"@statuses_id)";
             
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -100,7 +100,7 @@ namespace Bank.Data
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = mortgages.Cost;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = mortgages.Init_fee;
             cmd.Parameters.Add("@credit_summ", MySqlDbType.VarChar).Value = mortgages.Credit_summ;
-            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = mortgages.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.UInt16).Value = mortgages.Term_id;
 
             cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = mortgages.Rate_id;
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = mortgages.Credit_type_id;
@@ -183,11 +183,11 @@ namespace Bank.Data
         public static void Update_mortgages(Mortgages mortgages, string id)
         {
             string sql = $"UPDATE mortgages SET cost = @cost, init_fee = @init_fee, credit_summ = @credit_summ, " +
-                $"term_id = (SELECT id FROM terms WHERE len = @term), " +
-                $"rate_id = (SELECT id FROM rates WHERE coefficient LIKE @rate), " +
-                $"credit_type_id = (SELECT id FROM credits_types WHERE name LIKE @credit_type_id), " + 
+                $"term_id = @term, " +
+                $"rate_id = @rate, " +
+                $"credit_type_id = @credit_type_id, " + 
                 $"users_id = (SELECT id FROM users WHERE login = @users), " +
-                $"statuses_id = (SELECT id FROM statuses WHERE name LIKE @statuses_id) " +
+                $"statuses_id = @statuses_id " +
                 $"WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -296,6 +296,22 @@ namespace Bank.Data
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
             dgv.DataSource = tbl;
+            con.Close();
+        }
+
+        public static void SelectInComboBox(string query, ComboBox cb,string DM, string VM)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable ds= new DataTable();
+            adp.Fill(ds);
+            cb.DataSource = ds;
+            cb.DisplayMember = DM;
+            cb.ValueMember = VM;
+            
             con.Close();
         }
     }

@@ -133,5 +133,10 @@ namespace Bank.Forms.Admin_s_forms
         {
             textBox1.Text = "Поиск";
         }
+
+        private void Mortgages_watch_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

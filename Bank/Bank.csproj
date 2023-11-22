@@ -129,12 +129,6 @@
     <Compile Include="Forms\Admin%27s forms\Mortgages_watch.Designer.cs">
       <DependentUpon>Mortgages_watch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin%27s forms\Rates_watch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin%27s forms\Rates_watch.Designer.cs">
-      <DependentUpon>Rates_watch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Admin%27s forms\Users_enter_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_watch.resx">
       <DependentUpon>Mortgages_watch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin%27s forms\Rates_watch.resx">
-      <DependentUpon>Rates_watch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Users_enter_form.resx">
       <DependentUpon>Users_enter_form.cs</DependentUpon>

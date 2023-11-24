@@ -47,7 +47,7 @@ namespace Bank.Forms.Admin_s_forms
         {
             if (Save.Text == "Сохранить")
             {
-                MessageBox.Show(Term_combo.SelectedValue.ToString());
+                //MessageBox.Show(Term_combo.SelectedValue.ToString());
                 Mortgages mortgages = new Mortgages(Cost_txt.Text.Trim(), Init_fee_txt.Text.Trim(),
                 Credit_summ_txt.Text.Trim(), Term_combo.SelectedValue.ToString(), Rate_combo.SelectedValue.ToString(), 
                 Type_combo.SelectedValue.ToString(), Users_id_txt.Text.Trim(), Status_combo.SelectedValue.ToString());

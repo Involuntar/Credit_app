@@ -55,12 +55,11 @@ namespace Bank.Data
 
         public static void Add_credit(Credits credit)
         {
-            string sql = $"INSERT INTO credits VALUES (NULL, " +
-                $"(SELECT id FROM terms WHERE len = @term), " +
-                $"@summ, " +
-                $"(SELECT id FROM rates WHERE coefficient = @rate), " +
-                $"(SELECT id FROM credits_types WHERE name LIKE @type), " +
-                $"(SELECT id FROM statuses WHERE name LIKE @status), " +
+            string sql = $"INSERT INTO credits VALUES (NULL, @summ, " +
+                $"@term, " +
+                $"@rate, " +
+                $"@type, " +
+                $"@status, " +
                 $"(SELECT id FROM users WHERE lastname LIKE @user))";
 
             MySqlConnection con = GetConnection();
@@ -148,14 +147,13 @@ namespace Bank.Data
 
         public static void Update_credit(Credits credit, string id)   
         {
-            string sql = "UPDATE credits SET " +
-                "term_id = (SELECT id FROM terms WHERE len = @term), " +
-                "summ = @summ, " +
-                "rate_id = (SELECT id FROM rates WHERE coefficient LIKE @rate), " +
-                "credit_type_id = (SELECT id FROM credits_types WHERE name LIKE @type), " +
-                "statuses_id = (SELECT id FROM statuses WHERE name LIKE @status), " +
-                "users_id = (SELECT id FROM users WHERE lastname = @user) " +
-                "WHERE id = @id";
+            string sql = $"UPDATE credits SET summ = @summ, " +
+                $"term_id = @term, " +
+                $"rate_id = @rate, " +
+                $"credit_type_id = @type, " +
+                $"statuses_id = @status, " +
+                $"users_id = (SELECT id FROM users WHERE lastname = @user) " +
+                $"WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -306,7 +304,7 @@ namespace Bank.Data
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
-            DataTable ds= new DataTable();
+            DataTable ds = new DataTable();
             adp.Fill(ds);
             cb.DataSource = ds;
             cb.DisplayMember = DM;

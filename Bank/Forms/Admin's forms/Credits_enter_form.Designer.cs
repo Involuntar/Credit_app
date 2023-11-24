@@ -37,28 +37,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.summ_txt = new System.Windows.Forms.TextBox();
-            this.term_id_txt = new System.Windows.Forms.TextBox();
-            this.rate_id_txt = new System.Windows.Forms.TextBox();
-            this.credit_type_id_txt = new System.Windows.Forms.TextBox();
             this.users_id_txt = new System.Windows.Forms.TextBox();
-            this.statuses_id_txt = new System.Windows.Forms.TextBox();
             this.save_cr = new Bank.RoundButton();
+            this.term_combox = new System.Windows.Forms.ComboBox();
+            this.rate_combox = new System.Windows.Forms.ComboBox();
+            this.type_combox = new System.Windows.Forms.ComboBox();
+            this.status_combox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Goudy Stout", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(277, 65);
+            this.label9.Location = new System.Drawing.Point(179, 63);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(223, 37);
             this.label9.TabIndex = 38;
             this.label9.Text = "Ввод кредита";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // cancel_cr
             // 
-            this.cancel_cr.Location = new System.Drawing.Point(733, 20);
+            this.cancel_cr.Location = new System.Drawing.Point(535, 24);
             this.cancel_cr.Margin = new System.Windows.Forms.Padding(2);
             this.cancel_cr.Name = "cancel_cr";
             this.cancel_cr.Size = new System.Drawing.Size(56, 19);
@@ -71,110 +72,90 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(394, 236);
+            this.label8.Location = new System.Drawing.Point(296, 234);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 22);
+            this.label8.Size = new System.Drawing.Size(69, 22);
             this.label8.TabIndex = 36;
-            this.label8.Text = "Код статуса";
+            this.label8.Text = "Статус";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(394, 194);
+            this.label7.Location = new System.Drawing.Point(296, 192);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 22);
+            this.label7.Size = new System.Drawing.Size(187, 22);
             this.label7.TabIndex = 35;
-            this.label7.Text = "Код пользователя";
+            this.label7.Text = "Логин пользователя";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(394, 153);
+            this.label6.Location = new System.Drawing.Point(296, 151);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 22);
+            this.label6.Size = new System.Drawing.Size(119, 22);
             this.label6.TabIndex = 34;
-            this.label6.Text = "Код типа кредита";
+            this.label6.Text = "Тип кредита";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(129, 236);
+            this.label5.Location = new System.Drawing.Point(31, 234);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 22);
+            this.label5.Size = new System.Drawing.Size(71, 22);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Код ставки";
+            this.label5.Text = "Ставка";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(129, 194);
+            this.label4.Location = new System.Drawing.Point(31, 192);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 22);
+            this.label4.Size = new System.Drawing.Size(51, 22);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Код срока";
+            this.label4.Text = "Срок";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(125, 152);
+            this.label3.Location = new System.Drawing.Point(27, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 22);
             this.label3.TabIndex = 31;
             this.label3.Text = "Сумма кредита";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // summ_txt
             // 
-            this.summ_txt.Location = new System.Drawing.Point(284, 156);
+            this.summ_txt.Location = new System.Drawing.Point(186, 154);
             this.summ_txt.Margin = new System.Windows.Forms.Padding(2);
             this.summ_txt.Name = "summ_txt";
             this.summ_txt.Size = new System.Drawing.Size(76, 20);
             this.summ_txt.TabIndex = 22;
-            // 
-            // term_id_txt
-            // 
-            this.term_id_txt.Location = new System.Drawing.Point(284, 194);
-            this.term_id_txt.Name = "term_id_txt";
-            this.term_id_txt.Size = new System.Drawing.Size(76, 20);
-            this.term_id_txt.TabIndex = 39;
-            // 
-            // rate_id_txt
-            // 
-            this.rate_id_txt.Location = new System.Drawing.Point(284, 238);
-            this.rate_id_txt.Name = "rate_id_txt";
-            this.rate_id_txt.Size = new System.Drawing.Size(76, 20);
-            this.rate_id_txt.TabIndex = 40;
-            // 
-            // credit_type_id_txt
-            // 
-            this.credit_type_id_txt.Location = new System.Drawing.Point(569, 152);
-            this.credit_type_id_txt.Name = "credit_type_id_txt";
-            this.credit_type_id_txt.Size = new System.Drawing.Size(76, 20);
-            this.credit_type_id_txt.TabIndex = 41;
+            this.summ_txt.TextChanged += new System.EventHandler(this.summ_txt_TextChanged);
             // 
             // users_id_txt
             // 
-            this.users_id_txt.Location = new System.Drawing.Point(569, 194);
+            this.users_id_txt.Location = new System.Drawing.Point(488, 192);
             this.users_id_txt.Name = "users_id_txt";
             this.users_id_txt.Size = new System.Drawing.Size(76, 20);
             this.users_id_txt.TabIndex = 42;
-            // 
-            // statuses_id_txt
-            // 
-            this.statuses_id_txt.Location = new System.Drawing.Point(569, 237);
-            this.statuses_id_txt.Name = "statuses_id_txt";
-            this.statuses_id_txt.Size = new System.Drawing.Size(76, 20);
-            this.statuses_id_txt.TabIndex = 43;
+            this.users_id_txt.TextChanged += new System.EventHandler(this.users_id_txt_TextChanged);
             // 
             // save_cr
             // 
@@ -190,7 +171,7 @@
             this.save_cr.ButtonRoundRadius = 30;
             this.save_cr.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_cr.ForeColor = System.Drawing.Color.White;
-            this.save_cr.Location = new System.Drawing.Point(309, 312);
+            this.save_cr.Location = new System.Drawing.Point(211, 310);
             this.save_cr.Margin = new System.Windows.Forms.Padding(2);
             this.save_cr.Name = "save_cr";
             this.save_cr.Size = new System.Drawing.Size(158, 48);
@@ -198,17 +179,50 @@
             this.save_cr.Text = "Сохранить";
             this.save_cr.Click += new System.EventHandler(this.save_cr_Click);
             // 
+            // term_combox
+            // 
+            this.term_combox.FormattingEnabled = true;
+            this.term_combox.Location = new System.Drawing.Point(186, 192);
+            this.term_combox.Name = "term_combox";
+            this.term_combox.Size = new System.Drawing.Size(76, 21);
+            this.term_combox.TabIndex = 44;
+            // 
+            // rate_combox
+            // 
+            this.rate_combox.FormattingEnabled = true;
+            this.rate_combox.Location = new System.Drawing.Point(186, 234);
+            this.rate_combox.Name = "rate_combox";
+            this.rate_combox.Size = new System.Drawing.Size(76, 21);
+            this.rate_combox.TabIndex = 45;
+            this.rate_combox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // type_combox
+            // 
+            this.type_combox.FormattingEnabled = true;
+            this.type_combox.Location = new System.Drawing.Point(488, 152);
+            this.type_combox.Name = "type_combox";
+            this.type_combox.Size = new System.Drawing.Size(76, 21);
+            this.type_combox.TabIndex = 46;
+            // 
+            // status_combox
+            // 
+            this.status_combox.FormattingEnabled = true;
+            this.status_combox.Location = new System.Drawing.Point(488, 236);
+            this.status_combox.Name = "status_combox";
+            this.status_combox.Size = new System.Drawing.Size(76, 21);
+            this.status_combox.TabIndex = 47;
+            // 
             // Credits_enter_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statuses_id_txt);
+            this.ClientSize = new System.Drawing.Size(602, 417);
+            this.Controls.Add(this.status_combox);
+            this.Controls.Add(this.type_combox);
+            this.Controls.Add(this.rate_combox);
+            this.Controls.Add(this.term_combox);
             this.Controls.Add(this.users_id_txt);
-            this.Controls.Add(this.credit_type_id_txt);
-            this.Controls.Add(this.rate_id_txt);
-            this.Controls.Add(this.term_id_txt);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cancel_cr);
             this.Controls.Add(this.label8);
@@ -239,10 +253,10 @@
         private System.Windows.Forms.Label label3;
         private RoundButton save_cr;
         private System.Windows.Forms.TextBox summ_txt;
-        private System.Windows.Forms.TextBox term_id_txt;
-        private System.Windows.Forms.TextBox rate_id_txt;
-        private System.Windows.Forms.TextBox credit_type_id_txt;
         private System.Windows.Forms.TextBox users_id_txt;
-        private System.Windows.Forms.TextBox statuses_id_txt;
+        private System.Windows.Forms.ComboBox term_combox;
+        private System.Windows.Forms.ComboBox rate_combox;
+        private System.Windows.Forms.ComboBox type_combox;
+        private System.Windows.Forms.ComboBox status_combox;
     }
 }

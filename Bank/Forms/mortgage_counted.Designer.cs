@@ -40,6 +40,7 @@
             this.Term_show = new System.Windows.Forms.Label();
             this.Start_summ = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.graf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Credit_summ
@@ -170,7 +171,7 @@
             // 
             this.Term_show.AutoSize = true;
             this.Term_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Term_show.Location = new System.Drawing.Point(123, 208);
+            this.Term_show.Location = new System.Drawing.Point(130, 202);
             this.Term_show.Name = "Term_show";
             this.Term_show.Size = new System.Drawing.Size(135, 20);
             this.Term_show.TabIndex = 6;
@@ -198,12 +199,26 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Количество лет:";
             // 
+            // graf
+            // 
+            this.graf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.graf.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf.ForeColor = System.Drawing.Color.White;
+            this.graf.Location = new System.Drawing.Point(302, 202);
+            this.graf.Name = "graf";
+            this.graf.Size = new System.Drawing.Size(140, 31);
+            this.graf.TabIndex = 12;
+            this.graf.Text = "График платежей";
+            this.graf.UseVisualStyleBackColor = false;
+            this.graf.Click += new System.EventHandler(this.graf_Click);
+            // 
             // mortgage_counted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.graf);
             this.Controls.Add(this.Monthly_pay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Back);
@@ -237,5 +252,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Term_show;
         private System.Windows.Forms.Label Start_summ;
+        private System.Windows.Forms.Button graf;
     }
 }

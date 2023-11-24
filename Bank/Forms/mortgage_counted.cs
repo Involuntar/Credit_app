@@ -93,5 +93,11 @@ namespace Bank.Forms
         {
 
         }
+
+        private void graf_Click(object sender, EventArgs e)
+        {
+            Grafic_show grafic = new Grafic_show();
+            grafic.ShowDialog();
+        }
     }
 }

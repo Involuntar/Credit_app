@@ -55,8 +55,8 @@ namespace Bank.Data
 
         public static void Add_credit(Credits credit)
         {
-            string sql = $"INSERT INTO credits VALUES (NULL, @summ, " +
-                $"@term, " +
+            string sql = $"INSERT INTO credits VALUES (NULL, @term, " +
+                $"@summ, " +
                 $"@rate, " +
                 $"@type, " +
                 $"@status, " +

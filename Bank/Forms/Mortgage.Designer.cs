@@ -133,8 +133,8 @@
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(658, 11);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Location = new System.Drawing.Point(480, 19);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(66, 24);
             this.Back.TabIndex = 35;
@@ -147,8 +147,8 @@
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Exit.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(728, 11);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.Location = new System.Drawing.Point(550, 19);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(68, 24);
             this.Exit.TabIndex = 36;
@@ -480,7 +480,7 @@
             this.Annuit.AutoSize = true;
             this.Annuit.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Annuit.Location = new System.Drawing.Point(26, 411);
-            this.Annuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Annuit.Margin = new System.Windows.Forms.Padding(2);
             this.Annuit.Name = "Annuit";
             this.Annuit.Size = new System.Drawing.Size(114, 22);
             this.Annuit.TabIndex = 39;
@@ -493,7 +493,7 @@
             this.Diff.AutoSize = true;
             this.Diff.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Diff.Location = new System.Drawing.Point(146, 411);
-            this.Diff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Diff.Margin = new System.Windows.Forms.Padding(2);
             this.Diff.Name = "Diff";
             this.Diff.Size = new System.Drawing.Size(178, 22);
             this.Diff.TabIndex = 40;
@@ -528,7 +528,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(805, 511);
+            this.ClientSize = new System.Drawing.Size(664, 511);
             this.Controls.Add(this.Diff);
             this.Controls.Add(this.Annuit);
             this.Controls.Add(this.rate);

@@ -38,13 +38,14 @@
             this.Payment = new System.Windows.Forms.Label();
             this.Send_req = new Bank.RoundButton();
             this.Back = new Bank.RoundButton();
+            this.graf_cr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Summ
             // 
             this.Summ.AutoSize = true;
             this.Summ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Summ.Location = new System.Drawing.Point(271, 108);
+            this.Summ.Location = new System.Drawing.Point(262, 130);
             this.Summ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Summ.Name = "Summ";
             this.Summ.Size = new System.Drawing.Size(60, 20);
@@ -55,7 +56,7 @@
             // 
             this.Rate.AutoSize = true;
             this.Rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Rate.Location = new System.Drawing.Point(199, 150);
+            this.Rate.Location = new System.Drawing.Point(190, 172);
             this.Rate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Rate.Name = "Rate";
             this.Rate.Size = new System.Drawing.Size(67, 20);
@@ -66,7 +67,7 @@
             // 
             this.Term.AutoSize = true;
             this.Term.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Term.Location = new System.Drawing.Point(199, 189);
+            this.Term.Location = new System.Drawing.Point(190, 211);
             this.Term.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Term.Name = "Term";
             this.Term.Size = new System.Drawing.Size(47, 20);
@@ -77,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(94, 186);
+            this.label4.Location = new System.Drawing.Point(85, 208);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 26);
@@ -89,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(94, 147);
+            this.label5.Location = new System.Drawing.Point(85, 169);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 26);
@@ -100,7 +101,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(94, 105);
+            this.label6.Location = new System.Drawing.Point(85, 127);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(162, 26);
@@ -111,7 +112,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Goudy Stout", 20.25F);
-            this.label7.Location = new System.Drawing.Point(92, 9);
+            this.label7.Location = new System.Drawing.Point(83, 31);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(418, 37);
@@ -122,7 +123,7 @@
             // 
             this.Payment.AutoSize = true;
             this.Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Payment.Location = new System.Drawing.Point(271, 58);
+            this.Payment.Location = new System.Drawing.Point(262, 80);
             this.Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Payment.Name = "Payment";
             this.Payment.Size = new System.Drawing.Size(72, 20);
@@ -143,7 +144,7 @@
             this.Send_req.ButtonRoundRadius = 30;
             this.Send_req.Font = new System.Drawing.Font("Goudy Stout", 12F);
             this.Send_req.ForeColor = System.Drawing.Color.White;
-            this.Send_req.Location = new System.Drawing.Point(316, 253);
+            this.Send_req.Location = new System.Drawing.Point(307, 275);
             this.Send_req.Margin = new System.Windows.Forms.Padding(2);
             this.Send_req.Name = "Send_req";
             this.Send_req.Size = new System.Drawing.Size(194, 51);
@@ -165,7 +166,7 @@
             this.Back.ButtonRoundRadius = 30;
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 12F);
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(99, 253);
+            this.Back.Location = new System.Drawing.Point(90, 275);
             this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(194, 51);
@@ -173,12 +174,26 @@
             this.Back.Text = "Вернуться к расчёту";
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // graf_cr
+            // 
+            this.graf_cr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.graf_cr.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_cr.ForeColor = System.Drawing.Color.White;
+            this.graf_cr.Location = new System.Drawing.Point(341, 207);
+            this.graf_cr.Name = "graf_cr";
+            this.graf_cr.Size = new System.Drawing.Size(160, 32);
+            this.graf_cr.TabIndex = 10;
+            this.graf_cr.Text = "График платежей";
+            this.graf_cr.UseVisualStyleBackColor = false;
+            this.graf_cr.Click += new System.EventHandler(this.graf_cr_Click);
+            // 
             // Credit_counted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.graf_cr);
             this.Controls.Add(this.Payment);
             this.Controls.Add(this.Send_req);
             this.Controls.Add(this.Back);
@@ -210,5 +225,6 @@
         private RoundButton Back;
         private RoundButton Send_req;
         private System.Windows.Forms.Label Payment;
+        private System.Windows.Forms.Button graf_cr;
     }
 }

@@ -15,7 +15,7 @@ namespace Bank
 {
     public partial class Credit : Form
     {
-        // перенесись позязя
+
         public Credit()
         {
             InitializeComponent();
@@ -80,36 +80,67 @@ namespace Bank
             {
                 if (Annuit.Checked == true)
                 {
+                    public_class.Credit_Type = 1;
+
                     public_class.End_Summ = Summ.Text;
+
                     public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
                     public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
-                    if (Annuit.Checked == true)
-                    {
-                        public_class.credit_type_id = "3";
-                        double abs_rate = Math.Pow(1 + Convert.ToDouble(public_class.Rate) * 0.01 / 12, Convert.ToUInt16(public_class.Term) * 12);
-                        public_class.monthly_pay =
-                            Convert.ToString(Math.Round(Convert.ToDouble(public_class.End_Summ) * Convert.ToDouble(public_class.Rate) * 0.01 / 12 * abs_rate / (abs_rate - 1), 2));
-                        public_class.End_Summ =
-                            Convert.ToString(Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt16(public_class.Term));
 
-                        this.Hide();
-                        Credit_counted counted = new Credit_counted();
-                        counted.Show();
-                    }
+                    public_class.credit_type_id = "3";
+
+                    double abs_rate = Math.Pow(1 + Convert.ToDouble(public_class.Rate) * 0.01 / 12, Convert.ToUInt16(public_class.Term) * 12);
+                    public_class.monthly_pay =
+                        Convert.ToString(Math.Round(Convert.ToDouble(public_class.End_Summ) * Convert.ToDouble(public_class.Rate) * 0.01 / 12 * abs_rate / (abs_rate - 1), 2));
+                    public_class.End_Summ =
+                        Convert.ToString(Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt16(public_class.Term));
+
+                    this.Hide();
+                    Credit_counted counted = new Credit_counted();
+                    counted.Show();
                 }
+
                 else if (Diff.Checked == true)
                 {
+                    double end_summ = 0;
 
+                    public_class.Credit_Type = 2;
+                    public_class.Start_Summ = Convert.ToUInt32(Summ.Text);
+
+                    public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
+                    public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
+
+                    public_class.credit_type_id = "5";
+
+                    int Term = Convert.ToUInt16(public_class.Term) * 12;
+
+                    for (int i = 0; i < Convert.ToUInt16(public_class.Term) * 12; ++i)
+                    {
+                        double summ = Convert.ToDouble(public_class.Start_Summ);
+                        double perc = summ * Convert.ToDouble(public_class.Rate) / 12 * 0.01;
+                        double debt = Math.Round(summ / Term, 2);
+
+                        end_summ += perc + debt;
+                    }
+
+                    public_class.End_Summ = Convert.ToString(end_summ);
+
+                    Grafic_show grafic = new Grafic_show();
+                    this.Hide();
+                    grafic.Show();
                 }
+
                 else
                 {
                     MessageBox.Show("Выберите тип платежа", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+
             catch (System.FormatException)
             {
                 MessageBox.Show("Введите сумму кредита", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
             catch (System.ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Выберите ставку и срок", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

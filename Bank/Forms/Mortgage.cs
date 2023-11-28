@@ -17,7 +17,7 @@ namespace Bank
 {
     public partial class Mortgage : Form
     {
-        //и ты засинхронься пжпж
+        
         public Mortgage()
         {
             InitializeComponent();

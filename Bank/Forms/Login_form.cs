@@ -43,9 +43,11 @@ namespace Bank
                     $"WHERE login LIKE @login";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                
                 string sql_2 = $"SELECT password FROM users";
                 MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
                 string passwords = (string)cmd_2.ExecuteScalar();
+
                 if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
                     MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -53,12 +55,14 @@ namespace Bank
                     Product_choice pr_ch = new Product_choice();
                     pr_ch.Show();
                 }
+
                 else
                 {
                     MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 con.Close();
             }
+
             else if (Admin.Checked == true)
             {
                 public_class.Login = Login.Text;
@@ -71,6 +75,7 @@ namespace Bank
                 string sql_2 = $"SELECT password FROM admins";
                 MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
                 string passwords = (string)cmd_2.ExecuteScalar();
+
                 if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
                     MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,6 +83,7 @@ namespace Bank
                     Form_for_admin for_Admin = new Form_for_admin();
                     for_Admin.Show();
                 }
+
                 else
                 {
                     MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);

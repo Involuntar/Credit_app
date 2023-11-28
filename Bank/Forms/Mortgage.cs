@@ -50,7 +50,7 @@ namespace Bank
             try
             {
                 UInt32 first_payment = Convert.ToUInt32(firstpay.Text);
-                public_class.Start_Summ = Convert.ToUInt32(Summ_morts.Text) - first_payment;
+                public_class.Start_Summ = Convert.ToDouble(Summ_morts.Text) - first_payment;
                 public_class.Rate = (rate.Text).Substring(0, (rate.Text).IndexOf('%'));
                 public_class.Term = (term.Text).Substring(0, (term.Text).IndexOf('л'));
                 public_class.init_fee = firstpay.Text;

@@ -53,10 +53,45 @@ namespace Bank.Data
             con.Close();
         }
 
+        public static void Add_credit(Credits credit)
+        {
+            string sql = $"INSERT INTO credits VALUES (NULL, @term, " +
+                $"@summ, " +
+                $"@rate, " +
+                $"@type, " +
+                $"@status, " +
+                $"(SELECT id FROM users WHERE lastname LIKE @user))";
+
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = credit.Term_id;
+            cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@status", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = credit.Users_id; 
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Кредит добавлен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Добавление произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
         public static void Add_mortgages(Mortgages mortgages)
         {
             string sql = $"INSERT INTO mortgages VALUES (NULL, @cost, @init_fee, @credit_summ, " +
-                $"@term_id, @rate_id, @credit_type_id, @users_id, @statuses_id)";
+                $"@term, " +
+                $"@rate, " +
+                $"@credit_type_id, " +
+                $"(SELECT id FROM users WHERE login LIKE @user), " +
+                $"@statuses_id)";
+            
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -64,11 +99,11 @@ namespace Bank.Data
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = mortgages.Cost;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = mortgages.Init_fee;
             cmd.Parameters.Add("@credit_summ", MySqlDbType.VarChar).Value = mortgages.Credit_summ;
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = mortgages.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.UInt16).Value = mortgages.Term_id;
 
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = mortgages.Rate_id;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = mortgages.Rate_id;
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = mortgages.Credit_type_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = mortgages.Users_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = mortgages.Users_id;
             cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = mortgages.Statuses_id;
             
             try
@@ -86,7 +121,7 @@ namespace Bank.Data
         public static void Update_users(Users users, string id)
         {
             string sql = "UPDATE users SET firstname = @firstname, middlename = @middlename," +
-                "lastname = @lastname, login = @login, password = @password, email = @email " +
+                "lastname = @lastname, login = @login, email = @email " +
                 "WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -97,8 +132,40 @@ namespace Bank.Data
             cmd.Parameters.Add("@middlename", MySqlDbType.VarChar).Value = users.Middlename;
             cmd.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = users.Lastname;
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = users.Login;
-            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = users.Password;
             cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = users.Email;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Изменения произведены успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Изменение произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+
+        public static void Update_credit(Credits credit, string id)   
+        {
+            string sql = $"UPDATE credits SET summ = @summ, " +
+                $"term_id = @term, " +
+                $"rate_id = @rate, " +
+                $"credit_type_id = @type, " +
+                $"statuses_id = @status, " +
+                $"users_id = (SELECT id FROM users WHERE lastname = @user) " +
+                $"WHERE id = @id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = credit.Term_id;
+            cmd.Parameters.Add("@summ", MySqlDbType.VarChar).Value = credit.Summ;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = credit.Rate_id;
+            cmd.Parameters.Add("@type", MySqlDbType.VarChar).Value = credit.Credit_type_id;
+            cmd.Parameters.Add("@status", MySqlDbType.VarChar).Value = credit.Statuses_id;
+            cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = credit.Users_id;
             try
             {
                 cmd.ExecuteNonQuery();
@@ -114,22 +181,27 @@ namespace Bank.Data
         public static void Update_mortgages(Mortgages mortgages, string id)
         {
             string sql = $"UPDATE mortgages SET cost = @cost, init_fee = @init_fee, credit_summ = @credit_summ, " +
-                $"term_id = @term_id, rate_id = @rate_id, credit_type_id = @credit_type_id, " +
-                $"users_id = @users_id, statuses_id = @statuses_id " +
+                $"term_id = @term, " +
+                $"rate_id = @rate, " +
+                $"credit_type_id = @credit_type_id, " + 
+                $"users_id = (SELECT id FROM users WHERE login = @users), " +
+                $"statuses_id = @statuses_id " +
                 $"WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
             cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                                                                       
+                                                                 
             cmd.Parameters.Add("@cost", MySqlDbType.VarChar).Value = mortgages.Cost;
             cmd.Parameters.Add("@init_fee", MySqlDbType.VarChar).Value = mortgages.Init_fee;
             cmd.Parameters.Add("@credit_summ", MySqlDbType.VarChar).Value = mortgages.Credit_summ;
-            cmd.Parameters.Add("@term_id", MySqlDbType.VarChar).Value = mortgages.Term_id;
+            cmd.Parameters.Add("@term", MySqlDbType.VarChar).Value = mortgages.Term_id;
 
-            cmd.Parameters.Add("@rate_id", MySqlDbType.VarChar).Value = mortgages.Rate_id;
+            cmd.Parameters.Add("@rate", MySqlDbType.VarChar).Value = mortgages.Rate_id;
             cmd.Parameters.Add("@credit_type_id", MySqlDbType.VarChar).Value = mortgages.Credit_type_id;
-            cmd.Parameters.Add("@users_id", MySqlDbType.VarChar).Value = mortgages.Users_id;
+            cmd.Parameters.Add("@users", MySqlDbType.VarChar).Value = mortgages.Users_id;
             cmd.Parameters.Add("@statuses_id", MySqlDbType.VarChar).Value = mortgages.Statuses_id;
 
             try
@@ -147,6 +219,25 @@ namespace Bank.Data
         public static void Delete_user(string id)
         {
             string sql = "DELETE FROM users WHERE id = @id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Удалено успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Удаление произошло с ошибкой! \n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+
+        public static void Delete_credit(string id)
+        {
+            string sql = "DELETE FROM credits WHERE id = @id";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -190,6 +281,35 @@ namespace Bank.Data
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
             dgv.DataSource = tbl;
+            con.Close();
+        }
+
+        public static void Search(string query, DataGridView dgv)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.Add("@search", MySqlDbType.VarChar).Value = public_class.Search;
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
+        }
+
+        public static void SelectInComboBox(string query, ComboBox cb,string DM, string VM)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable ds = new DataTable();
+            adp.Fill(ds);
+            cb.DataSource = ds;
+            cb.DisplayMember = DM;
+            cb.ValueMember = VM;
+            
             con.Close();
         }
     }

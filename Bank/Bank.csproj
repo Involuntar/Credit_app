@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -98,9 +101,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Credits.cs" />
     <Compile Include="Data\Mortgages.cs" />
     <Compile Include="Data\public_class.cs" />
     <Compile Include="Data\Users.cs" />
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.Designer.cs">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin%27s forms\Credits_watch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +128,6 @@
     </Compile>
     <Compile Include="Forms\Admin%27s forms\Mortgages_watch.Designer.cs">
       <DependentUpon>Mortgages_watch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin%27s forms\Rates_watch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin%27s forms\Rates_watch.Designer.cs">
-      <DependentUpon>Rates_watch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin%27s forms\Users_enter_form.cs">
       <SubType>Form</SubType>
@@ -149,6 +153,12 @@
     </Compile>
     <Compile Include="Forms\Check_con.Designer.cs">
       <DependentUpon>Check_con.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Credit_counted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Credit_counted.Designer.cs">
+      <DependentUpon>Credit_counted.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_for_admin.cs">
       <SubType>Form</SubType>
@@ -180,6 +190,12 @@
     <Compile Include="Forms\Product_choice.Designer.cs">
       <DependentUpon>Product_choice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grafic_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafic_show.Designer.cs">
+      <DependentUpon>Grafic_show.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Registration.cs">
@@ -191,6 +207,9 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Credits_enter_form.resx">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\credits_watch.resx">
       <DependentUpon>Credits_watch.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_watch.resx">
       <DependentUpon>Mortgages_watch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin%27s forms\Rates_watch.resx">
-      <DependentUpon>Rates_watch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin%27s forms\Users_enter_form.resx">
       <DependentUpon>Users_enter_form.cs</DependentUpon>
@@ -214,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credit.resx">
       <DependentUpon>Credit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Credit_counted.resx">
+      <DependentUpon>Credit_counted.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_for_admin.resx">
       <DependentUpon>Form_for_admin.cs</DependentUpon>
@@ -229,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product_choice.resx">
       <DependentUpon>Product_choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafic_show.resx">
+      <DependentUpon>Grafic_show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

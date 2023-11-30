@@ -46,34 +46,36 @@
             this.Password.Location = new System.Drawing.Point(156, 183);
             this.Password.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(287, 28);
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(287, 24);
             this.Password.TabIndex = 0;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Login
             // 
             this.Login.Location = new System.Drawing.Point(156, 135);
             this.Login.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(287, 28);
+            this.Login.Size = new System.Drawing.Size(287, 24);
             this.Login.TabIndex = 1;
             // 
             // Login_txt
             // 
             this.Login_txt.AutoSize = true;
-            this.Login_txt.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Login_txt.Location = new System.Drawing.Point(67, 147);
+            this.Login_txt.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_txt.Location = new System.Drawing.Point(75, 133);
             this.Login_txt.Name = "Login_txt";
-            this.Login_txt.Size = new System.Drawing.Size(69, 21);
+            this.Login_txt.Size = new System.Drawing.Size(66, 26);
             this.Login_txt.TabIndex = 3;
             this.Login_txt.Text = "Логин";
             // 
             // Password_txt
             // 
             this.Password_txt.AutoSize = true;
-            this.Password_txt.Font = new System.Drawing.Font("Georgia", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Password_txt.Location = new System.Drawing.Point(57, 196);
+            this.Password_txt.Font = new System.Drawing.Font("Goudy Stout", 14.25F);
+            this.Password_txt.Location = new System.Drawing.Point(63, 183);
             this.Password_txt.Name = "Password_txt";
-            this.Password_txt.Size = new System.Drawing.Size(84, 21);
+            this.Password_txt.Size = new System.Drawing.Size(78, 26);
             this.Password_txt.TabIndex = 4;
             this.Password_txt.Text = "Пароль";
             // 
@@ -81,10 +83,11 @@
             // 
             this.User.AutoSize = true;
             this.User.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.User.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User.ForeColor = System.Drawing.Color.Black;
             this.User.Location = new System.Drawing.Point(161, 229);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(176, 25);
+            this.User.Size = new System.Drawing.Size(150, 26);
             this.User.TabIndex = 5;
             this.User.TabStop = true;
             this.User.Text = "Пользователь";
@@ -94,14 +97,16 @@
             // 
             this.Admin.AutoSize = true;
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.Admin.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.ForeColor = System.Drawing.Color.Black;
             this.Admin.Location = new System.Drawing.Point(161, 261);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(201, 25);
+            this.Admin.Size = new System.Drawing.Size(163, 26);
             this.Admin.TabIndex = 6;
             this.Admin.TabStop = true;
             this.Admin.Text = "Администратор";
             this.Admin.UseVisualStyleBackColor = true;
+            this.Admin.CheckedChanged += new System.EventHandler(this.Admin_CheckedChanged);
             // 
             // Exit
             // 
@@ -112,10 +117,11 @@
             this.Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
             this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(424, 8);
+            this.Exit.Location = new System.Drawing.Point(429, 8);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(95, 35);
+            this.Exit.Size = new System.Drawing.Size(90, 29);
             this.Exit.TabIndex = 12;
             this.Exit.Text = "Выход";
             this.Exit.UseVisualStyleBackColor = false;
@@ -123,14 +129,14 @@
             // 
             // Log_in_txt
             // 
-            this.Log_in_txt.Font = new System.Drawing.Font("Georgia", 19.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Log_in_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.Log_in_txt.Font = new System.Drawing.Font("Goudy Stout", 20.25F);
+            this.Log_in_txt.ForeColor = System.Drawing.Color.Black;
             this.Log_in_txt.Location = new System.Drawing.Point(85, 72);
             this.Log_in_txt.Name = "Log_in_txt";
             this.Log_in_txt.Size = new System.Drawing.Size(467, 53);
             this.Log_in_txt.TabIndex = 13;
             this.Log_in_txt.Text = "Вход в личный кабинет";
+            this.Log_in_txt.Click += new System.EventHandler(this.Log_in_txt_Click);
             // 
             // Check_c
             // 
@@ -162,6 +168,7 @@
             this.Reg.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Reg.ButtonRoundRadius = 30;
             this.Reg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reg.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reg.ForeColor = System.Drawing.Color.White;
             this.Reg.Location = new System.Drawing.Point(271, 330);
             this.Reg.Name = "Reg";
@@ -184,6 +191,7 @@
             this.Log_in.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Log_in.ButtonRoundRadius = 30;
             this.Log_in.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Log_in.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Log_in.ForeColor = System.Drawing.Color.White;
             this.Log_in.Location = new System.Drawing.Point(92, 330);
             this.Log_in.Name = "Log_in";

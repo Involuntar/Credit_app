@@ -35,5 +35,15 @@ namespace Bank
         {
             Application.Exit();
         }
+
+        private void Product_head_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Product_choice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

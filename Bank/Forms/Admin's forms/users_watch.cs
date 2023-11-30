@@ -22,7 +22,7 @@ namespace Bank.Forms.Admin_s_forms
 
         public void Display_users()
         {
-            Connection.Display("SELECT * FROM users", dataGridUsers);
+            Connection.Display("SELECT id, firstname, middlename, lastname, login, email FROM users", dataGridUsers);
         }
 
         private void Add_new_Click(object sender, EventArgs e)
@@ -44,18 +44,17 @@ namespace Bank.Forms.Admin_s_forms
                 enter_Form.id = dataGridUsers.Rows[e.RowIndex].Cells[2].Value.ToString();
                 enter_Form.firstname = dataGridUsers.Rows[e.RowIndex].Cells[3].Value.ToString();
                 enter_Form.middlename = dataGridUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
-                enter_Form.lastname = dataGridUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
-                enter_Form.login = dataGridUsers.Rows[e.RowIndex].Cells[5].Value.ToString();
-                enter_Form.password = dataGridUsers.Rows[e.RowIndex].Cells[6].Value.ToString();
+                enter_Form.lastname = dataGridUsers.Rows[e.RowIndex].Cells[5].Value.ToString();
+                enter_Form.login = dataGridUsers.Rows[e.RowIndex].Cells[6].Value.ToString();
                 enter_Form.email = dataGridUsers.Rows[e.RowIndex].Cells[7].Value.ToString();
-
+                
                 enter_Form.UpdateUserInfo();
                 enter_Form.ShowDialog();
                 return;
             }
             if (e.ColumnIndex == 1)
             {
-                if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Connection.Delete_user(dataGridUsers.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display_users();
@@ -69,6 +68,44 @@ namespace Bank.Forms.Admin_s_forms
             this.Close();
             Form_for_admin for_Admin = new Form_for_admin();
             for_Admin.Show();
+        }
+
+        private void Users_text_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != String.Empty && textBox1.Text != "Поиск")
+            {
+                public_class.Search = textBox1.Text;
+                Connection.Search("SELECT id, firstname, middlename, lastname, login, email FROM users WHERE " +
+                    "firstname LIKE @search OR " +
+                    "middlename LIKE @search OR " +
+                    "lastname LIKE @search OR " +
+                    "login LIKE @search OR " +
+                    "email LIKE @search", dataGridUsers);
+            }
+            else 
+            {
+                Connection.Display("SELECT id, firstname, middlename, lastname, login, email FROM users", dataGridUsers);
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            textBox1.Text = "Поиск";
         }
     }
 }

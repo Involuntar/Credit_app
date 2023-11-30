@@ -31,20 +31,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Add_new = new Bank.RoundButton();
+            this.Users_text = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Add_new = new Bank.RoundButton();
-            this.Users_text = new System.Windows.Forms.Label();
-            this.Back = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,12 +68,12 @@
             this.middlename,
             this.lastname,
             this.login,
-            this.password,
             this.email,
             this.Edit,
             this.Delete});
             this.dataGridUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.dataGridUsers.Location = new System.Drawing.Point(0, 85);
+            this.dataGridUsers.Location = new System.Drawing.Point(0, 69);
+            this.dataGridUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridUsers.MultiSelect = false;
             this.dataGridUsers.Name = "dataGridUsers";
             this.dataGridUsers.RowHeadersVisible = false;
@@ -82,9 +81,83 @@
             this.dataGridUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridUsers.RowTemplate.Height = 24;
             this.dataGridUsers.ShowEditingIcon = false;
-            this.dataGridUsers.Size = new System.Drawing.Size(1149, 253);
+            this.dataGridUsers.Size = new System.Drawing.Size(862, 206);
             this.dataGridUsers.TabIndex = 0;
             this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
+            this.dataGridUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Add_new);
+            this.panel1.Controls.Add(this.dataGridUsers);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 91);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(862, 275);
+            this.panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(671, 29);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(181, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Поиск";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // Add_new
+            // 
+            this.Add_new.BackColor = System.Drawing.Color.DimGray;
+            this.Add_new.BackColor2 = System.Drawing.Color.DimGray;
+            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Add_new.ButtonRoundRadius = 30;
+            this.Add_new.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_new.ForeColor = System.Drawing.Color.White;
+            this.Add_new.Location = new System.Drawing.Point(25, 13);
+            this.Add_new.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_new.Name = "Add_new";
+            this.Add_new.Size = new System.Drawing.Size(105, 36);
+            this.Add_new.TabIndex = 1;
+            this.Add_new.Text = "Добавить";
+            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
+            // 
+            // Users_text
+            // 
+            this.Users_text.AutoSize = true;
+            this.Users_text.BackColor = System.Drawing.Color.DimGray;
+            this.Users_text.Font = new System.Drawing.Font("Goudy Stout", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Users_text.ForeColor = System.Drawing.Color.White;
+            this.Users_text.Location = new System.Drawing.Point(28, 33);
+            this.Users_text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Users_text.Name = "Users_text";
+            this.Users_text.Size = new System.Drawing.Size(236, 40);
+            this.Users_text.TabIndex = 2;
+            this.Users_text.Text = "Пользователи";
+            this.Users_text.Click += new System.EventHandler(this.Users_text_Click);
+            // 
+            // Back
+            // 
+            this.Back.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(792, 11);
+            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(60, 23);
+            this.Back.TabIndex = 3;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // id
             // 
@@ -120,13 +193,6 @@
             this.login.HeaderText = "Логин";
             this.login.MinimumWidth = 6;
             this.login.Name = "login";
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "Пароль";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
             // 
             // email
             // 
@@ -169,74 +235,17 @@
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.Add_new);
-            this.panel1.Controls.Add(this.dataGridUsers);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 112);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1149, 338);
-            this.panel1.TabIndex = 1;
-            // 
-            // Add_new
-            // 
-            this.Add_new.BackColor = System.Drawing.Color.Gainsboro;
-            this.Add_new.BackColor2 = System.Drawing.Color.Silver;
-            this.Add_new.ButtonBorderColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonHighlightColor = System.Drawing.Color.Orange;
-            this.Add_new.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
-            this.Add_new.ButtonHighlightForeColor = System.Drawing.Color.Black;
-            this.Add_new.ButtonPressedColor = System.Drawing.Color.Red;
-            this.Add_new.ButtonPressedColor2 = System.Drawing.Color.Maroon;
-            this.Add_new.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.Add_new.ButtonRoundRadius = 30;
-            this.Add_new.Location = new System.Drawing.Point(33, 26);
-            this.Add_new.Name = "Add_new";
-            this.Add_new.Size = new System.Drawing.Size(100, 40);
-            this.Add_new.TabIndex = 1;
-            this.Add_new.Text = "Добавить";
-            this.Add_new.Click += new System.EventHandler(this.Add_new_Click);
-            // 
-            // Users_text
-            // 
-            this.Users_text.AutoSize = true;
-            this.Users_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Users_text.Location = new System.Drawing.Point(38, 41);
-            this.Users_text.Name = "Users_text";
-            this.Users_text.Size = new System.Drawing.Size(267, 42);
-            this.Users_text.TabIndex = 2;
-            this.Users_text.Text = "Пользователи";
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(1062, 13);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 3;
-            this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(894, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
-            // 
             // users_watch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(1149, 450);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(862, 366);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Users_text);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "users_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Пользователи";
@@ -255,16 +264,15 @@
         private System.Windows.Forms.Panel panel1;
         private RoundButton Add_new;
         private System.Windows.Forms.Label Users_text;
+        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn middlename;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

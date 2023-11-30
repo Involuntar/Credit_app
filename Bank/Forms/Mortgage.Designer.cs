@@ -62,19 +62,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(29, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 29);
+            this.label1.Size = new System.Drawing.Size(423, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Стоимость недвижимости";
             // 
             // Summ_morts
             // 
-            this.Summ_morts.Location = new System.Drawing.Point(29, 58);
-            this.Summ_morts.Margin = new System.Windows.Forms.Padding(4);
+            this.Summ_morts.Location = new System.Drawing.Point(37, 57);
+            this.Summ_morts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Summ_morts.MaxLength = 20;
             this.Summ_morts.Name = "Summ_morts";
             this.Summ_morts.Size = new System.Drawing.Size(405, 22);
             this.Summ_morts.TabIndex = 5;
@@ -82,19 +83,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(29, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(322, 29);
+            this.label2.Size = new System.Drawing.Size(385, 41);
             this.label2.TabIndex = 6;
             this.label2.Text = "Первоначальный взнос";
             // 
             // firstpay
             // 
-            this.firstpay.Location = new System.Drawing.Point(29, 150);
-            this.firstpay.Margin = new System.Windows.Forms.Padding(4);
+            this.firstpay.Location = new System.Drawing.Point(37, 150);
+            this.firstpay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstpay.MaxLength = 20;
             this.firstpay.Name = "firstpay";
             this.firstpay.Size = new System.Drawing.Size(405, 22);
             this.firstpay.TabIndex = 7;
@@ -102,45 +104,45 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(29, 225);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.Size = new System.Drawing.Size(233, 41);
             this.label3.TabIndex = 8;
             this.label3.Text = "Срок кредита";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(24, 346);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 29);
+            this.label4.Size = new System.Drawing.Size(320, 41);
             this.label4.TabIndex = 10;
             this.label4.Text = "Процентная ставка";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(37, 463);
+            this.label5.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(27, 464);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 29);
+            this.label5.Size = new System.Drawing.Size(218, 41);
             this.label5.TabIndex = 30;
             this.label5.Text = "Тип платежа";
             // 
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Back.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Back.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(877, 14);
+            this.Back.Location = new System.Drawing.Point(640, 23);
             this.Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(88, 30);
@@ -152,9 +154,9 @@
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Exit.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Exit.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(971, 14);
+            this.Exit.Location = new System.Drawing.Point(733, 23);
             this.Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(91, 30);
@@ -185,7 +187,7 @@
             // 
             // perc30
             // 
-            this.perc30.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc30.BackColor = System.Drawing.Color.White;
             this.perc30.BackColor2 = System.Drawing.Color.Silver;
             this.perc30.ButtonBorderColor = System.Drawing.Color.Black;
             this.perc30.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -197,7 +199,7 @@
             this.perc30.ButtonRoundRadius = 30;
             this.perc30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc30.Location = new System.Drawing.Point(328, 182);
-            this.perc30.Margin = new System.Windows.Forms.Padding(4);
+            this.perc30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.perc30.Name = "perc30";
             this.perc30.Size = new System.Drawing.Size(65, 36);
             this.perc30.TabIndex = 29;
@@ -206,7 +208,7 @@
             // 
             // perc25
             // 
-            this.perc25.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc25.BackColor = System.Drawing.Color.White;
             this.perc25.BackColor2 = System.Drawing.Color.Silver;
             this.perc25.ButtonBorderColor = System.Drawing.Color.Black;
             this.perc25.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -218,7 +220,7 @@
             this.perc25.ButtonRoundRadius = 30;
             this.perc25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc25.Location = new System.Drawing.Point(255, 182);
-            this.perc25.Margin = new System.Windows.Forms.Padding(4);
+            this.perc25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.perc25.Name = "perc25";
             this.perc25.Size = new System.Drawing.Size(65, 36);
             this.perc25.TabIndex = 28;
@@ -227,7 +229,7 @@
             // 
             // perc20
             // 
-            this.perc20.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc20.BackColor = System.Drawing.Color.White;
             this.perc20.BackColor2 = System.Drawing.Color.Silver;
             this.perc20.ButtonBorderColor = System.Drawing.Color.Black;
             this.perc20.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -239,7 +241,7 @@
             this.perc20.ButtonRoundRadius = 30;
             this.perc20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc20.Location = new System.Drawing.Point(181, 182);
-            this.perc20.Margin = new System.Windows.Forms.Padding(4);
+            this.perc20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.perc20.Name = "perc20";
             this.perc20.Size = new System.Drawing.Size(65, 36);
             this.perc20.TabIndex = 27;
@@ -248,7 +250,7 @@
             // 
             // perc15
             // 
-            this.perc15.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc15.BackColor = System.Drawing.Color.White;
             this.perc15.BackColor2 = System.Drawing.Color.Silver;
             this.perc15.ButtonBorderColor = System.Drawing.Color.Black;
             this.perc15.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -260,7 +262,7 @@
             this.perc15.ButtonRoundRadius = 30;
             this.perc15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc15.Location = new System.Drawing.Point(108, 182);
-            this.perc15.Margin = new System.Windows.Forms.Padding(4);
+            this.perc15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.perc15.Name = "perc15";
             this.perc15.Size = new System.Drawing.Size(65, 36);
             this.perc15.TabIndex = 26;
@@ -269,7 +271,7 @@
             // 
             // perc10
             // 
-            this.perc10.BackColor = System.Drawing.Color.Gainsboro;
+            this.perc10.BackColor = System.Drawing.Color.White;
             this.perc10.BackColor2 = System.Drawing.Color.Silver;
             this.perc10.ButtonBorderColor = System.Drawing.Color.Black;
             this.perc10.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -281,7 +283,7 @@
             this.perc10.ButtonRoundRadius = 30;
             this.perc10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.perc10.Location = new System.Drawing.Point(35, 182);
-            this.perc10.Margin = new System.Windows.Forms.Padding(4);
+            this.perc10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.perc10.Name = "perc10";
             this.perc10.Size = new System.Drawing.Size(65, 36);
             this.perc10.TabIndex = 25;
@@ -290,7 +292,7 @@
             // 
             // rate155
             // 
-            this.rate155.BackColor = System.Drawing.Color.Gainsboro;
+            this.rate155.BackColor = System.Drawing.Color.White;
             this.rate155.BackColor2 = System.Drawing.Color.Silver;
             this.rate155.ButtonBorderColor = System.Drawing.Color.Black;
             this.rate155.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -302,7 +304,7 @@
             this.rate155.ButtonRoundRadius = 30;
             this.rate155.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate155.Location = new System.Drawing.Point(317, 411);
-            this.rate155.Margin = new System.Windows.Forms.Padding(4);
+            this.rate155.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rate155.Name = "rate155";
             this.rate155.Size = new System.Drawing.Size(75, 33);
             this.rate155.TabIndex = 24;
@@ -311,7 +313,7 @@
             // 
             // rate142
             // 
-            this.rate142.BackColor = System.Drawing.Color.Gainsboro;
+            this.rate142.BackColor = System.Drawing.Color.White;
             this.rate142.BackColor2 = System.Drawing.Color.Silver;
             this.rate142.ButtonBorderColor = System.Drawing.Color.Black;
             this.rate142.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -323,7 +325,7 @@
             this.rate142.ButtonRoundRadius = 30;
             this.rate142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate142.Location = new System.Drawing.Point(235, 411);
-            this.rate142.Margin = new System.Windows.Forms.Padding(4);
+            this.rate142.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rate142.Name = "rate142";
             this.rate142.Size = new System.Drawing.Size(75, 33);
             this.rate142.TabIndex = 23;
@@ -332,7 +334,7 @@
             // 
             // rate136
             // 
-            this.rate136.BackColor = System.Drawing.Color.Gainsboro;
+            this.rate136.BackColor = System.Drawing.Color.White;
             this.rate136.BackColor2 = System.Drawing.Color.Silver;
             this.rate136.ButtonBorderColor = System.Drawing.Color.Black;
             this.rate136.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -344,7 +346,7 @@
             this.rate136.ButtonRoundRadius = 30;
             this.rate136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rate136.Location = new System.Drawing.Point(152, 411);
-            this.rate136.Margin = new System.Windows.Forms.Padding(4);
+            this.rate136.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rate136.Name = "rate136";
             this.rate136.Size = new System.Drawing.Size(75, 33);
             this.rate136.TabIndex = 22;
@@ -353,7 +355,7 @@
             // 
             // rate8
             // 
-            this.rate8.BackColor = System.Drawing.Color.Gainsboro;
+            this.rate8.BackColor = System.Drawing.Color.White;
             this.rate8.BackColor2 = System.Drawing.Color.Silver;
             this.rate8.ButtonBorderColor = System.Drawing.Color.Black;
             this.rate8.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -364,7 +366,7 @@
             this.rate8.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate8.ButtonRoundRadius = 30;
             this.rate8.Location = new System.Drawing.Point(92, 411);
-            this.rate8.Margin = new System.Windows.Forms.Padding(4);
+            this.rate8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rate8.Name = "rate8";
             this.rate8.Size = new System.Drawing.Size(52, 33);
             this.rate8.TabIndex = 21;
@@ -373,7 +375,7 @@
             // 
             // rate5
             // 
-            this.rate5.BackColor = System.Drawing.Color.Gainsboro;
+            this.rate5.BackColor = System.Drawing.Color.White;
             this.rate5.BackColor2 = System.Drawing.Color.Silver;
             this.rate5.ButtonBorderColor = System.Drawing.Color.Black;
             this.rate5.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -384,7 +386,7 @@
             this.rate5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate5.ButtonRoundRadius = 30;
             this.rate5.Location = new System.Drawing.Point(32, 411);
-            this.rate5.Margin = new System.Windows.Forms.Padding(4);
+            this.rate5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rate5.Name = "rate5";
             this.rate5.Size = new System.Drawing.Size(52, 33);
             this.rate5.TabIndex = 20;
@@ -393,7 +395,7 @@
             // 
             // years30
             // 
-            this.years30.BackColor = System.Drawing.Color.Gainsboro;
+            this.years30.BackColor = System.Drawing.Color.White;
             this.years30.BackColor2 = System.Drawing.Color.Silver;
             this.years30.ButtonBorderColor = System.Drawing.Color.Black;
             this.years30.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -404,8 +406,8 @@
             this.years30.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years30.ButtonRoundRadius = 30;
             this.years30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.years30.Location = new System.Drawing.Point(340, 293);
-            this.years30.Margin = new System.Windows.Forms.Padding(4);
+            this.years30.Location = new System.Drawing.Point(345, 295);
+            this.years30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.years30.Name = "years30";
             this.years30.Size = new System.Drawing.Size(75, 33);
             this.years30.TabIndex = 19;
@@ -414,7 +416,7 @@
             // 
             // years20
             // 
-            this.years20.BackColor = System.Drawing.Color.Gainsboro;
+            this.years20.BackColor = System.Drawing.Color.White;
             this.years20.BackColor2 = System.Drawing.Color.Silver;
             this.years20.ButtonBorderColor = System.Drawing.Color.Black;
             this.years20.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -425,8 +427,8 @@
             this.years20.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years20.ButtonRoundRadius = 30;
             this.years20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.years20.Location = new System.Drawing.Point(257, 293);
-            this.years20.Margin = new System.Windows.Forms.Padding(4);
+            this.years20.Location = new System.Drawing.Point(263, 295);
+            this.years20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.years20.Name = "years20";
             this.years20.Size = new System.Drawing.Size(75, 33);
             this.years20.TabIndex = 18;
@@ -435,7 +437,7 @@
             // 
             // years15
             // 
-            this.years15.BackColor = System.Drawing.Color.Gainsboro;
+            this.years15.BackColor = System.Drawing.Color.White;
             this.years15.BackColor2 = System.Drawing.Color.Silver;
             this.years15.ButtonBorderColor = System.Drawing.Color.Black;
             this.years15.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -446,8 +448,8 @@
             this.years15.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years15.ButtonRoundRadius = 30;
             this.years15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.years15.Location = new System.Drawing.Point(175, 293);
-            this.years15.Margin = new System.Windows.Forms.Padding(4);
+            this.years15.Location = new System.Drawing.Point(180, 295);
+            this.years15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.years15.Name = "years15";
             this.years15.Size = new System.Drawing.Size(75, 33);
             this.years15.TabIndex = 17;
@@ -456,7 +458,7 @@
             // 
             // years10
             // 
-            this.years10.BackColor = System.Drawing.Color.Gainsboro;
+            this.years10.BackColor = System.Drawing.Color.White;
             this.years10.BackColor2 = System.Drawing.Color.Silver;
             this.years10.ButtonBorderColor = System.Drawing.Color.Black;
             this.years10.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -467,8 +469,8 @@
             this.years10.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years10.ButtonRoundRadius = 30;
             this.years10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.years10.Location = new System.Drawing.Point(92, 293);
-            this.years10.Margin = new System.Windows.Forms.Padding(4);
+            this.years10.Location = new System.Drawing.Point(97, 295);
+            this.years10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.years10.Name = "years10";
             this.years10.Size = new System.Drawing.Size(75, 33);
             this.years10.TabIndex = 16;
@@ -477,7 +479,7 @@
             // 
             // years5
             // 
-            this.years5.BackColor = System.Drawing.Color.Gainsboro;
+            this.years5.BackColor = System.Drawing.Color.White;
             this.years5.BackColor2 = System.Drawing.Color.Silver;
             this.years5.ButtonBorderColor = System.Drawing.Color.Black;
             this.years5.ButtonHighlightColor = System.Drawing.Color.Orange;
@@ -487,8 +489,8 @@
             this.years5.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.years5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.years5.ButtonRoundRadius = 30;
-            this.years5.Location = new System.Drawing.Point(32, 293);
-            this.years5.Margin = new System.Windows.Forms.Padding(4);
+            this.years5.Location = new System.Drawing.Point(37, 295);
+            this.years5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.years5.Name = "years5";
             this.years5.Size = new System.Drawing.Size(52, 33);
             this.years5.TabIndex = 15;
@@ -498,11 +500,11 @@
             // Annuit
             // 
             this.Annuit.AutoSize = true;
-            this.Annuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Annuit.Location = new System.Drawing.Point(37, 506);
+            this.Annuit.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Annuit.Location = new System.Drawing.Point(35, 506);
             this.Annuit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Annuit.Name = "Annuit";
-            this.Annuit.Size = new System.Drawing.Size(118, 22);
+            this.Annuit.Size = new System.Drawing.Size(152, 27);
             this.Annuit.TabIndex = 39;
             this.Annuit.TabStop = true;
             this.Annuit.Text = "Аннуитетный";
@@ -511,11 +513,11 @@
             // Diff
             // 
             this.Diff.AutoSize = true;
-            this.Diff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Diff.Location = new System.Drawing.Point(175, 506);
+            this.Diff.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Diff.Location = new System.Drawing.Point(195, 506);
             this.Diff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Diff.Name = "Diff";
-            this.Diff.Size = new System.Drawing.Size(191, 22);
+            this.Diff.Size = new System.Drawing.Size(239, 27);
             this.Diff.TabIndex = 40;
             this.Diff.TabStop = true;
             this.Diff.Text = "Дифференцированный";
@@ -534,10 +536,10 @@
             this.Mortgage_count.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Mortgage_count.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Mortgage_count.ButtonRoundRadius = 30;
-            this.Mortgage_count.Font = new System.Drawing.Font("Georgia", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Mortgage_count.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mortgage_count.ForeColor = System.Drawing.Color.White;
-            this.Mortgage_count.Location = new System.Drawing.Point(35, 546);
-            this.Mortgage_count.Margin = new System.Windows.Forms.Padding(4);
+            this.Mortgage_count.Location = new System.Drawing.Point(32, 555);
+            this.Mortgage_count.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mortgage_count.Name = "Mortgage_count";
             this.Mortgage_count.Size = new System.Drawing.Size(208, 59);
             this.Mortgage_count.TabIndex = 33;
@@ -549,7 +551,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(1073, 629);
+            this.ClientSize = new System.Drawing.Size(885, 629);
             this.Controls.Add(this.Diff);
             this.Controls.Add(this.Annuit);
             this.Controls.Add(this.rate);
@@ -579,7 +581,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Summ_morts);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mortgage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рассчёт ипотеки";

@@ -8,7 +8,7 @@ namespace Bank.Data
 {
     public class public_class
     {
-        public static UInt32 Start_Summ;
+        public static double Start_Summ;
         public static string init_fee;
         public static string Rate;
         public static string Term;
@@ -17,5 +17,8 @@ namespace Bank.Data
         public static string Password;
         public static string credit_type_id;
         public static string monthly_pay;
+        public static string Search;
+        public static string Summ_for_Grafic;
+        public static UInt32 Credit_Type; 
     }
 }

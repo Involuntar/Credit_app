@@ -145,6 +145,11 @@ namespace Bank
             {
                 MessageBox.Show("Выберите ставку и срок", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+            catch (System.OverflowException)
+            {
+                MessageBox.Show("Слишком большая сумма!", "Предупрждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void term5_Click(object sender, EventArgs e)

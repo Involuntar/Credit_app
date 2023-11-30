@@ -39,13 +39,10 @@ namespace Bank
                 public_class.Login = Login.Text;
                 public_class.Password = Password.Text;
                 MySqlConnection con = Connection.GetConnection();
-                string sql = $"SELECT login, password FROM users " +
-                    $"WHERE login LIKE @login";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 
-                string sql_2 = $"SELECT password FROM users";
+                string sql_2 = $"SELECT password FROM users WHERE login LIKE @login";
                 MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                cmd_2.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 string passwords = (string)cmd_2.ExecuteScalar();
 
                 if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)

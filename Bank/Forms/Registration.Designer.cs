@@ -52,10 +52,9 @@
             this.Product_head.AutoSize = true;
             this.Product_head.Font = new System.Drawing.Font("Goudy Stout", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Product_head.ForeColor = System.Drawing.Color.Black;
-            this.Product_head.Location = new System.Drawing.Point(266, 9);
-            this.Product_head.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Product_head.Location = new System.Drawing.Point(355, 11);
             this.Product_head.Name = "Product_head";
-            this.Product_head.Size = new System.Drawing.Size(211, 40);
+            this.Product_head.Size = new System.Drawing.Size(266, 51);
             this.Product_head.TabIndex = 5;
             this.Product_head.Text = "Регистрация";
             // 
@@ -64,17 +63,19 @@
             this.mail.AutoSize = true;
             this.mail.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.mail.ForeColor = System.Drawing.Color.Black;
-            this.mail.Location = new System.Drawing.Point(418, 74);
+            this.mail.Location = new System.Drawing.Point(557, 91);
+            this.mail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mail.Name = "mail";
-            this.mail.Size = new System.Drawing.Size(81, 28);
+            this.mail.Size = new System.Drawing.Size(105, 37);
             this.mail.TabIndex = 6;
             this.mail.Text = "Почта";
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(422, 107);
+            this.email.Location = new System.Drawing.Point(563, 132);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(305, 20);
+            this.email.Size = new System.Drawing.Size(405, 22);
             this.email.TabIndex = 7;
             this.email.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -83,17 +84,19 @@
             this.lgn.AutoSize = true;
             this.lgn.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.lgn.ForeColor = System.Drawing.Color.Black;
-            this.lgn.Location = new System.Drawing.Point(418, 129);
+            this.lgn.Location = new System.Drawing.Point(557, 159);
+            this.lgn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgn.Name = "lgn";
-            this.lgn.Size = new System.Drawing.Size(81, 28);
+            this.lgn.Size = new System.Drawing.Size(107, 37);
             this.lgn.TabIndex = 8;
             this.lgn.Text = "Логин";
             // 
             // new_login
             // 
-            this.new_login.Location = new System.Drawing.Point(422, 165);
+            this.new_login.Location = new System.Drawing.Point(563, 203);
+            this.new_login.Margin = new System.Windows.Forms.Padding(4);
             this.new_login.Name = "new_login";
-            this.new_login.Size = new System.Drawing.Size(305, 20);
+            this.new_login.Size = new System.Drawing.Size(405, 22);
             this.new_login.TabIndex = 9;
             this.new_login.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -102,17 +105,20 @@
             this.pswrd.AutoSize = true;
             this.pswrd.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.pswrd.ForeColor = System.Drawing.Color.Black;
-            this.pswrd.Location = new System.Drawing.Point(418, 189);
+            this.pswrd.Location = new System.Drawing.Point(557, 233);
+            this.pswrd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pswrd.Name = "pswrd";
-            this.pswrd.Size = new System.Drawing.Size(95, 28);
+            this.pswrd.Size = new System.Drawing.Size(128, 37);
             this.pswrd.TabIndex = 10;
             this.pswrd.Text = "Пароль";
             // 
             // new_password
             // 
-            this.new_password.Location = new System.Drawing.Point(422, 217);
+            this.new_password.Location = new System.Drawing.Point(563, 267);
+            this.new_password.Margin = new System.Windows.Forms.Padding(4);
             this.new_password.Name = "new_password";
-            this.new_password.Size = new System.Drawing.Size(305, 20);
+            this.new_password.PasswordChar = '*';
+            this.new_password.Size = new System.Drawing.Size(405, 22);
             this.new_password.TabIndex = 11;
             this.new_password.TextChanged += new System.EventHandler(this.new_password_TextChanged);
             // 
@@ -121,42 +127,45 @@
             this.pswrd_2.AutoSize = true;
             this.pswrd_2.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.pswrd_2.ForeColor = System.Drawing.Color.Black;
-            this.pswrd_2.Location = new System.Drawing.Point(418, 251);
+            this.pswrd_2.Location = new System.Drawing.Point(557, 309);
+            this.pswrd_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pswrd_2.Name = "pswrd_2";
-            this.pswrd_2.Size = new System.Drawing.Size(226, 28);
+            this.pswrd_2.Size = new System.Drawing.Size(291, 37);
             this.pswrd_2.TabIndex = 12;
             this.pswrd_2.Text = "Повторите пароль";
             // 
             // confirm_password
             // 
-            this.confirm_password.Location = new System.Drawing.Point(422, 288);
+            this.confirm_password.Location = new System.Drawing.Point(563, 354);
+            this.confirm_password.Margin = new System.Windows.Forms.Padding(4);
             this.confirm_password.Name = "confirm_password";
-            this.confirm_password.Size = new System.Drawing.Size(305, 20);
+            this.confirm_password.PasswordChar = '*';
+            this.confirm_password.Size = new System.Drawing.Size(405, 22);
             this.confirm_password.TabIndex = 13;
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(117, 165);
-            this.name.Margin = new System.Windows.Forms.Padding(2);
+            this.name.Location = new System.Drawing.Point(156, 203);
+            this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(151, 20);
+            this.name.Size = new System.Drawing.Size(200, 22);
             this.name.TabIndex = 15;
             // 
             // middlename
             // 
-            this.middlename.Location = new System.Drawing.Point(116, 228);
-            this.middlename.Margin = new System.Windows.Forms.Padding(2);
+            this.middlename.Location = new System.Drawing.Point(155, 281);
+            this.middlename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.middlename.Name = "middlename";
-            this.middlename.Size = new System.Drawing.Size(151, 20);
+            this.middlename.Size = new System.Drawing.Size(200, 22);
             this.middlename.TabIndex = 16;
             this.middlename.TextChanged += new System.EventHandler(this.middlename_TextChanged);
             // 
             // lastname
             // 
-            this.lastname.Location = new System.Drawing.Point(116, 107);
-            this.lastname.Margin = new System.Windows.Forms.Padding(2);
+            this.lastname.Location = new System.Drawing.Point(155, 132);
+            this.lastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(151, 20);
+            this.lastname.Size = new System.Drawing.Size(200, 22);
             this.lastname.TabIndex = 17;
             // 
             // reg
@@ -173,23 +182,23 @@
             this.reg.ButtonRoundRadius = 30;
             this.reg.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reg.ForeColor = System.Drawing.Color.White;
-            this.reg.Location = new System.Drawing.Point(244, 352);
-            this.reg.Margin = new System.Windows.Forms.Padding(2);
+            this.reg.Location = new System.Drawing.Point(325, 433);
+            this.reg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reg.Name = "reg";
-            this.reg.Size = new System.Drawing.Size(264, 62);
+            this.reg.Size = new System.Drawing.Size(352, 76);
             this.reg.TabIndex = 14;
             this.reg.Text = "Зарегистрироваться";
-            this.reg.Click += new System.EventHandler(this.credit_Click);
+            this.reg.Click += new System.EventHandler(this.reg_Click);
             // 
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(720, 9);
-            this.Back.Margin = new System.Windows.Forms.Padding(2);
+            this.Back.Location = new System.Drawing.Point(960, 11);
+            this.Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(71, 28);
+            this.Back.Size = new System.Drawing.Size(95, 34);
             this.Back.TabIndex = 18;
             this.Back.Text = "Назад";
             this.Back.UseVisualStyleBackColor = false;
@@ -200,10 +209,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(112, 129);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(149, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 28);
+            this.label5.Size = new System.Drawing.Size(81, 37);
             this.label5.TabIndex = 19;
             this.label5.Text = "Имя";
             // 
@@ -212,10 +220,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Goudy Stout", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(113, 189);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(151, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 28);
+            this.label6.Size = new System.Drawing.Size(152, 37);
             this.label6.TabIndex = 20;
             this.label6.Text = "Отчество";
             // 
@@ -224,19 +231,18 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(112, 74);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(149, 91);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 28);
+            this.label7.Size = new System.Drawing.Size(160, 37);
             this.label7.TabIndex = 21;
             this.label7.Text = "Фамилия";
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -254,6 +260,7 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.mail);
             this.Controls.Add(this.Product_head);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Registration_Load);

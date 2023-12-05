@@ -121,5 +121,10 @@ namespace Bank
         {
 
         }
+
+        private void User_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

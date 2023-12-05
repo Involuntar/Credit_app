@@ -87,5 +87,55 @@ namespace Bank
             }
             conn.Close();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirm_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pswrd_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pswrd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lgn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

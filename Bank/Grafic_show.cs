@@ -49,7 +49,7 @@ namespace Bank
 
                 dataGridGraf.Rows[RowIndex_last].Cells["month"].Value = term;
                 dataGridGraf.Rows[RowIndex_last].Cells["ost_debt"].Value = Math.Round(summ, 2);
-                dataGridGraf.Rows[RowIndex_last].Cells["payment"].Value = Math.Round(summ, 2);
+                dataGridGraf.Rows[RowIndex_last].Cells["payment"].Value = Math.Round(perc_last + debt, 2);
                 dataGridGraf.Rows[RowIndex_last].Cells["procent_part"].Value = Math.Round(perc_last, 2);
                 dataGridGraf.Rows[RowIndex_last].Cells["debt_part"].Value = Math.Round(debt, 2);
                 dataGridGraf.Rows[RowIndex_last].Cells["end_debt"].Value = 0;

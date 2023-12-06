@@ -61,7 +61,7 @@
             this.credit.ButtonRoundRadius = 30;
             this.credit.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.credit.ForeColor = System.Drawing.Color.White;
-            this.credit.Location = new System.Drawing.Point(82, 191);
+            this.credit.Location = new System.Drawing.Point(101, 191);
             this.credit.Margin = new System.Windows.Forms.Padding(2);
             this.credit.Name = "credit";
             this.credit.Size = new System.Drawing.Size(144, 59);
@@ -83,7 +83,7 @@
             this.mortgages.ButtonRoundRadius = 30;
             this.mortgages.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mortgages.ForeColor = System.Drawing.Color.White;
-            this.mortgages.Location = new System.Drawing.Point(345, 191);
+            this.mortgages.Location = new System.Drawing.Point(332, 191);
             this.mortgages.Margin = new System.Windows.Forms.Padding(2);
             this.mortgages.Name = "mortgages";
             this.mortgages.Size = new System.Drawing.Size(145, 59);

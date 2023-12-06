@@ -55,11 +55,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(28, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 32);
+            this.label1.Size = new System.Drawing.Size(197, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Сумма кредита";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -67,17 +67,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(33, 83);
+            this.label2.Location = new System.Drawing.Point(30, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 32);
+            this.label2.Size = new System.Drawing.Size(173, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "Срок кредита";
             // 
             // Summ
             // 
-            this.Summ.Location = new System.Drawing.Point(37, 48);
+            this.Summ.Location = new System.Drawing.Point(36, 59);
             this.Summ.Name = "Summ";
             this.Summ.Size = new System.Drawing.Size(305, 20);
             this.Summ.TabIndex = 4;
@@ -85,22 +85,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(33, 167);
+            this.label3.Location = new System.Drawing.Point(28, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 32);
+            this.label3.Size = new System.Drawing.Size(234, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "Процентная ставка";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Goudy Stout", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(34, 258);
+            this.label4.Location = new System.Drawing.Point(29, 273);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 32);
+            this.label4.Size = new System.Drawing.Size(164, 28);
             this.label4.TabIndex = 8;
             this.label4.Text = "Тип платежа";
             // 
@@ -108,7 +108,7 @@
             // 
             this.Diff.AutoSize = true;
             this.Diff.Font = new System.Drawing.Font("Goudy Stout", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diff.Location = new System.Drawing.Point(41, 319);
+            this.Diff.Location = new System.Drawing.Point(36, 334);
             this.Diff.Name = "Diff";
             this.Diff.Size = new System.Drawing.Size(189, 24);
             this.Diff.TabIndex = 10;
@@ -120,7 +120,7 @@
             // 
             this.Annuit.AutoSize = true;
             this.Annuit.Font = new System.Drawing.Font("Goudy Stout", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Annuit.Location = new System.Drawing.Point(41, 296);
+            this.Annuit.Location = new System.Drawing.Point(36, 311);
             this.Annuit.Name = "Annuit";
             this.Annuit.Size = new System.Drawing.Size(116, 24);
             this.Annuit.TabIndex = 13;
@@ -141,7 +141,7 @@
             this.term5.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.term5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.term5.ButtonRoundRadius = 30;
-            this.term5.Location = new System.Drawing.Point(37, 137);
+            this.term5.Location = new System.Drawing.Point(32, 152);
             this.term5.Name = "term5";
             this.term5.Size = new System.Drawing.Size(39, 27);
             this.term5.TabIndex = 14;
@@ -161,7 +161,7 @@
             this.term10.ButtonPressedForeColor = System.Drawing.Color.White;
             this.term10.ButtonRoundRadius = 30;
             this.term10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.term10.Location = new System.Drawing.Point(82, 137);
+            this.term10.Location = new System.Drawing.Point(77, 152);
             this.term10.Name = "term10";
             this.term10.Size = new System.Drawing.Size(56, 27);
             this.term10.TabIndex = 15;
@@ -181,7 +181,7 @@
             this.term15.ButtonPressedForeColor = System.Drawing.Color.White;
             this.term15.ButtonRoundRadius = 30;
             this.term15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.term15.Location = new System.Drawing.Point(144, 137);
+            this.term15.Location = new System.Drawing.Point(139, 152);
             this.term15.Name = "term15";
             this.term15.Size = new System.Drawing.Size(56, 27);
             this.term15.TabIndex = 16;
@@ -201,7 +201,7 @@
             this.term20.ButtonPressedForeColor = System.Drawing.Color.White;
             this.term20.ButtonRoundRadius = 30;
             this.term20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.term20.Location = new System.Drawing.Point(206, 137);
+            this.term20.Location = new System.Drawing.Point(201, 152);
             this.term20.Name = "term20";
             this.term20.Size = new System.Drawing.Size(56, 27);
             this.term20.TabIndex = 17;
@@ -221,7 +221,7 @@
             this.term30.ButtonPressedForeColor = System.Drawing.Color.White;
             this.term30.ButtonRoundRadius = 30;
             this.term30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.term30.Location = new System.Drawing.Point(268, 137);
+            this.term30.Location = new System.Drawing.Point(263, 152);
             this.term30.Name = "term30";
             this.term30.Size = new System.Drawing.Size(56, 27);
             this.term30.TabIndex = 18;
@@ -240,7 +240,7 @@
             this.rate5.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.rate5.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate5.ButtonRoundRadius = 30;
-            this.rate5.Location = new System.Drawing.Point(37, 228);
+            this.rate5.Location = new System.Drawing.Point(32, 243);
             this.rate5.Name = "rate5";
             this.rate5.Size = new System.Drawing.Size(39, 27);
             this.rate5.TabIndex = 19;
@@ -259,7 +259,7 @@
             this.rate8.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.rate8.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate8.ButtonRoundRadius = 30;
-            this.rate8.Location = new System.Drawing.Point(82, 228);
+            this.rate8.Location = new System.Drawing.Point(77, 243);
             this.rate8.Name = "rate8";
             this.rate8.Size = new System.Drawing.Size(39, 27);
             this.rate8.TabIndex = 20;
@@ -279,7 +279,7 @@
             this.rate136.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate136.ButtonRoundRadius = 30;
             this.rate136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rate136.Location = new System.Drawing.Point(127, 228);
+            this.rate136.Location = new System.Drawing.Point(122, 243);
             this.rate136.Name = "rate136";
             this.rate136.Size = new System.Drawing.Size(56, 27);
             this.rate136.TabIndex = 21;
@@ -299,7 +299,7 @@
             this.rate142.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate142.ButtonRoundRadius = 30;
             this.rate142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rate142.Location = new System.Drawing.Point(188, 228);
+            this.rate142.Location = new System.Drawing.Point(183, 243);
             this.rate142.Name = "rate142";
             this.rate142.Size = new System.Drawing.Size(56, 27);
             this.rate142.TabIndex = 22;
@@ -319,7 +319,7 @@
             this.rate155.ButtonPressedForeColor = System.Drawing.Color.White;
             this.rate155.ButtonRoundRadius = 30;
             this.rate155.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rate155.Location = new System.Drawing.Point(250, 228);
+            this.rate155.Location = new System.Drawing.Point(245, 243);
             this.rate155.Name = "rate155";
             this.rate155.Size = new System.Drawing.Size(56, 27);
             this.rate155.TabIndex = 23;
@@ -339,11 +339,11 @@
             this.Count.ButtonPressedColor2 = System.Drawing.Color.Maroon;
             this.Count.ButtonPressedForeColor = System.Drawing.Color.White;
             this.Count.ButtonRoundRadius = 30;
-            this.Count.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Count.Font = new System.Drawing.Font("Goudy Stout", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Count.ForeColor = System.Drawing.Color.White;
-            this.Count.Location = new System.Drawing.Point(34, 368);
+            this.Count.Location = new System.Drawing.Point(36, 381);
             this.Count.Name = "Count";
-            this.Count.Size = new System.Drawing.Size(155, 52);
+            this.Count.Size = new System.Drawing.Size(134, 44);
             this.Count.TabIndex = 24;
             this.Count.Text = "Рассчитать";
             this.Count.Click += new System.EventHandler(this.Count_Click);
@@ -353,8 +353,8 @@
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Exit.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(561, 16);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.Location = new System.Drawing.Point(470, 9);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(69, 25);
             this.Exit.TabIndex = 26;
@@ -367,8 +367,8 @@
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Back.Font = new System.Drawing.Font("Goudy Stout", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.White;
-            this.Back.Location = new System.Drawing.Point(488, 16);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Location = new System.Drawing.Point(397, 9);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(69, 25);
             this.Back.TabIndex = 27;
@@ -379,10 +379,11 @@
             // term
             // 
             this.term.AutoSize = true;
-            this.term.Location = new System.Drawing.Point(41, 119);
+            this.term.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.term.Location = new System.Drawing.Point(39, 133);
             this.term.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.term.Name = "term";
-            this.term.Size = new System.Drawing.Size(32, 13);
+            this.term.Size = new System.Drawing.Size(39, 16);
             this.term.TabIndex = 28;
             this.term.Text = "Срок";
             this.term.Visible = false;
@@ -390,7 +391,7 @@
             // rate
             // 
             this.rate.AutoSize = true;
-            this.rate.Location = new System.Drawing.Point(44, 204);
+            this.rate.Location = new System.Drawing.Point(39, 219);
             this.rate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rate.Name = "rate";
             this.rate.Size = new System.Drawing.Size(43, 13);
@@ -403,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.ClientSize = new System.Drawing.Size(555, 450);
             this.Controls.Add(this.rate);
             this.Controls.Add(this.term);
             this.Controls.Add(this.Back);

@@ -206,7 +206,7 @@
             this.Controls.Add(this.Summ);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credit_counted";
-            this.Text = "Credit_counted";
+            this.Text = "Расчёт кредита";
             this.Load += new System.EventHandler(this.Credit_counted_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

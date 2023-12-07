@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Aspose.Pdf;
+using Aspose.Pdf.Plugins;
+using Aspose.Pdf.Text;
 using MySql.Data.MySqlClient;
 
 namespace Bank.Data
@@ -311,6 +314,72 @@ namespace Bank.Data
             cb.ValueMember = VM;
             
             con.Close();
+        }
+
+        public static void Create_pdf(double summ, int term, string file_name)
+        {
+            Document doc = new Document();
+            Page page = doc.Pages.Add();
+            Table table = new Table();
+            table.ColumnAdjustment = ColumnAdjustment.AutoFitToContent;
+            table.DefaultCellBorder = new BorderInfo(BorderSide.All, 0.1F);
+            table.Border = new BorderInfo(BorderSide.All, 1F);
+
+            /*
+            MarginInfo margin = new MarginInfo();
+            margin.Top = 5f;
+            margin.Bottom = 5f;
+            margin.Left = 5f;
+            margin.Right = 5f;
+            table.DefaultCellPadding = margin;*/
+
+            Row main_row = table.Rows.Add();
+            main_row.Cells.Add("Месяц");
+            main_row.Cells.Add("Остаток долга");
+            main_row.Cells.Add("Сумма платежа");
+            main_row.Cells.Add("Платёж по процентам");
+            main_row.Cells.Add("Платёж по основному долгу");
+            main_row.Cells.Add("Остаток долга на конец периода");
+
+            double debt = summ / term;
+            for (int i = 0; i < term - 1; ++i)
+            {
+                double perc = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
+
+                Row row = table.Rows.Add();
+
+                row.Cells.Add(Convert.ToString(i + 1));
+                row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+                row.Cells.Add(Convert.ToString(Math.Round(perc + debt, 2)));
+                row.Cells.Add(Convert.ToString(Math.Round(perc, 2)));
+                row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
+                row.Cells.Add(Convert.ToString(Math.Round(summ - debt, 2)));
+
+                summ -= debt;
+            }
+            double perc_last = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
+
+            Row last_row = table.Rows.Add();
+
+            last_row.Cells.Add(Convert.ToString(term));
+            last_row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+            last_row.Cells.Add(Convert.ToString(Math.Round(perc_last + debt, 2)));
+            last_row.Cells.Add(Convert.ToString(Math.Round(perc_last, 2)));
+            last_row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
+            last_row.Cells.Add("0");
+
+            TextFragment description = new TextFragment($"Hello World!");
+            description.Position = new Position(100, 800);
+            description.TextState.FontSize = 14;
+            description.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            description.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+            TextBuilder builder = new TextBuilder(page);
+            builder.AppendText(description);
+
+            page.Paragraphs.Add(table);
+
+            doc.Save("C:\\Users\\Public\\Documents\\" + file_name);
         }
     }
 }

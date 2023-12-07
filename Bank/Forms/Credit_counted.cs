@@ -57,6 +57,9 @@ namespace Bank.Forms
             {
                 MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            Connection.Create_pdf(Convert.ToDouble(public_class.End_Summ), Convert.ToUInt16(public_class.Term), "Annuit_credit.pdf");
+
             con.Close();
         }
 

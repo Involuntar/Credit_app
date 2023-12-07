@@ -45,6 +45,8 @@ namespace Bank
                 cmd_2.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 string passwords = (string)cmd_2.ExecuteScalar();
 
+                //string sql_lastname = "SELECT lastname FROM users WHERE";
+
                 if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {
                     MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -45,7 +45,25 @@ namespace Bank
                 cmd_2.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 string passwords = (string)cmd_2.ExecuteScalar();
 
-                //string sql_lastname = "SELECT lastname FROM users WHERE";
+                string sql_lastname = "SELECT lastname FROM users WHERE login LIKE @login";
+                MySqlCommand cmd_last = new MySqlCommand(sql_lastname, con);
+                cmd_last.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                public_class.Lastname = (string)cmd_last.ExecuteScalar();
+
+                string sql_middle = "SELECT middlename FROM users WHERE login LIKE @login";
+                MySqlCommand cmd_mid = new MySqlCommand(sql_middle, con);
+                cmd_mid.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                public_class.Middlename = (string)cmd_mid.ExecuteScalar();
+
+                string sql_frst = "SELECT firstname FROM users WHERE login LIKE @login";
+                MySqlCommand cmd_frst = new MySqlCommand(sql_frst, con);
+                cmd_frst.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                public_class.Firstname = (string)cmd_last.ExecuteScalar();
+
+                string sql_mail = "SELECT email FROM users WHERE login LIKE @login";
+                MySqlCommand cmd_mail = new MySqlCommand(sql_mail, con);
+                cmd_mail.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                public_class.Mail = (string)cmd_mail.ExecuteScalar();
 
                 if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
                 {

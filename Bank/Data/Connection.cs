@@ -319,7 +319,7 @@ namespace Bank.Data
         public static void Create_pdf(double summ, int term, string file_name)
         {
             Document doc = new Document();
-            Page page = doc.Pages.Add();
+
             Table table = new Table();
             table.ColumnAdjustment = ColumnAdjustment.AutoFitToContent;
             table.DefaultCellBorder = new BorderInfo(BorderSide.All, 0.1F);
@@ -367,17 +367,66 @@ namespace Bank.Data
             last_row.Cells.Add(Convert.ToString(Math.Round(perc_last, 2)));
             last_row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
             last_row.Cells.Add("0");
+            
+            Page page1 = doc.Pages.Add();
+            //имя--------------------------------------------------------------
+            TextFragment name = new TextFragment($"ФИО занимателя: {public_class.Lastname} {public_class.Firstname} {public_class.Middlename}");
 
-            TextFragment description = new TextFragment($"Hello World!");
-            description.Position = new Position(100, 800);
-            description.TextState.FontSize = 14;
-            description.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            description.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+            name.Position = new Position(200, 700);
+            name.TextState.FontSize = 20;
+            name.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            name.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
 
-            TextBuilder builder = new TextBuilder(page);
-            builder.AppendText(description);
+            TextBuilder builder1 = new TextBuilder(page1);
+            builder1.AppendText(name);
 
-            page.Paragraphs.Add(table);
+            //займ--------------------------------------------------------------
+            TextFragment credit = new TextFragment($"Сумма займа: {public_class.Start_Summ} р.");
+
+            credit.Position = new Position(200, 660);
+            credit.TextState.FontSize = 20;
+            credit.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            credit.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+            TextBuilder builder2 = new TextBuilder(page1);
+            builder2.AppendText(credit);
+
+            //займ--------------------------------------------------------------
+            TextFragment rate = new TextFragment($"Процентная ставка: {public_class.Rate} %");
+
+            rate.Position = new Position(200, 620);
+            rate.TextState.FontSize = 20;
+            rate.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            rate.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+            TextBuilder builder3 = new TextBuilder(page1);
+            builder3.AppendText(rate);
+
+            //срок--------------------------------------------------------------
+            TextFragment Term = new TextFragment($"Срок кредита: {public_class.Term} лет");
+
+            Term.Position = new Position(200, 580);
+            Term.TextState.FontSize = 20;
+            Term.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            Term.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+            TextBuilder builder4 = new TextBuilder(page1);
+            builder4.AppendText(Term);
+
+            //почта--------------------------------------------------------------
+            TextFragment mail = new TextFragment($"Почта: {public_class.Mail}");
+
+            mail.Position = new Position(200, 540);
+            mail.TextState.FontSize = 20;
+            mail.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+            mail.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+            TextBuilder builder5 = new TextBuilder(page1);
+            builder5.AppendText(mail);
+
+            //таблица------------------------------------------------------------
+            Page page2 = doc.Pages.Add();
+            page2.Paragraphs.Add(table);
 
             doc.Save("C:\\Users\\Public\\Documents\\" + file_name);
         }

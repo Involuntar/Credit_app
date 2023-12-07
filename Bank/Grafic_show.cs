@@ -139,7 +139,8 @@ namespace Bank
                 MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            Connection.Create_pdf(Convert.ToDouble(public_class.End_Summ), Convert.ToUInt16(public_class.Term), "Diff_credit.pdf");
+            Connection.Create_pdf(Convert.ToDouble(public_class.End_Summ), Convert.ToUInt16(public_class.Term),
+                $"Diff_credit{public_class.Lastname}_{public_class.Firstname}.pdf");
 
             con.Close();
         }

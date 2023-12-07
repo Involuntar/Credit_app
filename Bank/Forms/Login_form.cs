@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bank
 {
@@ -146,5 +147,30 @@ namespace Bank
         {
 
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Password.PasswordChar == '*')
+            {
+                button1.BringToFront();
+                Password.PasswordChar = '\0';
+            }
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if(Password.PasswordChar == '\0')
+            {
+                button2.BringToFront();
+                Password.PasswordChar = '*';
+            }
+        }
+
+        /*private void button2_Click(object sender, EventArgs e)
+        {
+            if (Password.PasswordChar == '\0')
+            {
+                button1.BringToFront();
+                Password.PasswordChar = '*';
+            }
+        }*/
     }
 }

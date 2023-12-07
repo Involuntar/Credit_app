@@ -318,117 +318,238 @@ namespace Bank.Data
 
         public static void Create_pdf(double summ, int term, string file_name)
         {
-            Document doc = new Document();
-
-            Table table = new Table();
-            table.ColumnAdjustment = ColumnAdjustment.AutoFitToContent;
-            table.DefaultCellBorder = new BorderInfo(BorderSide.All, 0.1F);
-            table.Border = new BorderInfo(BorderSide.All, 1F);
-
-            /*
-            MarginInfo margin = new MarginInfo();
-            margin.Top = 5f;
-            margin.Bottom = 5f;
-            margin.Left = 5f;
-            margin.Right = 5f;
-            table.DefaultCellPadding = margin;*/
-
-            Row main_row = table.Rows.Add();
-            main_row.Cells.Add("Месяц");
-            main_row.Cells.Add("Остаток долга");
-            main_row.Cells.Add("Сумма платежа");
-            main_row.Cells.Add("Платёж по процентам");
-            main_row.Cells.Add("Платёж по основному долгу");
-            main_row.Cells.Add("Остаток долга на конец периода");
-
-            double debt = summ / term;
-            for (int i = 0; i < term - 1; ++i)
+            if (file_name.Substring(0, 6) == "Annuit")
             {
-                double perc = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
+                Document doc = new Document();
 
-                Row row = table.Rows.Add();
+                Table table = new Table();
+                table.ColumnAdjustment = ColumnAdjustment.AutoFitToContent;
+                table.DefaultCellBorder = new BorderInfo(BorderSide.All, 0.1F);
+                table.Border = new BorderInfo(BorderSide.All, 1F);
 
-                row.Cells.Add(Convert.ToString(i + 1));
-                row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
-                row.Cells.Add(Convert.ToString(Math.Round(perc + debt, 2)));
-                row.Cells.Add(Convert.ToString(Math.Round(perc, 2)));
-                row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
-                row.Cells.Add(Convert.ToString(Math.Round(summ - debt, 2)));
+                /*
+                MarginInfo margin = new MarginInfo();
+                margin.Top = 5f;
+                margin.Bottom = 5f;
+                margin.Left = 5f;
+                margin.Right = 5f;
+                table.DefaultCellPadding = margin;*/
 
-                summ -= debt;
+                Row main_row = table.Rows.Add();
+                main_row.Cells.Add("Месяц");
+                main_row.Cells.Add("Остаток долга");
+                main_row.Cells.Add("Сумма платежа");
+                main_row.Cells.Add("Платёж по процентам");
+                main_row.Cells.Add("Платёж по основному долгу");
+                main_row.Cells.Add("Остаток долга на конец периода");
+
+                for (int i = 0; i < term - 1; ++i)
+                {
+                    double perc = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
+                    double debt = Convert.ToDouble(public_class.monthly_pay) - perc;
+
+                    Row row = table.Rows.Add();
+
+                    row.Cells.Add(Convert.ToString(i + 1));
+                    row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+                    row.Cells.Add(Convert.ToString(public_class.monthly_pay));
+                    row.Cells.Add(Convert.ToString(Math.Round(perc, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(summ - debt, 2)));
+
+                    summ -= debt;
+                }
+                double perc_last = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
+                double debt_last = Convert.ToDouble(public_class.monthly_pay) - perc_last;
+
+                Row last_row = table.Rows.Add();
+
+                last_row.Cells.Add(Convert.ToString(term));
+                last_row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(perc_last + debt_last, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(perc_last, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(debt_last, 2)));
+                last_row.Cells.Add("0");
+
+                Page page1 = doc.Pages.Add();
+                //имя--------------------------------------------------------------
+                TextFragment name = new TextFragment($"ФИО занимателя: {public_class.Lastname} {public_class.Firstname} {public_class.Middlename}");
+
+                name.Position = new Position(200, 700);
+                name.TextState.FontSize = 20;
+                name.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                name.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder1 = new TextBuilder(page1);
+                builder1.AppendText(name);
+
+                //займ--------------------------------------------------------------
+                TextFragment credit = new TextFragment($"Сумма займа: {public_class.Start_Summ} р.");
+
+                credit.Position = new Position(200, 660);
+                credit.TextState.FontSize = 20;
+                credit.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                credit.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder2 = new TextBuilder(page1);
+                builder2.AppendText(credit);
+
+                //займ--------------------------------------------------------------
+                TextFragment rate = new TextFragment($"Процентная ставка: {public_class.Rate} %");
+
+                rate.Position = new Position(200, 620);
+                rate.TextState.FontSize = 20;
+                rate.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                rate.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder3 = new TextBuilder(page1);
+                builder3.AppendText(rate);
+
+                //срок--------------------------------------------------------------
+                TextFragment Term = new TextFragment($"Срок кредита: {public_class.Term} лет");
+
+                Term.Position = new Position(200, 580);
+                Term.TextState.FontSize = 20;
+                Term.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                Term.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder4 = new TextBuilder(page1);
+                builder4.AppendText(Term);
+
+                //почта--------------------------------------------------------------
+                TextFragment mail = new TextFragment($"Почта: {public_class.Mail}");
+
+                mail.Position = new Position(200, 540);
+                mail.TextState.FontSize = 20;
+                mail.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                mail.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder5 = new TextBuilder(page1);
+                builder5.AppendText(mail);
+
+                //таблица------------------------------------------------------------
+                Page page2 = doc.Pages.Add();
+                page2.Paragraphs.Add(table);
+
+
+                doc.Save("C:\\Users\\Public\\Documents\\" + file_name);
             }
-            double perc_last = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
 
-            Row last_row = table.Rows.Add();
+            else
+            {
+                Document doc = new Document();
 
-            last_row.Cells.Add(Convert.ToString(term));
-            last_row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
-            last_row.Cells.Add(Convert.ToString(Math.Round(perc_last + debt, 2)));
-            last_row.Cells.Add(Convert.ToString(Math.Round(perc_last, 2)));
-            last_row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
-            last_row.Cells.Add("0");
-            
-            Page page1 = doc.Pages.Add();
-            //имя--------------------------------------------------------------
-            TextFragment name = new TextFragment($"ФИО занимателя: {public_class.Lastname} {public_class.Firstname} {public_class.Middlename}");
+                Table table = new Table();
+                table.ColumnAdjustment = ColumnAdjustment.AutoFitToContent;
+                table.DefaultCellBorder = new BorderInfo(BorderSide.All, 0.1F);
+                table.Border = new BorderInfo(BorderSide.All, 1F);
 
-            name.Position = new Position(200, 700);
-            name.TextState.FontSize = 20;
-            name.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            name.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+                /*
+                MarginInfo margin = new MarginInfo();
+                margin.Top = 5f;
+                margin.Bottom = 5f;
+                margin.Left = 5f;
+                margin.Right = 5f;
+                table.DefaultCellPadding = margin;*/
 
-            TextBuilder builder1 = new TextBuilder(page1);
-            builder1.AppendText(name);
+                Row main_row = table.Rows.Add();
+                main_row.Cells.Add("Месяц");
+                main_row.Cells.Add("Остаток долга");
+                main_row.Cells.Add("Сумма платежа");
+                main_row.Cells.Add("Платёж по процентам");
+                main_row.Cells.Add("Платёж по основному долгу");
+                main_row.Cells.Add("Остаток долга на конец периода");
 
-            //займ--------------------------------------------------------------
-            TextFragment credit = new TextFragment($"Сумма займа: {public_class.Start_Summ} р.");
+                double debt = summ / term;
+                for (int i = 0; i < term - 1; ++i)
+                {
+                    double perc = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
 
-            credit.Position = new Position(200, 660);
-            credit.TextState.FontSize = 20;
-            credit.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            credit.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+                    Row row = table.Rows.Add();
 
-            TextBuilder builder2 = new TextBuilder(page1);
-            builder2.AppendText(credit);
+                    row.Cells.Add(Convert.ToString(i + 1));
+                    row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(perc + debt, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(perc, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
+                    row.Cells.Add(Convert.ToString(Math.Round(summ - debt, 2)));
 
-            //займ--------------------------------------------------------------
-            TextFragment rate = new TextFragment($"Процентная ставка: {public_class.Rate} %");
+                    summ -= debt;
+                }
+                double perc_last = summ * Convert.ToDouble(public_class.Rate) / 12 / 100;
 
-            rate.Position = new Position(200, 620);
-            rate.TextState.FontSize = 20;
-            rate.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            rate.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+                Row last_row = table.Rows.Add();
 
-            TextBuilder builder3 = new TextBuilder(page1);
-            builder3.AppendText(rate);
+                last_row.Cells.Add(Convert.ToString(term));
+                last_row.Cells.Add(Convert.ToString(Math.Round(summ, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(perc_last + debt, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(perc_last, 2)));
+                last_row.Cells.Add(Convert.ToString(Math.Round(debt, 2)));
+                last_row.Cells.Add("0");
 
-            //срок--------------------------------------------------------------
-            TextFragment Term = new TextFragment($"Срок кредита: {public_class.Term} лет");
+                Page page1 = doc.Pages.Add();
+                //имя--------------------------------------------------------------
+                TextFragment name = new TextFragment($"ФИО занимателя: {public_class.Lastname} {public_class.Firstname} {public_class.Middlename}");
 
-            Term.Position = new Position(200, 580);
-            Term.TextState.FontSize = 20;
-            Term.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            Term.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+                name.Position = new Position(200, 700);
+                name.TextState.FontSize = 20;
+                name.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                name.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
 
-            TextBuilder builder4 = new TextBuilder(page1);
-            builder4.AppendText(Term);
+                TextBuilder builder1 = new TextBuilder(page1);
+                builder1.AppendText(name);
 
-            //почта--------------------------------------------------------------
-            TextFragment mail = new TextFragment($"Почта: {public_class.Mail}");
+                //займ--------------------------------------------------------------
+                TextFragment credit = new TextFragment($"Сумма займа: {public_class.Start_Summ} р.");
 
-            mail.Position = new Position(200, 540);
-            mail.TextState.FontSize = 20;
-            mail.TextState.Font = FontRepository.FindFont("TimesNewRoman");
-            mail.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+                credit.Position = new Position(200, 660);
+                credit.TextState.FontSize = 20;
+                credit.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                credit.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
 
-            TextBuilder builder5 = new TextBuilder(page1);
-            builder5.AppendText(mail);
+                TextBuilder builder2 = new TextBuilder(page1);
+                builder2.AppendText(credit);
 
-            //таблица------------------------------------------------------------
-            Page page2 = doc.Pages.Add();
-            page2.Paragraphs.Add(table);
+                //займ--------------------------------------------------------------
+                TextFragment rate = new TextFragment($"Процентная ставка: {public_class.Rate} %");
 
-            doc.Save("C:\\Users\\Public\\Documents\\" + file_name);
+                rate.Position = new Position(200, 620);
+                rate.TextState.FontSize = 20;
+                rate.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                rate.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder3 = new TextBuilder(page1);
+                builder3.AppendText(rate);
+
+                //срок--------------------------------------------------------------
+                TextFragment Term = new TextFragment($"Срок кредита: {public_class.Term} лет");
+
+                Term.Position = new Position(200, 580);
+                Term.TextState.FontSize = 20;
+                Term.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                Term.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder4 = new TextBuilder(page1);
+                builder4.AppendText(Term);
+
+                //почта--------------------------------------------------------------
+                TextFragment mail = new TextFragment($"Почта: {public_class.Mail}");
+
+                mail.Position = new Position(200, 540);
+                mail.TextState.FontSize = 20;
+                mail.TextState.Font = FontRepository.FindFont("TimesNewRoman");
+                mail.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                TextBuilder builder5 = new TextBuilder(page1);
+                builder5.AppendText(mail);
+
+                //таблица------------------------------------------------------------
+                Page page2 = doc.Pages.Add();
+                page2.Paragraphs.Add(table);
+
+
+                doc.Save("C:\\Users\\Public\\Documents\\" + file_name);
+            }
         }
     }
 }

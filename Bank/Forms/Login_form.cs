@@ -92,21 +92,27 @@ namespace Bank
                 cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 string sql_2 = $"SELECT password FROM admins";
                 MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
-                string passwords = (string)cmd_2.ExecuteScalar();
-
-                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                try
                 {
-                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Form_for_admin for_Admin = new Form_for_admin();
-                    for_Admin.Show();
+                    string passwords = (string)cmd_2.ExecuteScalar();
+                    if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                    {
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Form_for_admin for_Admin = new Form_for_admin();
+                        for_Admin.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    con.Close();
                 }
-
-                else
+                catch (System.InvalidOperationException)
                 {
-                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Невозможно подключиться к базе данных\n" +
+                        "Попробуйте позже", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                con.Close();
             }
 
             else

@@ -143,6 +143,7 @@ namespace Bank
             {
                 button1.BringToFront();
                 new_password.PasswordChar = '\0';
+                confirm_password.PasswordChar = '\0';
             }
         }
 
@@ -152,25 +153,8 @@ namespace Bank
              {
                  button2.BringToFront();
                  new_password.PasswordChar = '*';
+                 confirm_password.PasswordChar = '*';
              }
          }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (confirm_password.PasswordChar == '*')
-            {
-                button4.BringToFront();
-                confirm_password.PasswordChar = '\0';
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (confirm_password.PasswordChar == '\0')
-            {
-                button3.BringToFront();
-                confirm_password.PasswordChar = '*';
-            }
-        }
     }
 }

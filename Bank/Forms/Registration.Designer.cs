@@ -147,11 +147,12 @@
             // 
             // confirm_password
             // 
+            this.confirm_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirm_password.Location = new System.Drawing.Point(291, 271);
             this.confirm_password.Margin = new System.Windows.Forms.Padding(2);
             this.confirm_password.Name = "confirm_password";
             this.confirm_password.PasswordChar = '*';
-            this.confirm_password.Size = new System.Drawing.Size(151, 20);
+            this.confirm_password.Size = new System.Drawing.Size(151, 22);
             this.confirm_password.TabIndex = 13;
             this.confirm_password.TextChanged += new System.EventHandler(this.confirm_password_TextChanged);
             // 
@@ -278,7 +279,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(414, 221);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 20);
+            this.button2.Size = new System.Drawing.Size(28, 22);
             this.button2.TabIndex = 23;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

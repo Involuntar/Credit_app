@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.PDF, Version=23.11.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PDF.23.11.1\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -98,62 +104,156 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Credit.cs">
+    <Compile Include="Data\Credits.cs" />
+    <Compile Include="Data\Mortgages.cs" />
+    <Compile Include="Data\public_class.cs" />
+    <Compile Include="Data\Users.cs" />
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credit.Designer.cs">
+    <Compile Include="Forms\Admin%27s forms\Credits_enter_form.Designer.cs">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Credits_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Credits_watch.Designer.cs">
+      <DependentUpon>Credits_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Mortgages_enter_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Mortgages_enter_form.Designer.cs">
+      <DependentUpon>Mortgages_enter_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Mortgages_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Mortgages_watch.Designer.cs">
+      <DependentUpon>Mortgages_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_enter_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_enter_form.Designer.cs">
+      <DependentUpon>Users_enter_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin%27s forms\Users_watch.Designer.cs">
+      <DependentUpon>Users_watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Credit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Credit.Designer.cs">
       <DependentUpon>Credit.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Connection.cs" />
-    <Compile Include="Check_con.cs">
+    <Compile Include="Forms\Check_con.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Check_con.Designer.cs">
+    <Compile Include="Forms\Check_con.Designer.cs">
       <DependentUpon>Check_con.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_form.cs">
+    <Compile Include="Forms\Credit_counted.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_form.Designer.cs">
+    <Compile Include="Forms\Credit_counted.Designer.cs">
+      <DependentUpon>Credit_counted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_for_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_for_admin.Designer.cs">
+      <DependentUpon>Form_for_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login_form.Designer.cs">
       <DependentUpon>Login_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mortgage.cs">
+    <Compile Include="Forms\Mortgage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mortgage.Designer.cs">
+    <Compile Include="Forms\Mortgage.Designer.cs">
       <DependentUpon>Mortgage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product_choice.cs">
+    <Compile Include="Forms\mortgage_counted.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product_choice.Designer.cs">
+    <Compile Include="Forms\mortgage_counted.Designer.cs">
+      <DependentUpon>mortgage_counted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product_choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product_choice.Designer.cs">
       <DependentUpon>Product_choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafic_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafic_show.Designer.cs">
+      <DependentUpon>Grafic_show.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.cs">
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
+    <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Test_table.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test_table.Designer.cs">
-      <DependentUpon>Test_table.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Check_con.resx">
+    <EmbeddedResource Include="Forms\Admin%27s forms\Credits_enter_form.resx">
+      <DependentUpon>Credits_enter_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\credits_watch.resx">
+      <DependentUpon>Credits_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_enter_form.resx">
+      <DependentUpon>Mortgages_enter_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Mortgages_watch.resx">
+      <DependentUpon>Mortgages_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Users_enter_form.resx">
+      <DependentUpon>Users_enter_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin%27s forms\Users_watch.resx">
+      <DependentUpon>Users_watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Check_con.resx">
       <DependentUpon>Check_con.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_form.resx">
+    <EmbeddedResource Include="Forms\Credit.resx">
+      <DependentUpon>Credit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Credit_counted.resx">
+      <DependentUpon>Credit_counted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_for_admin.resx">
+      <DependentUpon>Form_for_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login_form.resx">
       <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product_choice.resx">
+    <EmbeddedResource Include="Forms\Mortgage.resx">
+      <DependentUpon>Mortgage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\mortgage_counted.resx">
+      <DependentUpon>mortgage_counted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product_choice.resx">
       <DependentUpon>Product_choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafic_show.resx">
+      <DependentUpon>Grafic_show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,11 +265,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registration.resx">
+    <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test_table.resx">
-      <DependentUpon>Test_table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Bank.Data.Connection.datasource" />

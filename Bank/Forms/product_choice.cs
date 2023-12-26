@@ -30,5 +30,20 @@ namespace Bank
             this.Hide();
             mrtg.Show();
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Product_head_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Product_choice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

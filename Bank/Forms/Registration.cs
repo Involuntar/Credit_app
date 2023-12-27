@@ -20,36 +20,11 @@ namespace Bank
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Registration_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login_form login = new Login_form();
             login.Show();
-        }
-
-        private void new_password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void middlename_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void reg_Click(object sender, EventArgs e)
@@ -86,56 +61,6 @@ namespace Bank
                 MessageBox.Show("Такой логин уже используется", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             conn.Close();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lastname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void confirm_password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pswrd_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pswrd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lgn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mail_Click(object sender, EventArgs e)
-        {
-
         }
         private void button2_Click(object sender, EventArgs e)
         {

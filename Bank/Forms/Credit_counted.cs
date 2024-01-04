@@ -25,7 +25,7 @@ namespace Bank.Forms
             //Rate.Text = public_class.Rate + '%';
             Term.Text = public_class.Term + " лет";
             Payment.Text = public_class.monthly_pay;
-            double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term) - public_class.Start_Summ;
+            double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term);
 
             Rate.Text = Convert.ToString(Percents);
         }

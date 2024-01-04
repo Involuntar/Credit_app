@@ -430,7 +430,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Credit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Рассчёт кредита";
+            this.Text = "Расчёт кредита";
             this.Load += new System.EventHandler(this.Credit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

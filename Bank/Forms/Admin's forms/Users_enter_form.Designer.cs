@@ -240,6 +240,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Users_enter_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Добавление пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

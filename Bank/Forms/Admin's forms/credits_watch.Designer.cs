@@ -33,9 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Add_new2 = new Bank.RoundButton();
             this.dataGridCredit = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Back = new System.Windows.Forms.Button();
-            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.term = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itog_sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +42,9 @@
             this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Mortgagestxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,7 @@
             this.Add_new2.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_new2.ForeColor = System.Drawing.Color.White;
             this.Add_new2.Location = new System.Drawing.Point(38, 8);
-            this.Add_new2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_new2.Margin = new System.Windows.Forms.Padding(2);
             this.Add_new2.Name = "Add_new2";
             this.Add_new2.Size = new System.Drawing.Size(105, 36);
             this.Add_new2.TabIndex = 4;
@@ -118,39 +118,6 @@
             this.dataGridCredit.Size = new System.Drawing.Size(880, 172);
             this.dataGridCredit.TabIndex = 0;
             this.dataGridCredit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCredit_CellClick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(712, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Поиск";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(817, 12);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 1;
-            this.Back.Text = "Назад";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // Mortgagestxt
-            // 
-            this.Mortgagestxt.AutoSize = true;
-            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
-            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
-            this.Mortgagestxt.Location = new System.Drawing.Point(44, 39);
-            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Mortgagestxt.Name = "Mortgagestxt";
-            this.Mortgagestxt.Size = new System.Drawing.Size(151, 40);
-            this.Mortgagestxt.TabIndex = 4;
-            this.Mortgagestxt.Text = "Кредиты";
             // 
             // id
             // 
@@ -229,6 +196,39 @@
             this.Delete.Text = "Удалить";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(712, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Поиск";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(817, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 1;
+            this.Back.Text = "Назад";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Mortgagestxt
+            // 
+            this.Mortgagestxt.AutoSize = true;
+            this.Mortgagestxt.Font = new System.Drawing.Font("Goudy Stout", 21.75F);
+            this.Mortgagestxt.ForeColor = System.Drawing.Color.White;
+            this.Mortgagestxt.Location = new System.Drawing.Point(44, 39);
+            this.Mortgagestxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Mortgagestxt.Name = "Mortgagestxt";
+            this.Mortgagestxt.Size = new System.Drawing.Size(151, 40);
+            this.Mortgagestxt.TabIndex = 4;
+            this.Mortgagestxt.Text = "Кредиты";
+            // 
             // Credits_watch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,7 +240,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Credits_watch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "credits_watch";
+            this.Text = "Просмотр кредита";
             this.Shown += new System.EventHandler(this.Credits_watch_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

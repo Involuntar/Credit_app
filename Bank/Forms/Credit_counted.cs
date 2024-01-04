@@ -22,9 +22,12 @@ namespace Bank.Forms
         private void Credit_counted_Load(object sender, EventArgs e)
         {
             Summ.Text = public_class.End_Summ;
-            Rate.Text = public_class.Rate + '%';
+            //Rate.Text = public_class.Rate + '%';
             Term.Text = public_class.Term + " лет";
             Payment.Text = public_class.monthly_pay;
+            double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term) - public_class.Start_Summ;
+
+            Rate.Text = Convert.ToString(Percents);
         }
 
         private void Send_req_Click(object sender, EventArgs e)

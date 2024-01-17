@@ -21,10 +21,13 @@ namespace Bank.Forms
 
         private void Credit_counted_Load(object sender, EventArgs e)
         {
-            Summ.Text = public_class.End_Summ;
-            Rate.Text = public_class.Rate + '%';
+            Summ.Text = public_class.End_Summ + " р.";
+            //Rate.Text = public_class.Rate + '%';
             Term.Text = public_class.Term + " лет";
-            Payment.Text = public_class.monthly_pay;
+            Payment.Text = public_class.monthly_pay + " р.";
+            double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term) - Convert.ToDouble(public_class.Start_Summ);
+
+            Rate.Text = Convert.ToString(Percents) + " р.";
         }
 
         private void Send_req_Click(object sender, EventArgs e)
@@ -57,6 +60,10 @@ namespace Bank.Forms
             {
                 MessageBox.Show("Ошибка отправки \n" + ex, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            Connection.Create_pdf(public_class.Start_Summ, Convert.ToUInt16(public_class.Term) * 12, 
+                $"Annuit_credit{public_class.Lastname}_{public_class.Firstname}.pdf");
+
             con.Close();
         }
 

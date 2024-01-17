@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_form));
             this.Password = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.TextBox();
             this.Login_txt = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.Check_c = new System.Windows.Forms.Button();
             this.Reg = new Bank.RoundButton();
             this.Log_in = new Bank.RoundButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Password
@@ -201,12 +204,40 @@
             this.Log_in.Text = "Войти";
             this.Log_in.Click += new System.EventHandler(this.Log_in_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(409, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 23);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(409, 188);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 23);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Login_form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(527, 407);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Check_c);
             this.Controls.Add(this.Log_in_txt);
             this.Controls.Add(this.Exit);
@@ -243,5 +274,7 @@
         private System.Windows.Forms.Label Log_in_txt;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Check_c;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

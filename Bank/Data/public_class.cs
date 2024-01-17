@@ -19,6 +19,10 @@ namespace Bank.Data
         public static string monthly_pay;
         public static string Search;
         public static string Summ_for_Grafic;
-        public static UInt32 Credit_Type; 
+        public static UInt32 Credit_Type;
+        public static string Lastname;
+        public static string Middlename;
+        public static string Firstname;
+        public static string Mail;
     }
 }

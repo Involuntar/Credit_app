@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bank
 {
@@ -34,30 +35,59 @@ namespace Bank
 
         private void Log_in_Click(object sender, EventArgs e)
         {
+
             if (User.Checked == true)
             {
-                public_class.Login = Login.Text;
-                public_class.Password = Password.Text;
-                MySqlConnection con = Connection.GetConnection();
-                
-                string sql_2 = $"SELECT password FROM users WHERE login LIKE @login";
-                MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
-                cmd_2.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
-                string passwords = (string)cmd_2.ExecuteScalar();
-
-                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                try
                 {
-                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Product_choice pr_ch = new Product_choice();
-                    pr_ch.Show();
-                }
+                    public_class.Login = Login.Text;
+                    public_class.Password = Password.Text;
+                    MySqlConnection con = Connection.GetConnection();
 
-                else
-                {
-                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string sql_2 = $"SELECT password FROM users WHERE login LIKE @login";
+                    MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
+                    cmd_2.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                    string passwords = (string)cmd_2.ExecuteScalar();
+
+                    string sql_lastname = "SELECT lastname FROM users WHERE login LIKE @login";
+                    MySqlCommand cmd_last = new MySqlCommand(sql_lastname, con);
+                    cmd_last.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                    public_class.Lastname = (string)cmd_last.ExecuteScalar();
+
+                    string sql_middle = "SELECT middlename FROM users WHERE login LIKE @login";
+                    MySqlCommand cmd_mid = new MySqlCommand(sql_middle, con);
+                    cmd_mid.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                    public_class.Middlename = (string)cmd_mid.ExecuteScalar();
+
+                    string sql_frst = "SELECT firstname FROM users WHERE login LIKE @login";
+                    MySqlCommand cmd_frst = new MySqlCommand(sql_frst, con);
+                    cmd_frst.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                    public_class.Firstname = (string)cmd_last.ExecuteScalar();
+
+                    string sql_mail = "SELECT email FROM users WHERE login LIKE @login";
+                    MySqlCommand cmd_mail = new MySqlCommand(sql_mail, con);
+                    cmd_mail.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
+                    public_class.Mail = (string)cmd_mail.ExecuteScalar();
+
+                    if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                    {
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Product_choice pr_ch = new Product_choice();
+                        pr_ch.Show();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    con.Close();
                 }
-                con.Close();
+                catch (System.InvalidOperationException)
+                {
+                    MessageBox.Show("Невозможно подключиться к базе данных\n" +
+                        "Попробуйте позже", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
             else if (Admin.Checked == true)
@@ -71,21 +101,27 @@ namespace Bank
                 cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = public_class.Login;
                 string sql_2 = $"SELECT password FROM admins";
                 MySqlCommand cmd_2 = new MySqlCommand(sql_2, con);
-                string passwords = (string)cmd_2.ExecuteScalar();
-
-                if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                try
                 {
-                    MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Form_for_admin for_Admin = new Form_for_admin();
-                    for_Admin.Show();
+                    string passwords = (string)cmd_2.ExecuteScalar();
+                    if (passwords != null && BCrypt.Net.BCrypt.Verify(public_class.Password, passwords) == true)
+                    {
+                        MessageBox.Show("Вход успешен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Form_for_admin for_Admin = new Form_for_admin();
+                        for_Admin.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    con.Close();
                 }
-
-                else
+                catch (System.InvalidOperationException)
                 {
-                    MessageBox.Show("Неверный логин или пароль", "Ошибка входа!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Невозможно подключиться к базе данных\n" +
+                        "Попробуйте позже", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                con.Close();
             }
 
             else
@@ -126,5 +162,30 @@ namespace Bank
         {
 
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Password.PasswordChar == '*')
+            {
+                button1.BringToFront();
+                Password.PasswordChar = '\0';
+            }
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if(Password.PasswordChar == '\0')
+            {
+                button2.BringToFront();
+                Password.PasswordChar = '*';
+            }
+        }
+
+        /*private void button2_Click(object sender, EventArgs e)
+        {
+            if (Password.PasswordChar == '\0')
+            {
+                button1.BringToFront();
+                Password.PasswordChar = '*';
+            }
+        }*/
     }
 }

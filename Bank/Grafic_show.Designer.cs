@@ -61,7 +61,7 @@
             this.debt_part,
             this.end_debt});
             this.dataGridGraf.Location = new System.Drawing.Point(29, 28);
-            this.dataGridGraf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridGraf.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridGraf.MultiSelect = false;
             this.dataGridGraf.Name = "dataGridGraf";
             this.dataGridGraf.RowHeadersVisible = false;
@@ -113,7 +113,7 @@
             this.Graf_back.Font = new System.Drawing.Font("Goudy Stout", 9F);
             this.Graf_back.ForeColor = System.Drawing.Color.White;
             this.Graf_back.Location = new System.Drawing.Point(1047, 15);
-            this.Graf_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Graf_back.Margin = new System.Windows.Forms.Padding(4);
             this.Graf_back.Name = "Graf_back";
             this.Graf_back.Size = new System.Drawing.Size(108, 33);
             this.Graf_back.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.diff_add.Font = new System.Drawing.Font("Goudy Stout", 9F);
             this.diff_add.ForeColor = System.Drawing.Color.White;
             this.diff_add.Location = new System.Drawing.Point(972, 457);
-            this.diff_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.diff_add.Margin = new System.Windows.Forms.Padding(4);
             this.diff_add.Name = "diff_add";
             this.diff_add.Size = new System.Drawing.Size(171, 54);
             this.diff_add.TabIndex = 2;
@@ -152,8 +152,9 @@
             this.Controls.Add(this.diff_add);
             this.Controls.Add(this.Graf_back);
             this.Controls.Add(this.dataGridGraf);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Grafic_show";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вывод графика";
             this.Load += new System.EventHandler(this.Grafic_show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGraf)).EndInit();

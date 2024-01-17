@@ -21,13 +21,13 @@ namespace Bank.Forms
 
         private void mortgage_counted_Load(object sender, EventArgs e)
         {
-            Summ_show.Text = public_class.End_Summ;
+            Summ_show.Text = public_class.End_Summ + " р.";
             Term_show.Text = public_class.Term + " лет";
-            Monthly_pay.Text = public_class.monthly_pay;
+            Monthly_pay.Text = public_class.monthly_pay + " р.";
 
             double Percents = Convert.ToDouble(public_class.monthly_pay) * 12 * Convert.ToUInt32(public_class.Term) - public_class.Start_Summ;
 
-            Rate_show.Text = Convert.ToString(Percents);
+            Rate_show.Text = Convert.ToString(Percents) + " р.";
         }
 
         private void Back_Click_1(object sender, EventArgs e)

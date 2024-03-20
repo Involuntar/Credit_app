@@ -97,6 +97,7 @@ namespace Bank
                 if (check_user == null)
                 {
                     cmd_insert.ExecuteScalar();
+                    MessageBox.Show("Вы успешно зарегистрированы!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
